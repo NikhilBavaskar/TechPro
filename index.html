@@ -267,3 +267,152 @@
             <div class="col-span-3 sm:col-span-4 text-slate-500">Break-Fix Only</div>
             <div class="col-span-4 sm:col-span-4 text-electricCyan font-mono font-bold">Scheduled Quarterly PM</div>
           </div>
+          <div class="grid grid-cols-12 p-4 sm:p-5 items-center">
+            <div class="col-span-5 sm:col-span-4 font-semibold text-white">DVR / Footage Verification</div>
+            <div class="col-span-3 sm:col-span-4 text-slate-500">Never Checked</div>
+            <div class="col-span-4 sm:col-span-4 text-white font-mono font-bold">Verified Storage Health Log</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calculator" class="py-24 bg-gradient-to-b from-obsidian to-obsidianSurface border-t border-slate-800 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-slate-900/90 border border-slate-700 p-8 sm:p-12 shadow-2xl relative">
+        <div class="inline-block px-3 py-1 rounded-md bg-cobalt/20 text-electricCyan text-xs font-mono uppercase mb-4">
+          Complimentary Branch Assessment
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">
+          Schedule a 10-Minute On-Site Infrastructure Audit
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 mb-8 max-w-xl">
+          We will send a senior hardware technician to verify your CCTV storage health, DVR hard drive sectors, LAN ping stability, and PC thermal throttling — completely free of charge.
+        </p>
+
+        <form class="space-y-4" onsubmit="event.preventDefault(); submitAudit();">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Institution / Office Name</label>
+              <input type="text" id="officeName" required placeholder="e.g. Union Bank / Apex Clinic" 
+                     class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electricCyan transition-colors" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Direct Mobile Number</label>
+              <input type="tel" id="mobileNumber" required placeholder="+91 797210 4370" 
+                     class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electricCyan transition-colors" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Primary Requirement</label>
+              <select id="reqType" class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-electricCyan transition-colors">
+                <option>Complete Office PC Setup</option>
+                <option>CCTV Footage & Storage Audit</option>
+                <option>Complete Office PC AMC Retainer</option>
+                <option>Emergency Breakdown Visit</option>
+                <option>Bulk Workstation Purchase</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Location in Akola</label>
+              <input type="text" id="location" required placeholder="e.g. Civil Lines, Station Rd, MIDC" 
+                     class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electricCyan transition-colors" />
+            </div>
+          </div>
+
+          <button type="submit" class="w-full mt-4 py-4 rounded-xl bg-gradient-to-r from-cobalt to-electricCyan text-white font-bold text-sm tracking-wide shadow-subtleGlow hover:opacity-95 transition-all">
+            Confirm 10-Minute Audit Dispatch &rarr;
+          </button>
+        </form>
+
+        <p class="text-[11px] text-slate-500 text-center mt-4">
+          No obligation. No hidden visit charges for registered commercial branches in Akola.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="bg-obsidian border-t border-slate-800 text-slate-400 py-16 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" class="h-10 w-auto">
+            <defs>
+              <linearGradient id="monochromeGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#38bdf8" />
+                <stop offset="100%" stop-color="#2563eb" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(15, 14)">
+              <rect x="0" y="0" width="70" height="70" rx="18" fill="#0b1120" stroke="#1e293b" stroke-width="2"/>
+              <path d="M18,24 L52,24" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+              <path d="M28,24 L28,48" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+              <path d="M42,24 L42,50 M42,24 C54,24 54,38 42,38" fill="none" stroke="url(#monochromeGradFooter)" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="56" cy="16" r="3.5" fill="#00f2fe"/>
+            </g>
+            <text x="106" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="800" fill="#ffffff" letter-spacing="-0.5">TechPro</text>
+            <text x="108" y="69" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#00f2fe" letter-spacing="3">HARDWARE SOLUTIONS</text>
+          </svg>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-4">
+          Fast-response IT infrastructure provider and security surveillance integrator. Dedicated to keeping institutional workflows in Akola fully operational.
+        </p>
+        <div class="flex items-center gap-4 text-slate-500 font-mono text-[11px]">
+          <span>Govt MSME Reg.</span>
+          <span>•</span>
+          <span>GeM Seller Portal</span>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 font-mono text-xs uppercase">Key Hubs Serviced</h4>
+        <ul class="space-y-1.5 text-slate-400">
+          <li>Civil Lines Business Sector</li>
+          <li>Station Road & Market Enclave</li>
+          <li>Gorakshan Road Clinics</li>
+          <li>MIDC Industrial Areas Phase 1 & 2</li>
+          <li>Ramdaspeth Commercial Units</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 font-mono text-xs uppercase">Emergency Contact</h4>
+        <p class="text-slate-200 font-bold mb-1">TechPro Technical Hub</p>
+        <p class="text-slate-400 mb-3">Akola, Maharashtra 444001</p>
+        <p class="text-electricCyan font-mono font-bold mb-1">Direct: +91 797210 4370</p>
+        <p class="text-slate-400 font-mono">Email: sales@techprohardware.in</p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-900 flex justify-between items-center text-[11px] text-slate-600">
+      <p>&copy; TechPro Hardware Solutions. All rights reserved.</p>
+      <p>Local SLA Response Guaranteed</p>
+    </div>
+  </footer>
+
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/917972104370?text=Hi%20Nikhil,%20I%20need%20a%20quotation%20for%20CCTV%20/%20PC%20maintenance%20in%20Akola." 
+       target="_blank" 
+       class="flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#25D366] text-white font-bold text-xs shadow-xl hover:scale-105 transition-transform">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+      <span>Instant Support (Nikhil)</span>
+    </a>
+  </div>
+
+  <script>
+    function submitAudit() {
+      const office = document.getElementById('officeName').value;
+      const mobile = document.getElementById('mobileNumber').value;
+      const req = document.getElementById('reqType').value;
+      const loc = document.getElementById('location').value;
+
+      const message = `Hi Nikhil, I would like to book a Free 10-Min Audit for TechPro Hardware Solutions.%0A%0AOffice: ${encodeURIComponent(office)}%0ALocation: ${encodeURIComponent(loc)}%0ARequirement: ${encodeURIComponent(req)}%0AContact: ${encodeURIComponent(mobile)}`;
+      
+      window.open(`https://wa.me/917972104370?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>
