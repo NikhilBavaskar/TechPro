@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechPro Hardware Solutions | Enterprise IT & Surveillance Akola</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          colors: {
+            obsidian: '#070A11',
+            obsidianSurface: '#0E1424',
+            lightBg: '#F8FAFC',
+            lightCard: '#FFFFFF',
+            cobalt: '#2563EB',
+            electricCyan: '#06B6D4',
+            emeraldLive: '#10B981',
+          },
+          boxShadow: {
+            subtleGlow: '0 0 35px -5px rgba(6, 182, 212, 0.15)',
+            deepCard: '0 20px 40px -15px rgba(2, 6, 23, 0.08)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .grid-pattern {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .text-metallic {
+      background: linear-gradient(180deg, #FFFFFF 30%, #94A3B8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .badge-ring {
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-obsidian text-slate-300 antialiased selection:bg-electricCyan selection:text-black">
+
+  <!-- ================= TOP SLA TICKER ================= -->
+  <div class="bg-obsidianSurface border-b border-slate-800 text-[11px] font-mono tracking-wider text-slate-400 py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emeraldLive animate-pulse"></span>
+        <span class="text-slate-200 font-semibold">AKOLA ON-SITE DISPATCH ACTIVE:</span> Civil Lines • Station Rd • MIDC
+      </div>
+      <div class="hidden sm:flex items-center gap-4 text-slate-400">
+        <span>SLA: &lt; 180 Mins</span>
+        <span>•</span>
+        <span>GeM ID: Verified</span>
+        <span>•</span>
+        <span class="text-slate-200">Govt. MSME Registered</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAV ================= -->
+  <header class="sticky top-0 z-50 bg-obsidian/90 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-cobalt to-electricCyan flex items-center justify-center font-extrabold text-white text-base shadow-lg">
+          TP
+        </div>
+        <div>
+          <span class="text-lg font-extrabold tracking-tight text-white block leading-tight">TechPro</span>
+          <span class="text-[10px] tracking-widest uppercase text-electricCyan font-semibold font-mono">Hardware Solutions</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#services" class="hover:text-electricCyan transition-colors">Core Verticals</a>
+        <a href="#matrix" class="hover:text-electricCyan transition-colors">SLA Comparison</a>
+        <a href="#calculator" class="hover:text-electricCyan transition-colors">Audit Checklist</a>
+        <a href="#contact" class="hover:text-electricCyan transition-colors">Direct Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="tel:+917972104370" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-slate-200 bg-slate-900 border border-slate-700 px-4 py-2.5 rounded-lg hover:border-slate-500 transition-all">
+          <svg class="w-3.5 h-3.5 text-emeraldLive" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
+          +91 7972104370
+        </a>
+        <a href="#calculator" class="bg-cobalt hover:bg-blue-600 text-white font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-lg shadow-subtleGlow transition-all">
+          Book Audit
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION (DARK DEEP ENTERPRISE) ================= -->
+  <section class="relative pt-20 pb-24 lg:pt-32 lg:pb-36 grid-pattern overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700 text-xs font-mono text-electricCyan mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-electricCyan"></span>
+        AKOLA COMMERCIAL IT INFRASTRUCTURE & SURVEILLANCE
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight max-w-5xl mx-auto leading-[1.12]">
+        Enterprise IT Hardware & Surveillance. <br class="hidden sm:inline" />
+        <span class="text-metallic">Zero Extended Downtime.</span>
+      </h1>
+
+      <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
+        Engineered for local Bank Branches, Schools, Diagnostics Centers, and Commercial Offices. On-site emergency arrival within <strong class="text-white font-semibold">2 to 4 hours</strong> with wholesale transparent parts replacement.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/917972104370?text=Hi%20Nikhil,%20I%20need%20a%20quotation%20for%20CCTV%20/%20PC%20maintenance%20in%20Akola." 
+           target="_blank" 
+           class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-cobalt to-electricCyan text-white font-bold text-sm tracking-wide shadow-subtleGlow hover:opacity-95 transition-all flex items-center justify-center gap-2">
+          <span>⚡</span> Request Instant WhatsApp Quote
+        </a>
+        <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900/90 border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold text-sm tracking-wide transition-all">
+          Free 10-Minute Health Audit &rarr;
+        </a>
+      </div>
+
+      <!-- Trust Metrics Bar -->
+      <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div class="p-4 rounded-xl bg-obsidianSurface border border-slate-800 text-left">
+          <div class="text-xs font-mono text-slate-400 uppercase">Response Time</div>
+          <div class="text-xl font-bold text-white mt-1">2 – 4 Hours</div>
+          <div class="text-[11px] text-emeraldLive mt-0.5">Guaranteed Local SLA</div>
+        </div>
+        <div class="p-4 rounded-xl bg-obsidianSurface border border-slate-800 text-left">
+          <div class="text-xs font-mono text-slate-400 uppercase">Procurement</div>
+          <div class="text-xl font-bold text-white mt-1">GeM Verified</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">MSME Reg. Seller</div>
+        </div>
+        <div class="p-4 rounded-xl bg-obsidianSurface border border-slate-800 text-left">
+          <div class="text-xs font-mono text-slate-400 uppercase">Spares Billing</div>
+          <div class="text-xl font-bold text-white mt-1">Wholesale OEM</div>
+          <div class="text-[11px] text-electricCyan mt-0.5">0% Hidden Markups</div>
+        </div>
+        <div class="p-4 rounded-xl bg-obsidianSurface border border-slate-800 text-left">
+          <div class="text-xs font-mono text-slate-400 uppercase">CCTV Compliance</div>
+          <div class="text-xl font-bold text-white mt-1">30-Day Retention</div>
+          <div class="text-[11px] text-emeraldLive mt-0.5">Audited Playback Safety</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CRISP LIGHT SECTION (SERVICES & VERTICALS) ================= -->
+  <section id="services" class="bg-lightBg text-slate-800 py-24 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-cobalt font-mono">Operations Portfolio</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-1">
+            Engineered For Zero Operational Downtime
+          </h2>
+        </div>
+        <p class="text-sm text-slate-600 max-w-md">
+          Hardware breakdowns translate directly to lost productivity, compliance fines, and stalled billing. We handle maintenance proactively.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="bg-lightCard p-8 rounded-2xl border border-slate-200 shadow-deepCard hover:border-cobalt transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">
+              01
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Commercial CCTV Surveillance</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              4/8/16/32-Channel IP & ColorVu camera arrays (CP Plus / Hikvision). Complete compliance setup with automated 30-day storage retention audits.
+            </p>
+          </div>
+          <ul class="text-[11px] text-slate-500 space-y-1.5 pt-4 border-t border-slate-100 font-medium">
+            <li>• Mobile Live-View Integration</li>
+            <li>• Night Vision Perimeter Security</li>
+            <li>• Banking Standard Storage Check</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-lightCard p-8 rounded-2xl border border-slate-200 shadow-deepCard hover:border-cobalt transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">
+              02
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Non-Comprehensive AMC</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Transparent, labor-only annual maintenance. Eliminates bloated contracts while providing dedicated preventive quarterly tune-ups.
+            </p>
+          </div>
+          <ul class="text-[11px] text-slate-500 space-y-1.5 pt-4 border-t border-slate-100 font-medium">
+            <li>• Deep Blower Cleaning & Thermal Pasting</li>
+            <li>• OS De-bloat & Cache Cleanup</li>
+            <li>• Priority Dispatch Routing</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-lightCard p-8 rounded-2xl border border-slate-200 shadow-deepCard hover:border-cobalt transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">
+              03
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Workstations & Upgrades</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Turnkey desktop units (Intel Core i3/i5/i7) with 3-year OEM warranties. Quick NVMe SSD and RAM upgrades for lagging office machines.
+            </p>
+          </div>
+          <ul class="text-[11px] text-slate-500 space-y-1.5 pt-4 border-t border-slate-100 font-medium">
+            <li>• Custom Multi-User Workstations</li>
+            <li>• Legacy System SSD Revamps</li>
+            <li>• Genuine OS & Tally Environments</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-lightCard p-8 rounded-2xl border border-slate-200 shadow-deepCard hover:border-cobalt transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">
+              04
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Rapid Breakdown Recovery</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Emergency technician callout for billing printers, teller counter crashes, network switch deadlocks, and local router faults.
+            </p>
+          </div>
+          <ul class="text-[11px] text-slate-500 space-y-1.5 pt-4 border-t border-slate-100 font-medium">
+            <li>• 2-to-4 Hour Arrival Across Akola</li>
+            <li>• Temporary Standby Units</li>
+            <li>• Minimal Footprint Diagnostics</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SLA MATRIX (DARK INDUSTRIAL) ================= -->
+  <section id="matrix" class="py-24 bg-obsidian text-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono uppercase text-electricCyan tracking-widest">Accountability Standards</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Vendor Comparison: The TechPro SLA</h2>
+      </div>
+
+      <div class="rounded-2xl border border-slate-800 bg-obsidianSurface overflow-hidden">
+        <div class="grid grid-cols-12 p-4 sm:p-5 bg-slate-900/80 border-b border-slate-800 text-xs font-mono uppercase text-slate-400">
+          <div class="col-span-5 sm:col-span-4">Operational Factor</div>
+          <div class="col-span-3 sm:col-span-4 text-slate-500">Traditional Vendors</div>
+          <div class="col-span-4 sm:col-span-4 text-electricCyan font-bold">TechPro Solutions</div>
+        </div>
+
+        <div class="divide-y divide-slate-800/60 text-xs sm:text-sm">
+          <div class="grid grid-cols-12 p-4 sm:p-5 items-center">
+            <div class="col-span-5 sm:col-span-4 font-semibold text-white">Emergency Response</div>
+            <div class="col-span-3 sm:col-span-4 text-slate-500">24 – 48 Hours</div>
+            <div class="col-span-4 sm:col-span-4 text-emeraldLive font-mono font-bold">⚡ 2 to 4 Hours (Akola Local)</div>
+          </div>
+          <div class="grid grid-cols-12 p-4 sm:p-5 items-center">
+            <div class="col-span-5 sm:col-span-4 font-semibold text-white">Hardware Spares Pricing</div>
+            <div class="col-span-3 sm:col-span-4 text-slate-500">Heavy Retail Markup</div>
+            <div class="col-span-4 sm:col-span-4 text-white font-mono font-bold">Wholesale OEM Invoicing</div>
+          </div>
+          <div class="grid grid-cols-12 p-4 sm:p-5 items-center">
+            <div class="col-span-5 sm:col-span-4 font-semibold text-white">Maintenance Model</div>
+            <div class="col-span-3 sm:col-span-4 text-slate-500">Break-Fix Only</div>
+            <div class="col-span-4 sm:col-span-4 text-electricCyan font-mono font-bold">Scheduled Quarterly PM</div>
+          </div>
+          <div class="grid grid-cols-12 p-4 sm:p-5 items-center">
+            <div class="col-span-5 sm:col-span-4 font-semibold text-white">DVR / Footage Verification</div>
+            <div class="col-span-3 sm:col-span-4 text-slate-500">Never Checked</div>
+            <div class="col-span-4 sm:col-span-4 text-white font-mono font-bold">Verified Storage Health Log</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE DIAGNOSTIC LEAD MAGNET ================= -->
+  <section id="calculator" class="py-24 bg-gradient-to-b from-obsidian to-obsidianSurface border-t border-slate-800 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="rounded-3xl bg-slate-900/90 border border-slate-700 p-8 sm:p-12 shadow-2xl relative">
+        <div class="inline-block px-3 py-1 rounded-md bg-cobalt/20 text-electricCyan text-xs font-mono uppercase mb-4">
+          Complimentary Branch Assessment
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">
+          Schedule a 10-Minute On-Site Infrastructure Audit
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 mb-8 max-w-xl">
+          We will send a senior hardware technician to verify your CCTV storage health, DVR hard drive sectors, LAN ping stability, and PC thermal throttling — completely free of charge.
+        </p>
+
+        <form class="space-y-4" onsubmit="event.preventDefault(); submitAudit();">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Institution / Office Name</label>
+              <input type="text" id="officeName" required placeholder="e.g. Union Bank / Apex Clinic" 
+                     class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electricCyan transition-colors" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Direct Mobile Number</label>
+              <input type="tel" id="mobileNumber" required placeholder="+91 797210 XXXXX" 
+                     class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electricCyan transition-colors" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Primary Requirement</label>
+              <select id="reqType" class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-electricCyan transition-colors">
+                <option>Complete Office PC Setup</option>
+                <option>CCTV Footage & Storage Audit</option>
+                <option>Complete Office PC AMC Retainer</option>
+                <option>Emergency Breakdown Visit</option>
+                <option>Bulk Workstation Purchase</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Location in Akola</label>
+              <input type="text" id="location" required placeholder="e.g. Civil Lines, Station Rd, MIDC" 
+                     class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electricCyan transition-colors" />
+            </div>
+          </div>
+
+          <button type="submit" class="w-full mt-4 py-4 rounded-xl bg-gradient-to-r from-cobalt to-electricCyan text-white font-bold text-sm tracking-wide shadow-subtleGlow hover:opacity-95 transition-all">
+            Confirm 10-Minute Audit Dispatch &rarr;
+          </button>
+        </form>
+
+        <p class="text-[11px] text-slate-500 text-center mt-4">
+          No obligation. No hidden visit charges for registered commercial branches in Akola.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="contact" class="bg-obsidian border-t border-slate-800 text-slate-400 py-16 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+      
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-7 h-7 rounded bg-cobalt flex items-center justify-center font-bold text-white text-xs">TP</div>
+          <span class="text-base font-bold text-white tracking-tight">TechPro Hardware Solutions</span>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-4">
+          Fast-response IT infrastructure provider and security surveillance integrator. Dedicated to keeping institutional workflows in Akola fully operational.
+        </p>
+        <div class="flex items-center gap-4 text-slate-500 font-mono text-[11px]">
+          <span>Govt MSME Reg.</span>
+          <span>•</span>
+          <span>GeM Seller Portal</span>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 font-mono text-xs uppercase">Key Hubs Serviced</h4>
+        <ul class="space-y-1.5 text-slate-400">
+          <li>Civil Lines Business Sector</li>
+          <li>Station Road & Market Enclave</li>
+          <li>Gorakshan Road Clinics</li>
+          <li>MIDC Industrial Areas Phase 1 & 2</li>
+          <li>Ramdaspeth Commercial Units</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 font-mono text-xs uppercase">Emergency Contact</h4>
+        <p class="text-slate-200 font-bold mb-1">TechPro Technical Hub</p>
+        <p class="text-slate-400 mb-3">Akola, Maharashtra 444001</p>
+        <p class="text-electricCyan font-mono font-bold mb-1">Direct: +91 797210 4370</p>
+        <p class="text-slate-400 font-mono">Email: sales@techprohardware.in</p>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-900 flex justify-between items-center text-[11px] text-slate-600">
+      <p>&copy; TechPro Hardware Solutions. All rights reserved.</p>
+      <p>Local SLA Response Guaranteed</p>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING ACTION WHATSAPP ================= -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/917972104370?text=Hi%20Nikhil,%20I%20need%20a%20quotation%20for%20CCTV%20/%20PC%20maintenance%20in%20Akola." 
+       target="_blank" 
+       class="flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#25D366] text-white font-bold text-xs shadow-xl hover:scale-105 transition-transform">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+      <span>Instant Support (Nikhil)</span>
+    </a>
+  </div>
+
+  <script>
+    function submitAudit() {
+      const office = document.getElementById('officeName').value;
+      const mobile = document.getElementById('mobileNumber').value;
+      const req = document.getElementById('reqType').value;
+      const loc = document.getElementById('location').value;
+
+      const message = `Hi Nikhil, I would like to book a Free 10-Min Audit for TechPro Hardware Solutions.%0A%0AOffice: ${encodeURIComponent(office)}%0ALocation: ${encodeURIComponent(loc)}%0ARequirement: ${encodeURIComponent(req)}%0AContact: ${encodeURIComponent(mobile)}`;
+      
+      window.open(`https://wa.me/917972104370?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>
