@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TechPro Hardware Solutions | Enterprise IT & Surveillance Akola</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1120'/%3E%3Cpath d='M8 10h16M13 10v12M19 10v12c4 0 4-6 0-6' fill='none' stroke='%2300f2fe' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='8' r='2' fill='%2310b981'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' rx='18' fill='%230b1120' stroke='%231e293b' stroke-width='2'/%3E%3Cpath d='M18 24h34M28 24v24' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M42 24v26M42 24c12 0 12 14 0 14' fill='none' stroke='%2338bdf8' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='56' cy='16' r='3.5' fill='%2300f2fe'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -46,14 +46,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .badge-ring {
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    }
   </style>
 </head>
 <body class="bg-obsidian text-slate-300 antialiased selection:bg-electricCyan selection:text-black">
 
-  <!-- ================= TOP SLA TICKER ================= -->
   <div class="bg-obsidianSurface border-b border-slate-800 text-[11px] font-mono tracking-wider text-slate-400 py-2 px-4">
     <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
       <div class="flex items-center gap-2">
@@ -70,17 +66,26 @@
     </div>
   </div>
 
-  <!-- ================= HEADER / NAV ================= -->
   <header class="sticky top-0 z-50 bg-obsidian/90 backdrop-blur-md border-b border-slate-800/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-cobalt to-electricCyan flex items-center justify-center font-extrabold text-white text-base shadow-lg">
-          TP
-        </div>
-        <div>
-          <span class="text-lg font-extrabold tracking-tight text-white block leading-tight">TechPro</span>
-          <span class="text-[10px] tracking-widest uppercase text-electricCyan font-semibold font-mono">Hardware Solutions</span>
-        </div>
+      <a href="#" class="flex items-center h-12 hover:opacity-90 transition-opacity">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" class="h-10 sm:h-12 w-auto">
+          <defs>
+            <linearGradient id="monochromeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" />
+              <stop offset="100%" stop-color="#2563eb" />
+            </linearGradient>
+          </defs>
+          <g transform="translate(15, 14)">
+            <rect x="0" y="0" width="70" height="70" rx="18" fill="#0b1120" stroke="#1e293b" stroke-width="2"/>
+            <path d="M18,24 L52,24" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+            <path d="M28,24 L28,48" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+            <path d="M42,24 L42,50 M42,24 C54,24 54,38 42,38" fill="none" stroke="url(#monochromeGrad)" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="56" cy="16" r="3.5" fill="#00f2fe"/>
+          </g>
+          <text x="106" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="800" fill="#ffffff" letter-spacing="-0.5">TechPro</text>
+          <text x="108" y="69" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#00f2fe" letter-spacing="3">HARDWARE SOLUTIONS</text>
+        </svg>
       </a>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
@@ -102,10 +107,8 @@
     </div>
   </header>
 
-  <!-- ================= HERO SECTION (DARK DEEP ENTERPRISE) ================= -->
   <section class="relative pt-20 pb-24 lg:pt-32 lg:pb-36 grid-pattern overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700 text-xs font-mono text-electricCyan mb-8">
         <span class="w-1.5 h-1.5 rounded-full bg-electricCyan"></span>
         AKOLA COMMERCIAL IT INFRASTRUCTURE & SURVEILLANCE
@@ -131,7 +134,6 @@
         </a>
       </div>
 
-      <!-- Trust Metrics Bar -->
       <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
         <div class="p-4 rounded-xl bg-obsidianSurface border border-slate-800 text-left">
           <div class="text-xs font-mono text-slate-400 uppercase">Response Time</div>
@@ -154,14 +156,11 @@
           <div class="text-[11px] text-emeraldLive mt-0.5">Audited Playback Safety</div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ================= CRISP LIGHT SECTION (SERVICES & VERTICALS) ================= -->
   <section id="services" class="bg-lightBg text-slate-800 py-24 border-y border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-cobalt font-mono">Operations Portfolio</span>
@@ -175,13 +174,9 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Card 1 -->
         <div class="bg-lightCard p-8 rounded-2xl border border-slate-200 shadow-deepCard hover:border-cobalt transition-all duration-200 flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">
-              01
-            </div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">01</div>
             <h3 class="text-lg font-bold text-slate-900 mb-2">Commercial CCTV Surveillance</h3>
             <p class="text-xs text-slate-600 leading-relaxed mb-6">
               4/8/16/32-Channel IP & ColorVu camera arrays (CP Plus / Hikvision). Complete compliance setup with automated 30-day storage retention audits.
@@ -194,12 +189,9 @@
           </ul>
         </div>
 
-        <!-- Card 2 -->
         <div class="bg-lightCard p-8 rounded-2xl border border-slate-200 shadow-deepCard hover:border-cobalt transition-all duration-200 flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">
-              02
-            </div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">02</div>
             <h3 class="text-lg font-bold text-slate-900 mb-2">Non-Comprehensive AMC</h3>
             <p class="text-xs text-slate-600 leading-relaxed mb-6">
               Transparent, labor-only annual maintenance. Eliminates bloated contracts while providing dedicated preventive quarterly tune-ups.
@@ -212,12 +204,9 @@
           </ul>
         </div>
 
-        <!-- Card 3 -->
         <div class="bg-lightCard p-8 rounded-2xl border border-slate-200 shadow-deepCard hover:border-cobalt transition-all duration-200 flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">
-              03
-            </div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">03</div>
             <h3 class="text-lg font-bold text-slate-900 mb-2">Workstations & Upgrades</h3>
             <p class="text-xs text-slate-600 leading-relaxed mb-6">
               Turnkey desktop units (Intel Core i3/i5/i7) with 3-year OEM warranties. Quick NVMe SSD and RAM upgrades for lagging office machines.
@@ -230,12 +219,9 @@
           </ul>
         </div>
 
-        <!-- Card 4 -->
         <div class="bg-lightCard p-8 rounded-2xl border border-slate-200 shadow-deepCard hover:border-cobalt transition-all duration-200 flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">
-              04
-            </div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-cobalt flex items-center justify-center text-xl font-bold mb-6">04</div>
             <h3 class="text-lg font-bold text-slate-900 mb-2">Rapid Breakdown Recovery</h3>
             <p class="text-xs text-slate-600 leading-relaxed mb-6">
               Emergency technician callout for billing printers, teller counter crashes, network switch deadlocks, and local router faults.
@@ -247,16 +233,12 @@
             <li>• Minimal Footprint Diagnostics</li>
           </ul>
         </div>
-
       </div>
-
     </div>
   </section>
 
-  <!-- ================= SLA MATRIX (DARK INDUSTRIAL) ================= -->
   <section id="matrix" class="py-24 bg-obsidian text-slate-200">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
       <div class="text-center max-w-2xl mx-auto mb-16">
         <span class="text-xs font-mono uppercase text-electricCyan tracking-widest">Accountability Standards</span>
         <h2 class="text-3xl font-extrabold text-white mt-1">Vendor Comparison: The TechPro SLA</h2>
@@ -285,145 +267,3 @@
             <div class="col-span-3 sm:col-span-4 text-slate-500">Break-Fix Only</div>
             <div class="col-span-4 sm:col-span-4 text-electricCyan font-mono font-bold">Scheduled Quarterly PM</div>
           </div>
-          <div class="grid grid-cols-12 p-4 sm:p-5 items-center">
-            <div class="col-span-5 sm:col-span-4 font-semibold text-white">DVR / Footage Verification</div>
-            <div class="col-span-3 sm:col-span-4 text-slate-500">Never Checked</div>
-            <div class="col-span-4 sm:col-span-4 text-white font-mono font-bold">Verified Storage Health Log</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= INTERACTIVE DIAGNOSTIC LEAD MAGNET ================= -->
-  <section id="calculator" class="py-24 bg-gradient-to-b from-obsidian to-obsidianSurface border-t border-slate-800 relative">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="rounded-3xl bg-slate-900/90 border border-slate-700 p-8 sm:p-12 shadow-2xl relative">
-        <div class="inline-block px-3 py-1 rounded-md bg-cobalt/20 text-electricCyan text-xs font-mono uppercase mb-4">
-          Complimentary Branch Assessment
-        </div>
-
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">
-          Schedule a 10-Minute On-Site Infrastructure Audit
-        </h2>
-        <p class="text-xs sm:text-sm text-slate-400 mb-8 max-w-xl">
-          We will send a senior hardware technician to verify your CCTV storage health, DVR hard drive sectors, LAN ping stability, and PC thermal throttling — completely free of charge.
-        </p>
-
-        <form class="space-y-4" onsubmit="event.preventDefault(); submitAudit();">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Institution / Office Name</label>
-              <input type="text" id="officeName" required placeholder="e.g. Union Bank / Apex Clinic" 
-                     class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electricCyan transition-colors" />
-            </div>
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Direct Mobile Number</label>
-              <input type="tel" id="mobileNumber" required placeholder="+91 797210 XXXXX" 
-                     class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electricCyan transition-colors" />
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Primary Requirement</label>
-              <select id="reqType" class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-electricCyan transition-colors">
-                <option>Complete Office PC Setup</option>
-                <option>CCTV Footage & Storage Audit</option>
-                <option>Complete Office PC AMC Retainer</option>
-                <option>Emergency Breakdown Visit</option>
-                <option>Bulk Workstation Purchase</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Location in Akola</label>
-              <input type="text" id="location" required placeholder="e.g. Civil Lines, Station Rd, MIDC" 
-                     class="w-full bg-obsidian border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-electricCyan transition-colors" />
-            </div>
-          </div>
-
-          <button type="submit" class="w-full mt-4 py-4 rounded-xl bg-gradient-to-r from-cobalt to-electricCyan text-white font-bold text-sm tracking-wide shadow-subtleGlow hover:opacity-95 transition-all">
-            Confirm 10-Minute Audit Dispatch &rarr;
-          </button>
-        </form>
-
-        <p class="text-[11px] text-slate-500 text-center mt-4">
-          No obligation. No hidden visit charges for registered commercial branches in Akola.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
-  <footer id="contact" class="bg-obsidian border-t border-slate-800 text-slate-400 py-16 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
-      
-      <div class="md:col-span-2">
-        <div class="flex items-center gap-2 mb-4">
-          <div class="w-7 h-7 rounded bg-cobalt flex items-center justify-center font-bold text-white text-xs">TP</div>
-          <span class="text-base font-bold text-white tracking-tight">TechPro Hardware Solutions</span>
-        </div>
-        <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-4">
-          Fast-response IT infrastructure provider and security surveillance integrator. Dedicated to keeping institutional workflows in Akola fully operational.
-        </p>
-        <div class="flex items-center gap-4 text-slate-500 font-mono text-[11px]">
-          <span>Govt MSME Reg.</span>
-          <span>•</span>
-          <span>GeM Seller Portal</span>
-        </div>
-      </div>
-
-      <div>
-        <h4 class="text-white font-semibold mb-3 font-mono text-xs uppercase">Key Hubs Serviced</h4>
-        <ul class="space-y-1.5 text-slate-400">
-          <li>Civil Lines Business Sector</li>
-          <li>Station Road & Market Enclave</li>
-          <li>Gorakshan Road Clinics</li>
-          <li>MIDC Industrial Areas Phase 1 & 2</li>
-          <li>Ramdaspeth Commercial Units</li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="text-white font-semibold mb-3 font-mono text-xs uppercase">Emergency Contact</h4>
-        <p class="text-slate-200 font-bold mb-1">TechPro Technical Hub</p>
-        <p class="text-slate-400 mb-3">Akola, Maharashtra 444001</p>
-        <p class="text-electricCyan font-mono font-bold mb-1">Direct: +91 797210 4370</p>
-        <p class="text-slate-400 font-mono">Email: sales@techprohardware.in</p>
-      </div>
-
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-900 flex justify-between items-center text-[11px] text-slate-600">
-      <p>&copy; TechPro Hardware Solutions. All rights reserved.</p>
-      <p>Local SLA Response Guaranteed</p>
-    </div>
-  </footer>
-
-  <!-- ================= FLOATING ACTION WHATSAPP ================= -->
-  <div class="fixed bottom-6 right-6 z-50">
-    <a href="https://wa.me/917972104370?text=Hi%20Nikhil,%20I%20need%20a%20quotation%20for%20CCTV%20/%20PC%20maintenance%20in%20Akola." 
-       target="_blank" 
-       class="flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#25D366] text-white font-bold text-xs shadow-xl hover:scale-105 transition-transform">
-      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-      <span>Instant Support (Nikhil)</span>
-    </a>
-  </div>
-
-  <script>
-    function submitAudit() {
-      const office = document.getElementById('officeName').value;
-      const mobile = document.getElementById('mobileNumber').value;
-      const req = document.getElementById('reqType').value;
-      const loc = document.getElementById('location').value;
-
-      const message = `Hi Nikhil, I would like to book a Free 10-Min Audit for TechPro Hardware Solutions.%0A%0AOffice: ${encodeURIComponent(office)}%0ALocation: ${encodeURIComponent(loc)}%0ARequirement: ${encodeURIComponent(req)}%0AContact: ${encodeURIComponent(mobile)}`;
-      
-      window.open(`https://wa.me/917972104370?text=${message}`, '_blank');
-    }
-  </script>
-</body>
-</html>
