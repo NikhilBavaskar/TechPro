@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: NikhilBavaskar/TechPro-Secand
+  repo: NikhilBavaskar/TechPro
   branch: main
 
 media_folder: "assets/uploads"
