@@ -9,12 +9,15 @@ public_folder: "/assets/uploads"
 collections:
   - name: "blog"
     label: "Knowledge Hub Tutorials"
-    folder: "blog"
+    folder: "content/posts"
     create: true
+    format: "json"
+    extension: "json"
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Read Time", name: "readTime", widget: "string", default: "4 min read"}
       - {label: "Tag", name: "tag", widget: "select", options: ["Surveillance", "Hardware AMC", "Networking", "Workstation"]}
       - {label: "Summary", name: "excerpt", widget: "text"}
       - {label: "Body Content", name: "body", widget: "markdown"}
