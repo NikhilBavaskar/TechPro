@@ -2,6 +2,7 @@ backend:
   name: github
   repo: NikhilBavaskar/TechPro
   branch: main
+  base_url: https://sveltia-cms-auth.vercel.app
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
@@ -9,7 +10,7 @@ public_folder: "/assets/uploads"
 collections:
   - name: "blog"
     label: "Knowledge Hub Tutorials"
-    folder: "content/blog"
+    folder: "blog"
     create: true
     slug: "{{slug}}"
     fields:
