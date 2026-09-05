@@ -1,22 +1,3 @@
 {
-  "posts": [
-    {
-      "id": "cctv-recording-audit",
-      "tag": "Surveillance",
-      "date": "Sep 05, 2026",
-      "readTime": "4 min read",
-      "title": "How to Verify If Your Office CCTV Is Actually Recording (30-Day Audit)",
-      "excerpt": "Over 35% of commercial establishments in Akola discover their DVR hard drive failed only after an incident occurs. Here is how to audit storage sectors.",
-      "content": "Over 35% of commercial establishments, diagnostic clinics, and retail stores in Akola only discover their DVR hard drive failed when police or insurance auditors request footage after an incident.\n\n### Step 1: Check HDD Health\nRight-click on your DVR screen and open **Main Menu > Storage > HDD Management**.\n- If it reports **Normal / Connected**, the drive is functioning properly.\n- If it reports **Error**, **Offline**, or **Unformatted**, the internal actuator or disk platter has failed and needs immediate replacement.\n\n### Step 2: 28-Day Playback Verification\nOpen the Playback window, pick Camera 01, and skip back 28 days on the calendar. If you see solid recording bars, your system complies with regulatory standards. If blank, your storage retention cycle is broken."
-    },
-    {
-      "id": "tally-pc-lag-fix",
-      "tag": "Hardware AMC",
-      "date": "Sep 03, 2026",
-      "readTime": "3 min read",
-      "title": "Why Accounting & Tally Systems Lag During Month-End (And The Fix)",
-      "excerpt": "Don't replace your whole office computer. Upgrading an old mechanical hard disk to an NVMe Solid State Drive fixes 90% of office bottlenecks for under ₹2,500.",
-      "content": "Commercial accounting systems in Akola often crawl to a halt at month-end closing not because of CPU speed, but because of hard disk bottlenecks.\n\n### Why Traditional HDDs Choke Tally\nMechanical 5400 RPM hard drives can only execute roughly 80 to 100 Input/Output operations per second (IOPS). When Tally Prime indexes multiple client ledgers simultaneously, the read queue spikes to 100% disk usage.\n\n### The Cost-Effective Fix\nInstead of buying an entirely new workstation, swap the primary drive for a 512GB NVMe PCIe M.2 SSD. This boosts IOPS to over 250,000, reducing invoice load times from 12 seconds to under 1 second. TechPro handles on-site bit-by-bit cloning without risking accounting ledger data."
-    }
-  ]
+  "posts": []
 }
