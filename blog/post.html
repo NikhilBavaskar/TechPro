@@ -1,94 +1,22 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="pageTitle">Knowledge Hub Guide | TechPro Akola</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-</head>
-<body class="bg-[#070A11] text-slate-300 font-['Plus_Jakarta_Sans',sans-serif] antialiased">
-
-  <header class="border-b border-slate-800 bg-[#070A11]/90 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
-      <a href="../" class="text-white font-extrabold text-lg flex items-center gap-2">
-        <span class="text-cyan-400">TechPro</span> Knowledge Hub
-      </a>
-      <a href="../#calculator" class="text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-2 rounded-lg">
-        Book On-Site Audit
-      </a>
-    </div>
-  </header>
-
-  <main class="max-w-3xl mx-auto px-4 py-12">
-    <div class="flex items-center gap-3 text-xs font-mono text-cyan-400 mb-4">
-      <span id="postTag" class="uppercase font-bold tracking-wider">Guide</span>
-      <span>•</span>
-      <span id="postDate" class="text-slate-500"></span>
-      <span>•</span>
-      <span id="postReadTime" class="text-slate-500"></span>
-    </div>
-
-    <h1 id="postHeading" class="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6">
-      Loading Guide...
-    </h1>
-
-    <div id="postContent" class="text-slate-300 space-y-4 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-      Fetching content from TechPro repository...
-    </div>
-
-    <div class="mt-12 p-6 rounded-2xl bg-[#0E1424] border border-slate-800 text-center">
-      <h3 class="text-lg font-bold text-white mb-2">Need On-Site Hardware Service in Akola?</h3>
-      <p class="text-xs text-slate-400 max-w-md mx-auto mb-6">TechPro technicians arrive within 2 to 4 hours across Civil Lines, Station Road, and MIDC.</p>
-      <a href="https://wa.me/917972104370?text=Hi%20Nikhil,%20I%20read%20your%20hardware%20guide%20and%20need%20on-site%20support." 
-         class="inline-block px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs tracking-wide">
-        Contact on WhatsApp &rarr;
-      </a>
-    </div>
-  </main>
-
-  <script>
-    async function loadFullPost() {
-      const params = new URLSearchParams(window.location.search);
-      const postSlug = params.get('post');
-
-      // Default static content if no post query is specified
-      if (!postSlug || postSlug === 'cctv-recording-audit') {
-        document.getElementById('pageTitle').innerText = "How to Check If Your Office CCTV Is Actually Recording | TechPro Akola";
-        document.getElementById('postTag').innerText = "Surveillance";
-        document.getElementById('postDate').innerText = "Sep 05, 2026";
-        document.getElementById('postReadTime').innerText = "4 min read";
-        document.getElementById('postHeading').innerText = "How to Verify If Your Office CCTV Is Actually Recording (30-Day Storage Audit)";
-        document.getElementById('postContent').innerHTML = `
-          Over 35% of commercial establishments in Akola discover their DVR hard drive failed only after an incident occurs.<br><br>
-          <strong>Step 1: Check HDD Health</strong><br>
-          Right-click on your DVR screen and open Main Menu > Storage > HDD. If it reports 'Error' or 'Unformatted', the drive has seized.<br><br>
-          <strong>Step 2: 28-Day Playback Verification</strong><br>
-          Jump backward on your calendar 28 days. If playback is blank, your storage retention cycle is failing.
-        `;
-        return;
-      }
-
-      // Fetch dynamic JSON from content/posts/
-      try {
-        const res = await fetch(`../content/posts/${postSlug}.json`);
-        if (!res.ok) throw new Error('Post not found');
-        const data = await res.json();
-
-        document.getElementById('pageTitle').innerText = `${data.title} | TechPro Akola`;
-        document.getElementById('postTag').innerText = data.tag || 'Guide';
-        document.getElementById('postDate').innerText = data.date || '';
-        document.getElementById('postReadTime').innerText = data.readTime || '3 min read';
-        document.getElementById('postHeading').innerText = data.title;
-        document.getElementById('postContent').innerText = data.body || data.excerpt;
-      } catch (err) {
-        document.getElementById('postHeading').innerText = "Article Not Found";
-        document.getElementById('postContent').innerHTML = "This guide has either been moved or removed. <a href='../' class='text-cyan-400 underline'>Return to homepage</a>.";
-      }
+{
+  "posts": [
+    {
+      "id": "cctv-recording-audit",
+      "tag": "Surveillance",
+      "date": "Sep 05, 2026",
+      "readTime": "4 min read",
+      "title": "How to Verify If Your Office CCTV Is Actually Recording (30-Day Audit)",
+      "excerpt": "Over 35% of commercial establishments in Akola discover their DVR hard drive failed only after an incident occurs. Here is how to audit storage sectors.",
+      "content": "Over 35% of commercial establishments, diagnostic clinics, and retail stores in Akola only discover their DVR hard drive failed when police or insurance auditors request footage after an incident.\n\n### Step 1: Check HDD Health\nRight-click on your DVR screen and open **Main Menu > Storage > HDD Management**.\n- If it reports **Normal / Connected**, the drive is functioning properly.\n- If it reports **Error**, **Offline**, or **Unformatted**, the internal actuator or disk platter has failed and needs immediate replacement.\n\n### Step 2: 28-Day Playback Verification\nOpen the Playback window, pick Camera 01, and skip back 28 days on the calendar. If you see solid recording bars, your system complies with regulatory standards. If blank, your storage retention cycle is broken."
+    },
+    {
+      "id": "tally-pc-lag-fix",
+      "tag": "Hardware AMC",
+      "date": "Sep 03, 2026",
+      "readTime": "3 min read",
+      "title": "Why Accounting & Tally Systems Lag During Month-End (And The Fix)",
+      "excerpt": "Don't replace your whole office computer. Upgrading an old mechanical hard disk to an NVMe Solid State Drive fixes 90% of office bottlenecks for under ₹2,500.",
+      "content": "Commercial accounting systems in Akola often crawl to a halt at month-end closing not because of CPU speed, but because of hard disk bottlenecks.\n\n### Why Traditional HDDs Choke Tally\nMechanical 5400 RPM hard drives can only execute roughly 80 to 100 Input/Output operations per second (IOPS). When Tally Prime indexes multiple client ledgers simultaneously, the read queue spikes to 100% disk usage.\n\n### The Cost-Effective Fix\nInstead of buying an entirely new workstation, swap the primary drive for a 512GB NVMe PCIe M.2 SSD. This boosts IOPS to over 250,000, reducing invoice load times from 12 seconds to under 1 second. TechPro handles on-site bit-by-bit cloning without risking accounting ledger data."
     }
-
-    window.addEventListener('DOMContentLoaded', loadFullPost);
-  </script>
-</body>
-</html>
+  ]
+}
