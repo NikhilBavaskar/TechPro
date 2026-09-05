@@ -591,7 +591,7 @@
         allProducts = await res.json();
         renderProducts(allProducts);
       } catch (e) {
-        // Retains static SEO fallback markup on preview
+        // Retains static SEO fallback markup on local preview
       }
     }
 
@@ -639,15 +639,31 @@
       }
     }
 
-    // Knowledge Hub fetch & render
+    // Dynamic Sveltia CMS Post Loader (GitHub API)
     async function loadPosts() {
+      const repo = 'NikhilBavaskar/TechPro-Secand';
+      const folder = 'content/posts';
+
       try {
-        const res = await fetch('posts.json');
-        if (!res.ok) return;
-        allPosts = await res.json();
+        const response = await fetch(`https://api.github.com/repos/${repo}/contents/${folder}`);
+        if (!response.ok) return;
+
+        const files = await response.json();
+        const jsonFiles = files.filter(file => file.name.endsWith('.json'));
+
+        if (!jsonFiles.length) return;
+
+        const postPromises = jsonFiles.map(async (file) => {
+          const postRes = await fetch(file.download_url);
+          const data = await postRes.json();
+          return { ...data, slug: file.name.replace('.json', '') };
+        });
+
+        allPosts = await Promise.all(postPromises);
+        allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
         renderPosts(allPosts);
-      } catch (e) {
-        // Retains static SEO fallback markup on preview
+      } catch (error) {
+        console.warn('Using static fallback tutorials:', error);
       }
     }
 
@@ -661,16 +677,16 @@
         <article class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-deepCard flex flex-col justify-between hover:border-cobalt transition-all">
           <div>
             <div class="flex items-center gap-3 text-xs font-mono text-slate-500 mb-3">
-              <span class="text-cobalt font-bold uppercase">${post.tag}</span>
+              <span class="text-cobalt font-bold uppercase">${post.tag || 'Guide'}</span>
               <span>•</span>
-              <span>${post.date}</span>
+              <span>${post.date || ''}</span>
               <span>•</span>
-              <span>${post.readTime}</span>
+              <span>${post.readTime || '4 min read'}</span>
             </div>
             <h3 class="text-xl font-bold text-slate-900 mb-3">${post.title}</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">${post.excerpt}</p>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">${post.excerpt || ''}</p>
           </div>
-          <a href="${post.url || 'blog/cctv-recording-audit.html'}" class="text-xs font-bold text-cobalt flex items-center gap-1 hover:underline">
+          <a href="blog/cctv-recording-audit.html?post=${post.slug || ''}" class="text-xs font-bold text-cobalt flex items-center gap-1 hover:underline">
             Read Full Troubleshooting Guide &rarr;
           </a>
         </article>
@@ -680,9 +696,9 @@
     function searchPosts() {
       const query = document.getElementById('blogSearch').value.toLowerCase();
       const filtered = allPosts.filter(p => 
-        p.title.toLowerCase().includes(query) || 
-        p.excerpt.toLowerCase().includes(query) || 
-        p.tag.toLowerCase().includes(query)
+        (p.title && p.title.toLowerCase().includes(query)) || 
+        (p.excerpt && p.excerpt.toLowerCase().includes(query)) || 
+        (p.tag && p.tag.toLowerCase().includes(query))
       );
       renderPosts(filtered);
     }
