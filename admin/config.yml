@@ -7,17 +7,40 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "blog"
-    label: "Knowledge Hub Tutorials"
-    folder: "content/posts"
-    create: true
-    format: "json"
-    extension: "json"
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false}
-      - {label: "Read Time", name: "readTime", widget: "string", default: "4 min read"}
-      - {label: "Tag", name: "tag", widget: "select", options: ["Surveillance", "Hardware AMC", "Networking", "Workstation"]}
-      - {label: "Summary", name: "excerpt", widget: "text"}
-      - {label: "Body Content", name: "body", widget: "markdown"}
+  - name: "posts_collection"
+    label: "Knowledge Hub Guides"
+    files:
+      - file: "posts.json"
+        name: "posts"
+        label: "All Field Guides"
+        fields:
+          - label: "Articles"
+            name: "posts"
+            widget: "list"
+            fields:
+              - {label: "Unique Slug ID (e.g. cctv-storage-guide)", name: "id", widget: "string"}
+              - {label: "Article Title", name: "title", widget: "string"}
+              - {label: "Category Tag", name: "tag", widget: "select", options: ["Surveillance", "Hardware AMC", "Networking", "Workstation"]}
+              - {label: "Published Date", name: "date", widget: "string"}
+              - {label: "Read Duration", name: "readTime", widget: "string", default: "4 min read"}
+              - {label: "Summary / Card Excerpt", name: "excerpt", widget: "text"}
+              - {label: "Full Guide Body", name: "content", widget: "markdown"}
+
+  - name: "products_collection"
+    label: "Hardware Catalog"
+    files:
+      - file: "products.json"
+        name: "products"
+        label: "All Hardware Bundles"
+        fields:
+          - label: "Hardware Items"
+            name: "products"
+            widget: "list"
+            fields:
+              - {label: "Product ID", name: "id", widget: "string"}
+              - {label: "Category", name: "category", widget: "select", options: ["Surveillance", "Workstation", "Upgrades", "Networking"]}
+              - {label: "Status Badge", name: "badge", widget: "string"}
+              - {label: "Product Name", name: "title", widget: "string"}
+              - {label: "Technical Specs", name: "specs", widget: "text"}
+              - {label: "Price Display (e.g. ₹14,800 + GST)", name: "price", widget: "string"}
+              - {label: "Warranty Period", name: "warranty", widget: "string"}
