@@ -1,0 +1,20 @@
+[
+  {
+    "id": "cctv-storage-audit-guide",
+    "url": "blog/cctv-recording-audit.html",
+    "tag": "Surveillance",
+    "readTime": "4 min read",
+    "date": "Sep 05, 2026",
+    "title": "How to Verify If Your Office CCTV Is Actually Recording (30-Day Audit)",
+    "excerpt": "Over 35% of commercial establishments in Akola discover their DVR hard drive failed only after an incident occurs. Here is how to audit storage sectors."
+  },
+  {
+    "id": "tally-pc-lag-fix",
+    "url": "blog/cctv-recording-audit.html",
+    "tag": "Hardware AMC",
+    "readTime": "3 min read",
+    "date": "Sep 03, 2026",
+    "title": "Why Accounting & Tally Systems Lag During Month-End (And The Fix)",
+    "excerpt": "Don't replace your whole office computer. Upgrading an old mechanical hard disk to an NVMe Solid State Drive fixes 90% of office bottlenecks for under ₹2,500."
+  }
+]

@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: NikhilBavaskar/TechPro
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "blog"
+    label: "Knowledge Hub Tutorials"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Tag", name: "tag", widget: "select", options: ["Surveillance", "Hardware AMC", "Networking", "Workstation"]}
+      - {label: "Summary", name: "excerpt", widget: "text"}
+      - {label: "Body Content", name: "body", widget: "markdown"}
