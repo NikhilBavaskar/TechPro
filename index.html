@@ -69,11 +69,11 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Vibrant Light Tech Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Cdefs%3E%3ClinearGradient id='tGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%238B5CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='pGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2306B6D4'/%3E%3Cstop offset='100%25' stop-color='%2310B981'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='70' height='70' rx='20' fill='%23ffffff' stroke='%2393C5FD' stroke-width='3'/%3E%3Cpath d='M16 23h36M26 23v26' stroke='url(%23tGrad)' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M42 23v26M42 23c13 0 13 14 0 14' stroke='url(%23pGrad)' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='56' cy='15' r='4' fill='%23F59E0B'/%3E%3C/svg%3E">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Cdefs%3E%3ClinearGradient id='tGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231D4ED8'/%3E%3Cstop offset='100%25' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3ClinearGradient id='pGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230284C7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='70' height='70' rx='20' fill='%23ffffff' stroke='%2393C5FD' stroke-width='3'/%3E%3Cpath d='M14 22h32M24 22v26' stroke='url(%23tGrad)' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M38 18v34M38 18h12c6 0 10 4 10 9s-4 9-10 9H38' stroke='url(%23pGrad)' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='54' cy='12' r='4' fill='%2300F2FE'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -164,32 +164,32 @@
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100 shadow-[0_4px_25px_-5px_rgba(59,130,246,0.12)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Identity with Dedicated Logo Container -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div id="navLogoContainer" class="h-14 flex items-center justify-start transition-transform group-hover:scale-105">
-          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-500 via-indigo-500 to-cyan-400 p-[2px] shadow-sm flex items-center justify-center">
+      <!-- Brand Identity (Seamless Transparent Container) -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div id="navLogoContainer" class="h-12 w-auto flex items-center justify-start transition-transform duration-300 group-hover:scale-105">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-500 via-indigo-500 to-cyan-400 p-[2px] shadow-sm flex items-center justify-center">
             <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-2">
               <svg class="w-full h-full" viewBox="0 0 70 70" fill="none">
                 <defs>
                   <linearGradient id="navTGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#2563EB" />
-                    <stop offset="100%" stop-color="#7C3AED" />
+                    <stop offset="0%" stop-color="#1D4ED8" />
+                    <stop offset="100%" stop-color="#2563EB" />
                   </linearGradient>
                   <linearGradient id="navPGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#06B6D4" />
-                    <stop offset="100%" stop-color="#10B981" />
+                    <stop offset="0%" stop-color="#00F2FE" />
+                    <stop offset="100%" stop-color="#0284C7" />
                   </linearGradient>
                 </defs>
-                <path d="M16 23h36M26 23v26" stroke="url(#navTGrad)" stroke-width="6.5" stroke-linecap="round"/>
-                <path d="M42 23v26M42 23c13 0 13 14 0 14" stroke="url(#navPGrad)" stroke-width="6.5" stroke-linecap="round"/>
-                <circle cx="56" cy="15" r="4" fill="#F59E0B"/>
+                <path d="M14 22h32M24 22v26" stroke="url(#navTGrad)" stroke-width="6.5" stroke-linecap="round"/>
+                <path d="M38 18v34M38 18h12c6 0 10 4 10 9s-4 9-10 9H38" stroke="url(#navPGrad)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="54" cy="12" r="4" fill="#00F2FE"/>
               </svg>
             </div>
           </div>
         </div>
         <div id="brandTextGroup">
-          <span class="text-2xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600" id="navBrandName">TechPro</span>
-          <span class="block text-[10px] font-mono font-bold tracking-[0.28em] text-cyan-600 uppercase">SOLUTIONS</span>
+          <span class="text-2xl font-black tracking-tight text-slate-900" id="navBrandName">Tech<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500">Pro</span></span>
+          <span class="block text-[9px] font-mono font-extrabold tracking-[0.28em] text-cyan-600 uppercase">SOLUTIONS</span>
         </div>
       </a>
 
@@ -571,18 +571,18 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
       
       <div class="md:col-span-2">
-        <div class="flex items-center gap-3 mb-4">
-          <div id="footerLogoContainer" class="h-12 flex items-center justify-start">
-            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-400 p-[1.5px] shadow-sm flex items-center justify-center">
+        <div class="flex items-center gap-3.5 mb-4">
+          <div id="footerLogoContainer" class="h-10 w-auto flex items-center justify-start">
+            <div class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-400 p-[1.5px] shadow-sm flex items-center justify-center">
               <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1.5">
                 <svg class="w-full h-full" viewBox="0 0 70 70" fill="none">
-                  <path d="M16 23h36M26 23v26" stroke="#2563EB" stroke-width="7" stroke-linecap="round"/>
-                  <path d="M42 23v26M42 23c13 0 13 14 0 14" stroke="#06B6D4" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M14 22h32M24 22v26" stroke="#1D4ED8" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M38 18v34M38 18h12c6 0 10 4 10 9s-4 9-10 9H38" stroke="#00F2FE" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
             </div>
           </div>
-          <span class="text-2xl font-extrabold tracking-tight text-slate-900" id="footerLegalName">TechPro Solutions</span>
+          <span class="text-2xl font-black tracking-tight text-slate-900" id="footerLegalName">TechPro Solutions</span>
         </div>
         <p id="footerAddress" class="text-xs text-slate-500 leading-relaxed max-w-sm mb-6 font-medium">
           Civil Lines / Station Road, Akola, Maharashtra 444001. High-availability IT hardware servicing and web architecture.
@@ -702,7 +702,7 @@
         if (metaTag) metaTag.setAttribute('content', c.metaDescription);
       }
       if (c.companyName) {
-        document.getElementById('navBrandName').innerText = c.companyName;
+        document.getElementById('navBrandName').innerHTML = c.companyName;
         document.getElementById('footerLegalName').innerText = c.companyName;
       }
       if (c.tagline) document.getElementById('heroTagline').innerText = c.tagline;
@@ -720,7 +720,7 @@
         document.getElementById('floatingWhatsAppBtn').href = `https://wa.me/${c.whatsapp}`;
       }
 
-      // High-Impact Responsive Logo Loader (Fixes contrast on light background and handles wide banners)
+      // Seamless Transparent Logo Loader
       if (c.logo && c.logo.trim() !== '') {
         const navLogo = document.getElementById('navLogoContainer');
         const footerLogo = document.getElementById('footerLogoContainer');
@@ -733,29 +733,29 @@
           const isWideBanner = this.naturalWidth > (this.naturalHeight * 1.5);
           
           if (isWideBanner) {
-            // Prominent dark tech capsule for wide banners containing white typography
+            // Clean inline display for wide logo (pure transparent fit, no black box)
             if (navLogo) {
-              navLogo.className = "h-14 w-auto flex items-center justify-center bg-[#070A13] px-3.5 py-1.5 rounded-2xl border border-slate-800 shadow-md transition-transform group-hover:scale-105";
+              navLogo.className = "h-12 w-auto flex items-center justify-start transition-transform group-hover:scale-105";
               navLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-10 w-auto object-contain" />`;
             }
             if (brandText) brandText.style.display = 'none';
 
             if (footerLogo) {
-              footerLogo.className = "h-14 w-auto flex items-center justify-center bg-[#070A13] px-3.5 py-1.5 rounded-2xl border border-slate-800 shadow-sm";
+              footerLogo.className = "h-12 w-auto flex items-center justify-start";
               footerLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-10 w-auto object-contain" />`;
             }
             if (footerText) footerText.style.display = 'none';
           } else {
-            // Square/App Icon sizing
+            // Square App Icon sizing
             if (navLogo) {
-              navLogo.className = "w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105";
-              navLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="w-full h-full object-contain rounded-2xl shadow-sm" />`;
+              navLogo.className = "w-11 h-11 flex items-center justify-center transition-transform group-hover:scale-105";
+              navLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="w-full h-full object-contain rounded-xl" />`;
             }
             if (brandText) brandText.style.display = 'block';
 
             if (footerLogo) {
               footerLogo.className = "w-10 h-10 flex items-center justify-center";
-              footerLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="w-full h-full object-contain rounded-xl shadow-sm" />`;
+              footerLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="w-full h-full object-contain rounded-xl" />`;
             }
             if (footerText) footerText.style.display = 'block';
           }
