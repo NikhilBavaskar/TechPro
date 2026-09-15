@@ -160,15 +160,15 @@
     </div>
   </div>
 
-  <!-- FROSTED LIGHT HEADER -->
+  <!-- FROSTED LIGHT HEADER WITH PROMINENT LOGO -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100 shadow-[0_4px_25px_-5px_rgba(59,130,246,0.12)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Logo Identity with Responsive Container -->
       <a href="#" class="flex items-center gap-3 group">
-        <div id="navLogoContainer" class="h-10 flex items-center justify-center transition-transform group-hover:scale-105">
-          <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-500 via-indigo-500 to-cyan-400 p-[2px] shadow-sm flex items-center justify-center">
-            <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1.5">
+        <div id="navLogoContainer" class="h-14 flex items-center justify-start transition-transform group-hover:scale-105">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-500 via-indigo-500 to-cyan-400 p-[2px] shadow-sm flex items-center justify-center">
+            <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-2">
               <svg class="w-full h-full" viewBox="0 0 70 70" fill="none">
                 <defs>
                   <linearGradient id="navTGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -188,8 +188,8 @@
           </div>
         </div>
         <div id="brandTextGroup">
-          <span class="text-xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600" id="navBrandName">TechPro</span>
-          <span class="block text-[9px] font-mono font-bold tracking-[0.28em] text-cyan-600 uppercase">SOLUTIONS</span>
+          <span class="text-2xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600" id="navBrandName">TechPro</span>
+          <span class="block text-[10px] font-mono font-bold tracking-[0.28em] text-cyan-600 uppercase">SOLUTIONS</span>
         </div>
       </a>
 
@@ -573,9 +573,9 @@
       
       <div class="md:col-span-2">
         <div class="flex items-center gap-3 mb-4">
-          <div id="footerLogoContainer" class="h-9 flex items-center justify-center">
-            <div class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-400 p-[1.5px] shadow-sm flex items-center justify-center">
-              <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1">
+          <div id="footerLogoContainer" class="h-12 flex items-center justify-start">
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-400 p-[1.5px] shadow-sm flex items-center justify-center">
+              <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1.5">
                 <svg class="w-full h-full" viewBox="0 0 70 70" fill="none">
                   <path d="M16 23h36M26 23v26" stroke="#2563EB" stroke-width="7" stroke-linecap="round"/>
                   <path d="M42 23v26M42 23c13 0 13 14 0 14" stroke="#06B6D4" stroke-width="7" stroke-linecap="round"/>
@@ -583,7 +583,7 @@
               </div>
             </div>
           </div>
-          <span class="text-xl font-extrabold tracking-tight text-slate-900" id="footerLegalName">TechPro Solutions</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-900" id="footerLegalName">TechPro Solutions</span>
         </div>
         <p id="footerAddress" class="text-xs text-slate-500 leading-relaxed max-w-sm mb-6 font-medium">
           Civil Lines / Station Road, Akola, Maharashtra 444001. High-availability IT hardware servicing and web architecture.
@@ -721,38 +721,43 @@
         document.getElementById('floatingWhatsAppBtn').href = `https://wa.me/${c.whatsapp}`;
       }
 
-      // Responsive Smart Logo Loader: Handles wide banners and square icons cleanly
+      // High-Impact Responsive Logo Loader (Fixes squished/tiny logo issue)
       if (c.logo && c.logo.trim() !== '') {
         const navLogo = document.getElementById('navLogoContainer');
         const footerLogo = document.getElementById('footerLogoContainer');
         const brandText = document.getElementById('brandTextGroup');
+        const footerText = document.getElementById('footerLegalName');
         
         const testImg = new Image();
         testImg.src = c.logo;
         testImg.onload = function() {
           const isWideBanner = this.naturalWidth > (this.naturalHeight * 1.5);
           if (isWideBanner) {
-            // Wide banner mode: expand container and hide duplicate HTML text
+            // Prominent banner sizing
             if (navLogo) {
-              navLogo.className = "h-11 w-auto flex items-center justify-center transition-transform group-hover:scale-105";
-              navLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-10 w-auto object-contain" />`;
+              navLogo.className = "h-14 w-auto flex items-center justify-start transition-transform group-hover:scale-105";
+              navLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-12 max-h-12 w-auto object-contain py-0.5" />`;
             }
             if (brandText) brandText.style.display = 'none';
+
             if (footerLogo) {
-              footerLogo.className = "h-10 w-auto flex items-center justify-center";
-              footerLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-9 w-auto object-contain" />`;
+              footerLogo.className = "h-12 w-auto flex items-center justify-start";
+              footerLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-11 max-h-11 w-auto object-contain" />`;
             }
+            if (footerText) footerText.style.display = 'none';
           } else {
-            // Square icon mode: render neatly beside HTML brand text
+            // Square/App Icon sizing
             if (navLogo) {
-              navLogo.className = "w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-105";
+              navLogo.className = "w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105";
               navLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="w-full h-full object-contain rounded-2xl shadow-sm" />`;
             }
             if (brandText) brandText.style.display = 'block';
+
             if (footerLogo) {
-              footerLogo.className = "w-9 h-9 flex items-center justify-center";
+              footerLogo.className = "w-10 h-10 flex items-center justify-center";
               footerLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="w-full h-full object-contain rounded-xl shadow-sm" />`;
             }
+            if (footerText) footerText.style.display = 'block';
           }
         };
       }
