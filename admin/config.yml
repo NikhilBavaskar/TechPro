@@ -7,40 +7,113 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "posts_collection"
-    label: "Knowledge Hub Guides"
+  # 1. COMPANY CONFIG & BRAND IDENTITY
+  - name: "company_settings"
+    label: "Company Settings & Identity"
     files:
-      - file: "posts.json"
-        name: "posts"
-        label: "All Field Guides"
+      - file: "site.json"
+        name: "general_settings"
+        label: "Profile, Vision & Mission"
         fields:
-          - label: "Articles"
-            name: "posts"
+          - {label: "Official Logo Image", name: "logo", widget: "image", required: false}
+          - {label: "Company Name", name: "companyName", widget: "string"}
+          - {label: "Tagline", name: "tagline", widget: "string"}
+  # 2. OPERATIONS PORTFOLIO (SERVICES)
+  - name: "services_collection"
+    label: "Operations Portfolio (Services)"
+    files:
+      - file: "services.json"
+        name: "services_list"
+        label: "All Services"
+        fields:
+          - label: "Services"
+            name: "services"
             widget: "list"
             fields:
-              - {label: "Unique Slug ID (e.g. cctv-storage-guide)", name: "id", widget: "string"}
-              - {label: "Article Title", name: "title", widget: "string"}
-              - {label: "Category Tag", name: "tag", widget: "select", options: ["Surveillance", "Hardware AMC", "Networking", "Workstation"]}
-              - {label: "Published Date", name: "date", widget: "string"}
-              - {label: "Read Duration", name: "readTime", widget: "string", default: "4 min read"}
-              - {label: "Summary / Card Excerpt", name: "excerpt", widget: "text"}
-              - {label: "Full Guide Body", name: "content", widget: "markdown"}
+              - {label: "Service ID", name: "id", widget: "string"}
+              - {label: "Index Number (e.g. 01)", name: "number", widget: "string"}
+              - {label: "Service Name", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Key Features", name: "features", widget: "list", field: {label: "Feature Point", name: "point", widget: "string"}}
 
+  # 3. READY-TO-DEPLOY BUNDLES & PACKAGES (PRODUCTS)
   - name: "products_collection"
-    label: "Hardware Catalog"
+    label: "Hardware Bundles & Packages"
     files:
       - file: "products.json"
-        name: "products"
-        label: "All Hardware Bundles"
+        name: "products_list"
+        label: "All Packages"
         fields:
-          - label: "Hardware Items"
+          - label: "Packages"
             name: "products"
             widget: "list"
             fields:
-              - {label: "Product ID", name: "id", widget: "string"}
-              - {label: "Category", name: "category", widget: "select", options: ["Surveillance", "Workstation", "Upgrades", "Networking"]}
-              - {label: "Status Badge", name: "badge", widget: "string"}
-              - {label: "Product Name", name: "title", widget: "string"}
-              - {label: "Technical Specs", name: "specs", widget: "text"}
-              - {label: "Price Display (e.g. ₹14,800 + GST)", name: "price", widget: "string"}
-              - {label: "Warranty Period", name: "warranty", widget: "string"}
+              - {label: "Unique ID", name: "id", widget: "string"}
+              - {label: "Category", name: "category", widget: "select", options: ["Websites", "Workstation", "Upgrades", "Surveillance", "Networking"]}
+              - {label: "Badge Tag", name: "badge", widget: "string"}
+              - {label: "Product Image", name: "image", widget: "image", required: false}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Specifications / Deliverables", name: "specs", widget: "text"}
+              - {label: "Price Display (e.g. ₹6,499 one-time)", name: "price", widget: "string"}
+              - {label: "Warranty / Support Period", name: "warranty", widget: "string"}
+
+  # 4. CUSTOM WORKSTATION BUILDER (PARTS & PRICES)
+  - name: "pc_builder_collection"
+    label: "Workstation Builder Parts & Prices"
+    files:
+      - file: "pc-parts.json"
+        name: "pc_components"
+        label: "Components Catalog"
+        fields:
+          - label: "Processors (CPUs)"
+            name: "cpus"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Price (Numeric)", name: "price", widget: "number"}
+              - {label: "Default Selected?", name: "selected", widget: "boolean", default: false}
+
+          - label: "Memory (RAM)"
+            name: "rams"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Price (Numeric)", name: "price", widget: "number"}
+              - {label: "Default Selected?", name: "selected", widget: "boolean", default: false}
+
+          - label: "Storage (SSDs / HDDs)"
+            name: "ssds"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Price (Numeric)", name: "price", widget: "number"}
+              - {label: "Default Selected?", name: "selected", widget: "boolean", default: false}
+
+          - label: "Motherboards & Power Units"
+            name: "psus"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Price (Numeric)", name: "price", widget: "number"}
+              - {label: "Default Selected?", name: "selected", widget: "boolean", default: false}
+
+  # 5. KNOWLEDGE HUB GUIDES (BLOG)
+  - name: "posts_collection"
+    label: "Field Guides & Tech Audits"
+    files:
+      - file: "posts.json"
+        name: "posts_list"
+        label: "All Guides"
+        fields:
+          - label: "Guides"
+            name: "posts"
+            widget: "list"
+            fields:
+              - {label: "Slug / ID", name: "id", widget: "string"}
+              - {label: "Featured Image", name: "image", widget: "image", required: false}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Category Tag", name: "tag", widget: "select", options: ["Hardware AMC", "Surveillance", "Workstation", "Web Dev", "Networking"]}
+              - {label: "Published Date", name: "date", widget: "string"}
+              - {label: "Read Time", name: "readTime", widget: "string", default: "4 min read"}
+              - {label: "Short Excerpt", name: "excerpt", widget: "text"}
+              - {label: "Full Guide Body", name: "content", widget: "markdown"}

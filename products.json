@@ -1,3 +1,34 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "starter-web-setup",
+      "category": "Websites",
+      "badge": "Best Seller",
+      "image": "",
+      "title": "Turnkey Commercial Website & Local SEO Package",
+      "specs": "Custom high-speed single/multi-page business portfolio, WhatsApp direct lead capture, Google Business profile indexing, free lifetime SSL, and no recurring hosting charges.",
+      "price": "₹6,499 one-time",
+      "warranty": "1 Year Technical Maintenance & Support"
+    },
+    {
+      "id": "tally-speed-upgrade",
+      "category": "Upgrades",
+      "badge": "Instant Fix",
+      "image": "",
+      "title": "Legacy PC Revamp: 512GB NVMe SSD + Clean Clone",
+      "specs": "On-site cloning of existing Windows & Tally accounting ledgers, dust cleaning, thermal paste refresh, and OS de-bloat.",
+      "price": "₹2,750 all-inclusive",
+      "warranty": "3 Years Direct Brand Warranty"
+    },
+    {
+      "id": "custom-office-rig",
+      "category": "Workstation",
+      "badge": "Custom Build",
+      "image": "",
+      "title": "Commercial Intel Core i5 Multi-Tasking Office Rig",
+      "specs": "Intel Core i5 (12th Gen), 16GB DDR4 RAM, 512GB Gen4 NVMe M.2 SSD, 450W 80+ Certified PSU, Antivirus, Genuine Windows 11 Pro.",
+      "price": "₹28,500 + GST",
+      "warranty": "3 Years On-Site Component Warranty"
+    }
+  ]
 }

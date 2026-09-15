@@ -1,0 +1,22 @@
+{
+  "cpus": [
+    { "name": "Intel Core i3 12th Gen", "price": 8500, "selected": false },
+    { "name": "Intel Core i5 12th/13th Gen", "price": 13500, "selected": true },
+    { "name": "Intel Core i7 13th Gen", "price": 26000, "selected": false },
+    { "name": "AMD Ryzen 5 5600X", "price": 12500, "selected": false }
+  ],
+  "rams": [
+    { "name": "8GB DDR4 3200MHz", "price": 1800, "selected": false },
+    { "name": "16GB DDR4 (2x8GB Dual Channel)", "price": 3400, "selected": true },
+    { "name": "32GB DDR4 High-Capacity", "price": 6800, "selected": false }
+  ],
+  "ssds": [
+    { "name": "512GB Gen4 NVMe M.2 SSD", "price": 2800, "selected": true },
+    { "name": "1TB Gen4 NVMe M.2 SSD", "price": 5200, "selected": false },
+    { "name": "512GB SSD + 1TB Secondary HDD", "price": 4200, "selected": false }
+  ],
+  "psus": [
+    { "name": "Commercial Board + 450W 80+ PSU", "price": 8500, "selected": true },
+    { "name": "ATX Pro Board + 650W Bronze PSU", "price": 12500, "selected": false }
+  ]
+}

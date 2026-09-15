@@ -1,0 +1,32 @@
+{
+  "services": [
+    {
+      "id": "cctv",
+      "number": "01",
+      "title": "Commercial CCTV Surveillance",
+      "description": "4 to 32-channel IP & ColorVu camera arrays (CP Plus / Hikvision). Comprehensive setup featuring verified 30-day storage retention audits for local compliance.",
+      "features": ["Mobile Live-View Integration", "Night Vision Perimeter Arrays", "Banking Storage Retention Audit"]
+    },
+    {
+      "id": "amc",
+      "number": "02",
+      "title": "Non-Comprehensive AMC",
+      "description": "Transparent, labor-only IT maintenance retainers. Eliminates bloated parts markups while providing scheduled quarterly preventive deep cleans.",
+      "features": ["Deep Blower Cleaning & Thermal Repaste", "OS Cleanup & Ledger Optimization", "Guaranteed 2-4 Hr Local SLA"]
+    },
+    {
+      "id": "custom-pc",
+      "number": "03",
+      "title": "Custom Workstations & Upgrades",
+      "description": "Tailored Intel/Ryzen desktop builds for Tally multi-users, AutoCAD, clinics, and billing desks with genuine OS and bit-by-bit SSD data cloning.",
+      "features": ["3-Year Direct OEM Component Warranty", "NVMe SSD & High-Speed RAM Upgrades", "Tally & Accounting Zero-Loss Migration"]
+    },
+    {
+      "id": "web-dev",
+      "number": "04",
+      "title": "High-Speed Business Websites & Portals",
+      "description": "Turnkey, ultra-fast commercial websites hosted on global cloud infrastructure. Comes complete with Sveltia CMS, WhatsApp lead generation, and Google Maps local SEO.",
+      "features": ["Zero Monthly Server Hosting Fees", "Integrated Client Self-Admin Panel", "Google Local Business & Maps Indexing"]
+    }
+  ]
+}
