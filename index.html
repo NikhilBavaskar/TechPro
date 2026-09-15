@@ -160,11 +160,11 @@
     </div>
   </div>
 
-  <!-- FROSTED LIGHT HEADER WITH PROMINENT LOGO -->
+  <!-- FROSTED LIGHT HEADER -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100 shadow-[0_4px_25px_-5px_rgba(59,130,246,0.12)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Logo Identity with Responsive Container -->
+      <!-- Brand Identity with Dedicated Logo Container -->
       <a href="#" class="flex items-center gap-3 group">
         <div id="navLogoContainer" class="h-14 flex items-center justify-start transition-transform group-hover:scale-105">
           <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-500 via-indigo-500 to-cyan-400 p-[2px] shadow-sm flex items-center justify-center">
@@ -305,7 +305,6 @@
       </div>
 
       <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Fallbacks for crawlability -->
         <div class="bg-gradient-to-b from-white to-blue-50/40 p-8 rounded-3xl border border-blue-200 shadow-cardLight flex flex-col justify-between hover:shadow-hoverLight transition-all">
           <div>
             <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-400 text-white flex items-center justify-center text-sm font-mono font-bold mb-6 shadow-sm">01</div>
@@ -721,7 +720,7 @@
         document.getElementById('floatingWhatsAppBtn').href = `https://wa.me/${c.whatsapp}`;
       }
 
-      // High-Impact Responsive Logo Loader (Fixes squished/tiny logo issue)
+      // High-Impact Responsive Logo Loader (Fixes contrast on light background and handles wide banners)
       if (c.logo && c.logo.trim() !== '') {
         const navLogo = document.getElementById('navLogoContainer');
         const footerLogo = document.getElementById('footerLogoContainer');
@@ -732,17 +731,18 @@
         testImg.src = c.logo;
         testImg.onload = function() {
           const isWideBanner = this.naturalWidth > (this.naturalHeight * 1.5);
+          
           if (isWideBanner) {
-            // Prominent banner sizing
+            // Prominent dark tech capsule for wide banners containing white typography
             if (navLogo) {
-              navLogo.className = "h-14 w-auto flex items-center justify-start transition-transform group-hover:scale-105";
-              navLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-12 max-h-12 w-auto object-contain py-0.5" />`;
+              navLogo.className = "h-14 w-auto flex items-center justify-center bg-[#070A13] px-3.5 py-1.5 rounded-2xl border border-slate-800 shadow-md transition-transform group-hover:scale-105";
+              navLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-10 w-auto object-contain" />`;
             }
             if (brandText) brandText.style.display = 'none';
 
             if (footerLogo) {
-              footerLogo.className = "h-12 w-auto flex items-center justify-start";
-              footerLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-11 max-h-11 w-auto object-contain" />`;
+              footerLogo.className = "h-14 w-auto flex items-center justify-center bg-[#070A13] px-3.5 py-1.5 rounded-2xl border border-slate-800 shadow-sm";
+              footerLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-10 w-auto object-contain" />`;
             }
             if (footerText) footerText.style.display = 'none';
           } else {
