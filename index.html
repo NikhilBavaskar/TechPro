@@ -164,28 +164,30 @@
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100 shadow-[0_4px_25px_-5px_rgba(59,130,246,0.12)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Logo Identity with Dynamic Provision -->
+      <!-- Logo Identity with Responsive Container -->
       <a href="#" class="flex items-center gap-3 group">
-        <div id="navLogoContainer" class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-500 via-indigo-500 via-purple-500 to-cyan-400 p-[2px] shadow-cardLight group-hover:scale-105 transition-all">
-          <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1.5 overflow-hidden">
-            <svg class="w-full h-full" viewBox="0 0 70 70" fill="none">
-              <defs>
-                <linearGradient id="navTGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#2563EB" />
-                  <stop offset="100%" stop-color="#7C3AED" />
-                </linearGradient>
-                <linearGradient id="navPGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#06B6D4" />
-                  <stop offset="100%" stop-color="#10B981" />
-                </linearGradient>
-              </defs>
-              <path d="M16 23h36M26 23v26" stroke="url(#navTGrad)" stroke-width="6.5" stroke-linecap="round"/>
-              <path d="M42 23v26M42 23c13 0 13 14 0 14" stroke="url(#navPGrad)" stroke-width="6.5" stroke-linecap="round"/>
-              <circle cx="56" cy="15" r="4" fill="#F59E0B"/>
-            </svg>
+        <div id="navLogoContainer" class="h-10 flex items-center justify-center transition-transform group-hover:scale-105">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-500 via-indigo-500 to-cyan-400 p-[2px] shadow-sm flex items-center justify-center">
+            <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1.5">
+              <svg class="w-full h-full" viewBox="0 0 70 70" fill="none">
+                <defs>
+                  <linearGradient id="navTGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2563EB" />
+                    <stop offset="100%" stop-color="#7C3AED" />
+                  </linearGradient>
+                  <linearGradient id="navPGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#06B6D4" />
+                    <stop offset="100%" stop-color="#10B981" />
+                  </linearGradient>
+                </defs>
+                <path d="M16 23h36M26 23v26" stroke="url(#navTGrad)" stroke-width="6.5" stroke-linecap="round"/>
+                <path d="M42 23v26M42 23c13 0 13 14 0 14" stroke="url(#navPGrad)" stroke-width="6.5" stroke-linecap="round"/>
+                <circle cx="56" cy="15" r="4" fill="#F59E0B"/>
+              </svg>
+            </div>
           </div>
         </div>
-        <div>
+        <div id="brandTextGroup">
           <span class="text-xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600" id="navBrandName">TechPro</span>
           <span class="block text-[9px] font-mono font-bold tracking-[0.28em] text-cyan-600 uppercase">SOLUTIONS</span>
         </div>
@@ -303,7 +305,7 @@
       </div>
 
       <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Hydrated dynamically from services.json with crawlable defaults -->
+        <!-- Fallbacks for crawlability -->
         <div class="bg-gradient-to-b from-white to-blue-50/40 p-8 rounded-3xl border border-blue-200 shadow-cardLight flex flex-col justify-between hover:shadow-hoverLight transition-all">
           <div>
             <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-400 text-white flex items-center justify-center text-sm font-mono font-bold mb-6 shadow-sm">01</div>
@@ -571,12 +573,14 @@
       
       <div class="md:col-span-2">
         <div class="flex items-center gap-3 mb-4">
-          <div id="footerLogoContainer" class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-400 p-[1.5px] shadow-sm">
-            <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1 overflow-hidden">
-              <svg class="w-full h-full" viewBox="0 0 70 70" fill="none">
-                <path d="M16 23h36M26 23v26" stroke="#2563EB" stroke-width="7" stroke-linecap="round"/>
-                <path d="M42 23v26M42 23c13 0 13 14 0 14" stroke="#06B6D4" stroke-width="7" stroke-linecap="round"/>
-              </svg>
+          <div id="footerLogoContainer" class="h-9 flex items-center justify-center">
+            <div class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-400 p-[1.5px] shadow-sm flex items-center justify-center">
+              <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1">
+                <svg class="w-full h-full" viewBox="0 0 70 70" fill="none">
+                  <path d="M16 23h36M26 23v26" stroke="#2563EB" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M42 23v26M42 23c13 0 13 14 0 14" stroke="#06B6D4" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+              </div>
             </div>
           </div>
           <span class="text-xl font-extrabold tracking-tight text-slate-900" id="footerLegalName">TechPro Solutions</span>
@@ -717,13 +721,40 @@
         document.getElementById('floatingWhatsAppBtn').href = `https://wa.me/${c.whatsapp}`;
       }
 
-      // Dynamic Logo Provision: Replace vector with uploaded image if specified in site.json
+      // Responsive Smart Logo Loader: Handles wide banners and square icons cleanly
       if (c.logo && c.logo.trim() !== '') {
         const navLogo = document.getElementById('navLogoContainer');
         const footerLogo = document.getElementById('footerLogoContainer');
-        const logoImgMarkup = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="w-full h-full object-contain rounded-[14px] bg-white p-1" />`;
-        if (navLogo) navLogo.innerHTML = logoImgMarkup;
-        if (footerLogo) footerLogo.innerHTML = logoImgMarkup;
+        const brandText = document.getElementById('brandTextGroup');
+        
+        const testImg = new Image();
+        testImg.src = c.logo;
+        testImg.onload = function() {
+          const isWideBanner = this.naturalWidth > (this.naturalHeight * 1.5);
+          if (isWideBanner) {
+            // Wide banner mode: expand container and hide duplicate HTML text
+            if (navLogo) {
+              navLogo.className = "h-11 w-auto flex items-center justify-center transition-transform group-hover:scale-105";
+              navLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-10 w-auto object-contain" />`;
+            }
+            if (brandText) brandText.style.display = 'none';
+            if (footerLogo) {
+              footerLogo.className = "h-10 w-auto flex items-center justify-center";
+              footerLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="h-9 w-auto object-contain" />`;
+            }
+          } else {
+            // Square icon mode: render neatly beside HTML brand text
+            if (navLogo) {
+              navLogo.className = "w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-105";
+              navLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="w-full h-full object-contain rounded-2xl shadow-sm" />`;
+            }
+            if (brandText) brandText.style.display = 'block';
+            if (footerLogo) {
+              footerLogo.className = "w-9 h-9 flex items-center justify-center";
+              footerLogo.innerHTML = `<img src="${c.logo}" alt="${c.companyName || 'Logo'}" class="w-full h-full object-contain rounded-xl shadow-sm" />`;
+            }
+          }
+        };
       }
     }
 
