@@ -1,14 +1,15 @@
 backend:
   name: github
-  repo: NikhilBavaskar/TechPro # Replace with your actual repository path (e.g. yourname/techpro)
+  repo: NikhilBavaskar/TechPro # Replace with your exact repository path
   branch: main
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
+  # ==================== FIELD GUIDES & BLOG ====================
   - name: "posts"
-    label: "Field Guides & Articles"
+    label: "Field Guides & Blog"
     folder: "_posts"
     create: true
     delete: true
@@ -18,14 +19,95 @@ collections:
       preview: true
     fields:
       - { label: "Article Title", name: "title", widget: "string" }
-      - { label: "URL Slug", name: "slug", widget: "string", hint: "Clean identifier without spaces (e.g. computer-amc-akola)" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "Clean URL name (e.g. computer-amc-akola)" }
       - { label: "Publish Date", name: "date", widget: "datetime", date_format: "MMM DD, YYYY", time_format: false }
       - { label: "Category", name: "tag", widget: "select", options: ["Maintenance & AMC", "Surveillance", "Workstations", "Web Systems", "Hardware Diagnostics"] }
       - { label: "Read Time", name: "readTime", widget: "string", default: "5 min read" }
       - { label: "Featured Cover Image", name: "image", widget: "image", required: false }
-      - { label: "Short Summary (SEO Excerpt)", name: "excerpt", widget: "text" }
+      - { label: "Short Summary (Excerpt)", name: "excerpt", widget: "text" }
       - { label: "Article Content", name: "body", widget: "markdown" }
 
+  # ==================== PRODUCTS & WEB PACKAGES ====================
+  - name: "products_collection"
+    label: "Products & Bundles"
+    files:
+      - label: "Product & Bundle Catalog"
+        name: "products"
+        file: "products.json"
+        fields:
+          - label: "Product Items"
+            name: "products"
+            widget: "list"
+            fields:
+              - { label: "Item Title", name: "title", widget: "string" }
+              - { label: "Category", name: "category", widget: "select", options: ["Websites", "Workstation", "Upgrades", "Surveillance"] }
+              - { label: "Badge Text", name: "badge", widget: "string", default: "Available" }
+              - { label: "Price Text", name: "price", widget: "string" }
+              - { label: "Warranty / SLA", name: "warranty", widget: "string" }
+              - { label: "Specifications & Details", name: "specs", widget: "text" }
+              - { label: "Product Image", name: "image", widget: "image", required: false }
+
+  # ==================== TURNKEY SERVICES ====================
+  - name: "services_collection"
+    label: "Turnkey Services"
+    files:
+      - label: "Services Catalog"
+        name: "services"
+        file: "services.json"
+        fields:
+          - label: "Services List"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Order / Number", name: "number", widget: "string" }
+              - { label: "Service Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Feature Bullet Points"
+                name: "features"
+                widget: "list"
+                field: { label: "Feature", name: "feature", widget: "string" }
+
+  # ==================== PC CONFIGURATOR PARTS ====================
+  - name: "pc_builder_parts"
+    label: "PC Builder Parts"
+    files:
+      - label: "Component Pricing & Inventory"
+        name: "pc_parts"
+        file: "pc-parts.json"
+        fields:
+          - label: "CPUs (Processors)"
+            name: "cpus"
+            widget: "list"
+            fields:
+              - { label: "Component Name", name: "name", widget: "string" }
+              - { label: "Price (₹)", name: "price", widget: "number" }
+              - { label: "Default Selected", name: "selected", widget: "boolean", default: false }
+
+          - label: "RAM (Memory)"
+            name: "rams"
+            widget: "list"
+            fields:
+              - { label: "Component Name", name: "name", widget: "string" }
+              - { label: "Price (₹)", name: "price", widget: "number" }
+              - { label: "Default Selected", name: "selected", widget: "boolean", default: false }
+
+          - label: "SSDs & Hard Drives"
+            name: "ssds"
+            widget: "list"
+            fields:
+              - { label: "Component Name", name: "name", widget: "string" }
+              - { label: "Price (₹)", name: "price", widget: "number" }
+              - { label: "Default Selected", name: "selected", widget: "boolean", default: false }
+
+          - label: "Motherboards & Power Units"
+            name: "psus"
+            widget: "list"
+            fields:
+              - { label: "Component Name", name: "name", widget: "string" }
+              - { label: "Price (₹)", name: "price", widget: "number" }
+              - { label: "Default Selected", name: "selected", widget: "boolean", default: false }
+
+  # ==================== SITE SETTINGS ====================
   - name: "settings"
     label: "Global Site Settings"
     files:
@@ -35,7 +117,11 @@ collections:
         fields:
           - { label: "Company Legal Name", name: "companyName", widget: "string" }
           - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Official Logo Image", name: "logo", widget: "image", required: false }
+          - { label: "Dispatch Ticker / SLA Notice", name: "slaNotice", widget: "string" }
           - { label: "Official Phone", name: "phone", widget: "string" }
           - { label: "Direct WhatsApp Number", name: "whatsapp", widget: "string" }
           - { label: "Official Support Email", name: "email", widget: "string" }
           - { label: "Office Address", name: "address", widget: "string" }
+          - { label: "SEO Meta Title", name: "metaTitle", widget: "string" }
+          - { label: "SEO Meta Description", name: "metaDescription", widget: "text" }
