@@ -8,17 +8,25 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Hardware Debugging Guide -->
+  <!-- Pillar SEO Service Page -->
   <url>
-    <loc>https://techprohardware.in/blog/post.html?post=akola-pc-hardware-debugging</loc>
+    <loc>https://techprohardware.in/blog/post.html?post=computer-amc-cctv-maintenance-akola</loc>
     <lastmod>2026-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <!-- Commercial CCTV Audit Guide -->
   <url>
     <loc>https://techprohardware.in/blog/post.html?post=cctv-recording-audit</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Hardware Debugging Guide -->
+  <url>
+    <loc>https://techprohardware.in/blog/post.html?post=akola-pc-hardware-debugging</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
