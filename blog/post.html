@@ -3,124 +3,341 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="pageTitle">Knowledge Hub Guide | TechPro Solutions</title>
+  <title id="postMetaTitle">Technical Field Guide | TechPro Solutions</title>
   
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <meta id="postMetaDesc" name="description" content="Technical hardware diagnostics, surveillance compliance audits, and workstation optimization guides by TechPro Solutions in Akola." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" id="canonicalLink" href="https://techprohardware.in/blog/post.html" />
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' rx='18' fill='%230b1120' stroke='%231e293b' stroke-width='2'/%3E%3Cpath d='M18 24h34M28 24v24' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M42 24v26M42 24c12 0 12 14 0 14' fill='none' stroke='%2338bdf8' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='56' cy='16' r='3.5' fill='%2300f2fe'/%3E%3C/svg%3E">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Cdefs%3E%3ClinearGradient id='tGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231D4ED8'/%3E%3Cstop offset='100%25' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3ClinearGradient id='pGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230284C7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='70' height='70' rx='20' fill='%23ffffff' stroke='%2393C5FD' stroke-width='3'/%3E%3Cpath d='M14 22h32M24 22v26' stroke='url(%23tGrad)' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M38 18v34M38 18h12c6 0 10 4 10 9s-4 9-10 9H38' stroke='url(%23pGrad)' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='54' cy='12' r='4' fill='%2300F2FE'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          colors: {
+            brandCanvas: '#F8FAFC',
+            brandSurface: '#FFFFFF',
+            brandAccent: '#2563EB',
+            brandSlate: '#0F172A',
+            brandMuted: '#64748B',
+          },
+          boxShadow: {
+            cardLight: '0 4px 20px -2px rgba(59, 130, 246, 0.08)',
+            hoverLight: '0 20px 40px -15px rgba(59, 130, 246, 0.16)',
+          }
+        }
+      }
+    }
+  </script>
 
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .prose table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1.5rem;
+    @keyframes gridDrift {
+      0% { background-position: 0 0; }
+      100% { background-position: 40px 40px; }
+    }
+    .animate-drift-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(59, 130, 246, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(139, 92, 246, 0.06) 1px, transparent 1px);
+      animation: gridDrift 25s linear infinite;
+    }
+    /* Prose styling to match the light theme */
+    .article-body h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-top: 2.25rem;
+      margin-bottom: 0.85rem;
+      letter-spacing: -0.02em;
+    }
+    .article-body h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1E293B;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 0.975rem;
+      line-height: 1.8;
+      color: #475569;
+      margin-bottom: 1.35rem;
+    }
+    .article-body ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
       margin-bottom: 1.5rem;
-      border: 1px solid #1e293b;
-      border-radius: 0.75rem;
-      overflow: hidden;
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
-    .prose th {
-      background-color: #0e1424;
-      color: #38bdf8;
-      padding: 0.75rem 1rem;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      border-bottom: 1px solid #1e293b;
-      text-align: left;
+    .article-body li {
+      margin-bottom: 0.5rem;
     }
-    .prose td {
-      padding: 0.75rem 1rem;
-      border-bottom: 1px solid #1e293b;
-      color: #cbd5e1;
-      font-size: 0.875rem;
+    .article-body strong {
+      color: #0F172A;
+      font-weight: 700;
     }
-    .prose tr:nth-child(even) { background-color: rgba(14, 20, 36, 0.4); }
-    .prose hr { border-color: #1e293b; margin: 2rem 0; }
+    .article-body blockquote {
+      border-left: 4px solid #2563EB;
+      background-color: #EFF6FF;
+      padding: 1rem 1.25rem;
+      border-radius: 0 1rem 1rem 0;
+      color: #1E3A8A;
+      margin: 1.5rem 0;
+      font-style: italic;
+    }
   </style>
 </head>
-<body class="bg-[#070A11] text-slate-300 antialiased selection:bg-cyan-500 selection:text-black">
+<body class="bg-brandCanvas text-brandSlate antialiased selection:bg-blue-600 selection:text-white">
 
-  <header class="border-b border-slate-800 bg-[#070A11]/90 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
-      <a href="../" class="text-white font-extrabold text-base flex items-center gap-2">
-        <span class="text-cyan-400">TechPro</span>
-        <span class="text-slate-400 font-normal">/</span>
-        <span class="text-slate-200">Knowledge Hub</span>
+  <!-- TOP DISPATCH & COMPLIANCE BAR -->
+  <div class="bg-gradient-to-r from-blue-100/90 via-cyan-100/80 via-emerald-100/70 to-indigo-100/90 border-b border-blue-200 text-[11px] font-mono tracking-wider py-2.5 px-4 text-slate-700">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse ring-4 ring-emerald-200"></span>
+        <span class="font-bold text-slate-900">ENGINEERING DESK:</span>
+        <span class="text-blue-700 font-semibold bg-white px-2 py-0.5 rounded-md border border-blue-300 shadow-sm">Akola On-Site Technical Guides & Field Audits</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-4 text-slate-600 font-medium">
+        <span class="text-emerald-700 font-bold bg-white/70 px-2 py-0.5 rounded border border-emerald-200">Verified Field Practices</span>
+        <span>•</span>
+        <a href="../#audit-ticket" class="text-blue-700 font-bold hover:underline">Book an On-Site Audit &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FROSTED LIGHT HEADER -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100 shadow-[0_4px_25px_-5px_rgba(59,130,246,0.12)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Identity -->
+      <a href="../" class="flex items-center gap-3.5 group">
+        <div id="navLogoContainer" class="h-12 w-auto flex items-center justify-start transition-transform duration-300 group-hover:scale-105">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-500 via-indigo-500 to-cyan-400 p-[2px] shadow-sm flex items-center justify-center">
+            <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-2">
+              <svg class="w-full h-full" viewBox="0 0 70 70" fill="none">
+                <defs>
+                  <linearGradient id="navTGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1D4ED8" />
+                    <stop offset="100%" stop-color="#2563EB" />
+                  </linearGradient>
+                  <linearGradient id="navPGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00F2FE" />
+                    <stop offset="100%" stop-color="#0284C7" />
+                  </linearGradient>
+                </defs>
+                <path d="M14 22h32M24 22v26" stroke="url(#navTGrad)" stroke-width="6.5" stroke-linecap="round"/>
+                <path d="M38 18v34M38 18h12c6 0 10 4 10 9s-4 9-10 9H38" stroke="url(#navPGrad)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="54" cy="12" r="4" fill="#00F2FE"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div id="brandTextGroup">
+          <span class="text-2xl font-black tracking-tight text-slate-900" id="navBrandName">Tech<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500">Pro</span></span>
+          <span class="block text-[9px] font-mono font-extrabold tracking-[0.28em] text-cyan-600 uppercase">SOLUTIONS</span>
+        </div>
       </a>
-      <a href="../#audit-ticket" class="text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg">
-        Open Support Ticket
-      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="../#services" class="hover:text-blue-600 transition-colors">Services</a>
+        <a href="../#products" class="hover:text-indigo-600 transition-colors">Bundles & Web</a>
+        <a href="../#pc-builder" class="hover:text-purple-600 transition-colors">PC Configurator</a>
+        <a href="../#blog" class="text-blue-600 font-bold transition-colors">Field Guides</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="../#audit-ticket" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:opacity-95 transition-all">
+          Open Support Ticket
+        </a>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-3xl mx-auto px-4 py-12">
-    <div class="flex items-center gap-3 text-xs font-mono text-cyan-400 mb-4">
-      <span id="postTag" class="uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-800/40">Field Guide</span>
-      <span>•</span>
-      <span id="postDate" class="text-slate-400"></span>
-      <span>•</span>
-      <span id="postReadTime" class="text-slate-400"></span>
+  <!-- ARTICLE HERO SECTION -->
+  <section class="relative pt-12 pb-16 lg:pt-20 lg:pb-24 overflow-hidden border-b border-blue-100 animate-drift-grid bg-gradient-to-b from-blue-50/40 via-white to-brandCanvas">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <!-- Breadcrumb & Badges -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blue-200 text-xs font-mono text-slate-600 mb-6 font-semibold shadow-sm">
+        <a href="../" class="text-blue-600 hover:underline">Home</a>
+        <span>/</span>
+        <a href="../#blog" class="text-blue-600 hover:underline">Knowledge Hub</a>
+        <span>/</span>
+        <span id="postTagBadge" class="text-cyan-700 uppercase font-bold">Field Guide</span>
+      </div>
+
+      <!-- Title -->
+      <h1 id="postTitle" class="text-3xl sm:text-5xl font-extrabold text-slate-950 tracking-tight leading-[1.15] max-w-3xl mx-auto">
+        Loading Field Guide...
+      </h1>
+
+      <!-- Metadata (Date, Read Time, Location) -->
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-slate-500">
+        <span id="postDate" class="font-semibold text-slate-700">Published in Akola</span>
+        <span>•</span>
+        <span id="postReadTime" class="font-semibold text-slate-700">4 min read</span>
+        <span>•</span>
+        <span class="px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 font-bold">Verified Procedure</span>
+      </div>
     </div>
+  </section>
 
-    <h1 id="postHeading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-8">
-      Loading Article...
-    </h1>
+  <!-- MAIN ARTICLE CONTAINER -->
+  <main class="py-16 bg-white border-b border-blue-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Featured Image (if available) -->
+      <div id="postImageContainer" class="hidden mb-12 rounded-3xl overflow-hidden border border-blue-100 shadow-cardLight">
+        <img id="postImage" src="" alt="Guide Cover" class="w-full h-auto max-h-[420px] object-cover" />
+      </div>
 
-    <article id="postContent" class="prose prose-invert prose-cyan max-w-none text-slate-300 text-sm sm:text-base leading-relaxed">
-      <p class="text-slate-500">Retrieving guide...</p>
-    </article>
+      <!-- Article Rich Content -->
+      <article id="postBody" class="article-body font-sans">
+        <!-- Injected via JavaScript from posts.json -->
+        <div class="py-12 text-center text-slate-400 font-mono text-xs">Fetching technical article content...</div>
+      </article>
 
-    <!-- Monetization Callout Box -->
-    <div class="mt-14 p-8 rounded-2xl bg-[#0E1424] border border-slate-800 text-center">
-      <h3 class="text-xl font-bold text-white mb-2">Need On-Site IT Repair or a Modern Business Website?</h3>
-      <p class="text-xs sm:text-sm text-slate-400 max-w-md mx-auto mb-6">
-        TechPro technicians arrive within 2 to 4 hours across Akola. We also build lightning-fast, zero-maintenance websites for local businesses.
-      </p>
-      <a href="https://wa.me/917972104370?text=Hi%20Nikhil,%20I%20read%20your%20technical%20guide%20and%20need%20assistance." 
-         target="_blank"
-         class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xs tracking-wide shadow-lg hover:opacity-95 transition-all">
-        Contact on WhatsApp &rarr;
-      </a>
+      <!-- Bottom Author & Verification Card -->
+      <div class="mt-16 p-6 rounded-3xl bg-gradient-to-br from-blue-50/60 to-indigo-50/50 border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-500 text-white flex items-center justify-center font-bold text-lg shadow-sm">
+            TP
+          </div>
+          <div>
+            <div class="text-sm font-bold text-slate-900">TechPro Engineering Unit</div>
+            <div class="text-xs text-slate-500 font-medium">On-Site Commercial Servicing • Civil Lines, Akola</div>
+          </div>
+        </div>
+        <a id="consultationWhatsAppBtn" href="https://wa.me/917972104370" target="_blank" 
+           class="w-full sm:w-auto px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all text-center">
+          Ask an Engineer on WhatsApp
+        </a>
+      </div>
     </div>
   </main>
 
+  <!-- LIGHT FOOTER -->
+  <footer class="bg-gradient-to-b from-white to-blue-50/50 border-t border-blue-200 text-slate-600 pt-16 pb-12 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 font-mono">
+      <p>&copy; 2026 TechPro Solutions. Physical IT Infrastructure & Web Architecture.</p>
+      <a href="../" class="text-blue-600 font-bold hover:underline">&larr; Return to Main Platform</a>
+    </div>
+  </footer>
+
+  <!-- CLIENT HYDRATION SCRIPT -->
   <script>
-    async function loadPostDetails() {
-      const params = new URLSearchParams(window.location.search);
-      const postSlug = params.get('post');
+    async function loadPost() {
+      // 1. Extract post slug from URL: ?post=slug-name
+      const urlParams = new URLSearchParams(window.location.search);
+      const postSlug = urlParams.get('post');
+
+      if (!postSlug) {
+        document.getElementById('postTitle').innerText = 'Field Guide Not Found';
+        document.getElementById('postBody').innerHTML = `
+          <p>Please specify a valid guide slug or browse our active articles.</p>
+          <p><a href="../#blog" class="text-blue-600 font-bold hover:underline">&larr; Back to all field guides</a></p>
+        `;
+        return;
+      }
 
       try {
-        const res = await fetch('../posts.json?t=' + Date.now());
-        if (!res.ok) throw new Error('Cannot load posts.json');
+        // 2. Fetch posts.json and site.json
+        const [postsRes, siteRes] = await Promise.all([
+          fetch(`../posts.json?t=${Date.now()}`).catch(() => null),
+          fetch(`../site.json?t=${Date.now()}`).catch(() => null)
+        ]);
+
+        if (siteRes && siteRes.ok) {
+          const siteData = await siteRes.json();
+          if (siteData.whatsapp) {
+            document.getElementById('consultationWhatsAppBtn').href = 
+              `https://wa.me/${siteData.whatsapp}?text=Hi,%20I%20have%20a%20question%20regarding%20the%20technical%20guide:%20${encodeURIComponent(postSlug)}`;
+          }
+        }
+
+        if (!postsRes || !postsRes.ok) throw new Error('Could not load posts catalog');
+
+        const postsData = await postsRes.json();
+        const postsList = Array.isArray(postsData) ? postsData : (postsData.posts || []);
         
-        const data = await res.json();
-        const postList = Array.isArray(data) ? data : (data.posts || []);
+        // 3. Match article by ID / slug
+        const post = postsList.find(p => p.id === postSlug || p.slug === postSlug);
+
+        if (!post) {
+          document.getElementById('postTitle').innerText = 'Article Not Found';
+          document.getElementById('postBody').innerHTML = `
+            <p>The requested guide <strong>${postSlug}</strong> could not be located in our repository.</p>
+            <p><a href="../#blog" class="text-blue-600 font-bold hover:underline">&larr; Return to Knowledge Hub</a></p>
+          `;
+          return;
+        }
+
+        // 4. Render Article Data into the Light Theme UI
+        document.title = `${post.title} | TechPro Solutions`;
+        document.getElementById('postMetaTitle').innerText = `${post.title} | TechPro Solutions`;
+        document.getElementById('canonicalLink').href = window.location.href;
         
-        const matchedPost = postList.find(p => p.id === postSlug) || postList[0];
-        if (!matchedPost) throw new Error('Post not found');
+        if (post.excerpt) {
+          document.getElementById('postMetaDesc').setAttribute('content', post.excerpt);
+        }
 
-        document.title = `${matchedPost.title} | TechPro Solutions`;
-        document.getElementById('postTag').innerText = matchedPost.tag || 'Field Guide';
-        document.getElementById('postDate').innerText = matchedPost.date || '';
-        document.getElementById('postReadTime').innerText = matchedPost.readTime || '4 min read';
-        document.getElementById('postHeading').innerText = matchedPost.title;
+        document.getElementById('postTitle').innerText = post.title;
+        if (post.tag) document.getElementById('postTagBadge').innerText = post.tag;
+        if (post.date) document.getElementById('postDate').innerText = post.date;
+        if (post.readTime) document.getElementById('postReadTime').innerText = post.readTime;
 
-        let rawMarkdown = matchedPost.content || matchedPost.excerpt || '';
-        let cleanMarkdown = rawMarkdown.replace(/\\([*_{}[\]()#+\-.!])/g, '$1');
+        if (post.image) {
+          const imgEl = document.getElementById('postImage');
+          imgEl.src = post.image.startsWith('http') || post.image.startsWith('../') ? post.image : `../${post.image}`;
+          imgEl.alt = post.title;
+          document.getElementById('postImageContainer').classList.remove('hidden');
+        }
 
-        document.getElementById('postContent').innerHTML = marked.parse(cleanMarkdown);
-      } catch (e) {
-        document.getElementById('postHeading').innerText = "Article Not Found";
-        document.getElementById('postContent').innerHTML = `
-          <p class="text-slate-400">This guide is unavailable. <a href="../" class="text-cyan-400 underline">Return to homepage</a>.</p>
+        // 5. Render Post Body (supports HTML or linebreaks)
+        const bodyContainer = document.getElementById('postBody');
+        if (post.body) {
+          // If body contains HTML tags, inject directly; otherwise wrap paragraphs
+          if (post.body.includes('<p>') || post.body.includes('<h2>')) {
+            bodyContainer.innerHTML = post.body;
+          } else {
+            bodyContainer.innerHTML = post.body
+              .split('\n\n')
+              .map(para => `<p>${para.replace(/\n/g, '<br/>')}</p>`)
+              .join('');
+          }
+        } else if (post.content) {
+          bodyContainer.innerHTML = post.content;
+        } else {
+          bodyContainer.innerHTML = `<p>${post.excerpt || 'No additional content provided for this guide.'}</p>`;
+        }
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById('postTitle').innerText = 'System Notice';
+        document.getElementById('postBody').innerHTML = `
+          <p>We encountered an issue loading this guide. Please try refreshing the page.</p>
+          <p><a href="../" class="text-blue-600 font-bold hover:underline">&larr; Return to Homepage</a></p>
         `;
       }
     }
 
-    window.addEventListener('DOMContentLoaded', loadPostDetails);
+    window.addEventListener('DOMContentLoaded', loadPost);
   </script>
 </body>
 </html>
