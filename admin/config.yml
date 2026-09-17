@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: NikhilBavaskar/TechPro # Replace with your GitHub repo
+  repo: NikhilBavaskar/TechPro # Replace with your exact GitHub repository path (e.g. nikhil/techpro)
   branch: main
 
 media_folder: "assets/uploads"
@@ -8,29 +8,34 @@ public_folder: "/assets/uploads"
 
 collections:
   - name: "posts"
-    label: "Field Guides & Blog"
+    label: "Field Guides & Articles"
     folder: "_posts"
     create: true
     delete: true
     slug: "{{slug}}"
+    format: "frontmatter"
+    editor:
+      preview: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Article Title", name: "title", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "Clean identifier without spaces (e.g., computer-amc-akola)" }
       - { label: "Publish Date", name: "date", widget: "date", format: "MMM DD, YYYY" }
-      - { label: "Category / Tag", name: "tag", widget: "select", options: ["Maintenance & AMC", "Surveillance", "Workstations", "Web Systems", "Hardware Diagnostics"] }
-      - { label: "Read Time", name: "readTime", widget: "string", default: "4 min read" }
+      - { label: "Category", name: "tag", widget: "select", options: ["Maintenance & AMC", "Surveillance", "Workstations", "Web Systems", "Hardware Diagnostics"] }
+      - { label: "Read Time", name: "readTime", widget: "string", default: "5 min read" }
       - { label: "Featured Cover Image", name: "image", widget: "image", required: false }
-      - { label: "Short Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Short Summary (SEO Excerpt)", name: "excerpt", widget: "text" }
       - { label: "Article Content", name: "body", widget: "markdown" }
 
   - name: "settings"
-    label: "Site Settings"
+    label: "Global Site Settings"
     files:
-      - label: "Company Information"
+      - label: "Company Profile"
         name: "site"
         file: "site.json"
         fields:
-          - { label: "Company Name", name: "companyName", widget: "string" }
-          - { label: "Phone", name: "phone", widget: "string" }
-          - { label: "WhatsApp", name: "whatsapp", widget: "string" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Company Legal Name", name: "companyName", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Official Phone", name: "phone", widget: "string" }
+          - { label: "Direct WhatsApp Number", name: "whatsapp", widget: "string" }
+          - { label: "Official Support Email", name: "email", widget: "string" }
+          - { label: "Office Address", name: "address", widget: "string" }
