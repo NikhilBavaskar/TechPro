@@ -3,31 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page Not Found | TechPro Solutions</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Redirecting | TechPro Solutions</title>
   <script>
     (function () {
       const path = window.location.pathname;
-      // If someone lands on /blog/xyz.html, reroute to /blog/post.html?post=xyz
-      if (path.includes('/blog/') && path.endsWith('.html') && !path.includes('post.html')) {
-        const slug = path.split('/').pop().replace('.html', '');
+      let slug = path.split('/').filter(Boolean).pop();
+      if (slug && slug.endsWith('.html')) {
+        slug = slug.replace('.html', '');
+      }
+      
+      if (slug && !['admin', 'blog', 'index'].includes(slug)) {
         window.location.replace('/blog/post.html?post=' + encodeURIComponent(slug));
+      } else {
+        window.location.replace('/');
       }
     })();
   </script>
 </head>
-<body class="bg-[#F8FAFC] text-slate-800 flex items-center justify-center min-h-screen p-6 font-sans">
-  <div class="max-w-md w-full bg-white p-8 rounded-3xl border border-slate-200 shadow-[0_4px_20px_-2px_rgba(59,130,246,0.08)] text-center">
-    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl mx-auto mb-4 border border-blue-200">
-      !
-    </div>
-    <h1 class="text-xl font-extrabold text-slate-900 mb-2">Page Not Found</h1>
-    <p class="text-xs text-slate-500 leading-relaxed mb-6">
-      The requested resource has been restructured or relocated.
-    </p>
-    <a href="/" class="inline-block w-full py-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider shadow-sm hover:opacity-95 transition-all">
-      Return to Homepage
-    </a>
-  </div>
+<body style="background:#F8FAFC;font-family:sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;color:#64748B;">
+  <p>Connecting to field guide...</p>
 </body>
 </html>
