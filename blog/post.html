@@ -176,7 +176,7 @@
         <img id="postImage" src="" alt="Cover" onerror="document.getElementById('postImageContainer').classList.add('hidden')" class="w-full h-auto max-h-[420px] object-cover" />
       </div>
 
-      <article id="postBody" class="article-body">
+      <article id="postBody" class="article-body font-sans">
         <div class="py-12 text-center text-slate-400 font-mono text-xs">Loading content...</div>
       </article>
 
@@ -242,14 +242,23 @@
       }
 
       try {
-        // Try exact slug first
-        let mdRes = await fetch(`../_posts/${slug}.md?t=${Date.now()}`).catch(() => null);
+        // List of candidate filenames to check in _posts
+        const candidateFiles = [
+          slug,
+          `computer-amc-cctv-maintenance-in-akola-stop-downtime-before-it-halts-your-operations`,
+          `multi-hdd-storage-in-cp-plus-nvrs-and-ip-vs.-analog-cctv-the-complete-engineering-guide`
+        ];
 
-        // Fallback search in _posts/ if filename was saved with full title by Sveltia
-        if (!mdRes || !mdRes.ok) {
-          const longSlug = "multi-hdd-storage-in-cp-plus-nvrs-and-ip-vs.-analog-cctv-the-complete-engineering-guide";
-          if (slug.includes('multiple-hdd') || slug.includes('nvr')) {
-            mdRes = await fetch(`../_posts/${longSlug}.md?t=${Date.now()}`).catch(() => null);
+        let mdRes = null;
+
+        // Try exact first, then match by prefix
+        for (const candidate of candidateFiles) {
+          if (candidate === slug || candidate.startsWith(slug) || slug.startsWith(candidate.slice(0, 20))) {
+            const res = await fetch(`../_posts/${candidate}.md?t=${Date.now()}`).catch(() => null);
+            if (res && res.ok) {
+              mdRes = res;
+              break;
+            }
           }
         }
 
@@ -264,6 +273,9 @@
           if (meta.tag) document.getElementById('postTagBadge').innerText = meta.tag;
           if (meta.date) document.getElementById('postDate').innerText = meta.date;
           if (meta.readTime) document.getElementById('postReadTime').innerText = meta.readTime;
+          if (meta.metaDesc || meta.excerpt) {
+            document.getElementById('postMetaDesc').setAttribute('content', meta.metaDesc || meta.excerpt);
+          }
 
           if (meta.image && meta.image.trim() !== '') {
             const imgEl = document.getElementById('postImage');
@@ -275,7 +287,7 @@
           return;
         }
 
-        // Fallback: check posts.json
+        // Fallback to posts.json
         const jsonRes = await fetch(`../posts.json?t=${Date.now()}`).catch(() => null);
         if (jsonRes && jsonRes.ok) {
           const pData = await jsonRes.json();
@@ -295,8 +307,8 @@
         document.getElementById('postTitle').innerText = 'Guide Not Found';
         document.getElementById('postBody').innerHTML = '<p>The requested guide could not be located. <a href="../#blog" class="text-blue-600 font-bold">&larr; Return to Knowledge Hub</a></p>';
       } catch (err) {
-        document.getElementById('postTitle').innerText = 'Guide Loading Error';
-        document.getElementById('postBody').innerHTML = '<p>Please refresh the page or return to the home screen.</p>';
+        document.getElementById('postTitle').innerText = 'Error Loading Guide';
+        document.getElementById('postBody').innerHTML = '<p>Please refresh the page.</p>';
       }
     }
 
