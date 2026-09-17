@@ -1,202 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="postMetaTitle">Technical Field Guide | TechPro Solutions</title>
-  
-  <meta id="postMetaDesc" name="description" content="Technical hardware diagnostics, surveillance compliance audits, and workstation optimization guides." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" id="canonicalLink" href="https://techprohardware.in/blog/post.html" />
-
-  <!-- Tailwind CSS & Markdown Engine -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            mono: ['"Space Grotesk"', 'monospace'],
-          },
-          colors: {
-            brandCanvas: '#F8FAFC',
-            brandSlate: '#0F172A',
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    @keyframes gridDrift {
-      0% { background-position: 0 0; }
-      100% { background-position: 40px 40px; }
-    }
-    .animate-drift-grid {
-      background-size: 40px 40px;
-      background-image: 
-        linear-gradient(to right, rgba(59, 130, 246, 0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(139, 92, 246, 0.06) 1px, transparent 1px);
-      animation: gridDrift 25s linear infinite;
-    }
-    .article-body h2 {
-      font-size: 1.65rem;
-      font-weight: 800;
-      color: #0F172A;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-      line-height: 1.3;
-      border-bottom: 2px solid #F1F5F9;
-      padding-bottom: 0.5rem;
-    }
-    .article-body h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #1E293B;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.05rem;
-      line-height: 1.85;
-      color: #334155;
-      margin-bottom: 1.5rem;
-    }
-    .article-body ul, .article-body ol {
-      padding-left: 1.75rem;
-      margin-bottom: 1.75rem;
-      color: #334155;
-      font-size: 1.025rem;
-      line-height: 1.8;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body strong { color: #0F172A; font-weight: 700; }
-    .article-body hr {
-      border: 0;
-      height: 1px;
-      background: #E2E8F0;
-      margin: 2.5rem 0;
-    }
-    .article-body table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      margin: 2rem 0;
-      border-radius: 1rem;
-      overflow: hidden;
-      border: 1px solid #E2E8F0;
-      box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.04);
-    }
-    .article-body th {
-      background-color: #F8FAFC;
-      color: #0F172A;
-      font-weight: 700;
-      padding: 0.85rem 1rem;
-      border-bottom: 2px solid #E2E8F0;
-      text-align: left;
-      font-family: 'Space Grotesk', monospace;
-    }
-    .article-body td {
-      padding: 0.85rem 1rem;
-      border-bottom: 1px solid #F1F5F9;
-      color: #475569;
-    }
-    .article-body blockquote {
-      border-left: 4px solid #2563EB;
-      background-color: #EFF6FF;
-      padding: 1rem 1.25rem;
-      border-radius: 0 1rem 1rem 0;
-      color: #1E3A8A;
-      margin: 1.5rem 0;
-    }
-  </style>
-</head>
-<body class="bg-brandCanvas text-brandSlate antialiased selection:bg-blue-600 selection:text-white">
-
-  <!-- TOP DISPATCH -->
-  <div class="bg-gradient-to-r from-blue-100/90 via-cyan-100/80 to-indigo-100/90 border-b border-blue-200 text-[11px] font-mono tracking-wider py-2.5 px-4 text-slate-700">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span class="font-bold text-slate-900">ENGINEERING DESK:</span>
-        <span class="text-blue-700 font-semibold bg-white px-2 py-0.5 rounded border border-blue-300">Akola On-Site Technical Guides</span>
-      </div>
-      <a href="../#audit-ticket" class="text-blue-700 font-bold hover:underline hidden sm:inline">Book On-Site Audit &rarr;</a>
-    </div>
-  </div>
-
-  <!-- NAVIGATION HEADER -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="../" class="flex items-center gap-3 group">
-        <div>
-          <span class="text-2xl font-black text-slate-900">Tech<span class="text-blue-600">Pro</span></span>
-          <span class="block text-[9px] font-mono font-bold tracking-[0.28em] text-cyan-600 uppercase">SOLUTIONS</span>
-        </div>
-      </a>
-      <div class="flex items-center gap-4">
-        <a href="../#blog" class="text-xs font-bold text-slate-600 hover:text-blue-600">&larr; All Guides</a>
-        <a href="../#audit-ticket" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xs uppercase tracking-wider">Open Ticket</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="relative pt-12 pb-16 overflow-hidden border-b border-blue-100 animate-drift-grid bg-gradient-to-b from-blue-50/40 to-brandCanvas">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blue-200 text-xs font-mono text-slate-600 mb-6 font-semibold shadow-sm">
-        <a href="../" class="text-blue-600 hover:underline">Home</a>
-        <span>/</span>
-        <span id="postTagBadge" class="text-cyan-700 uppercase font-bold">Field Guide</span>
-      </div>
-      <h1 id="postTitle" class="text-3xl sm:text-5xl font-extrabold text-slate-950 tracking-tight leading-tight max-w-3xl mx-auto">
-        Loading Field Guide...
-      </h1>
-      <div class="mt-6 flex items-center justify-center gap-4 text-xs font-mono text-slate-500">
-        <span id="postDate">Published in Akola</span>
-        <span>•</span>
-        <span id="postReadTime">5 min read</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ARTICLE BODY -->
-  <main class="py-16 bg-white border-b border-blue-100">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      <div id="postImageContainer" class="hidden mb-12 rounded-3xl overflow-hidden border border-blue-100">
-        <img id="postImage" src="" alt="Cover" onerror="document.getElementById('postImageContainer').classList.add('hidden')" class="w-full h-auto max-h-[420px] object-cover" />
-      </div>
-
-      <article id="postBody" class="article-body font-sans">
-        <div class="py-12 text-center text-slate-400 font-mono text-xs">Loading content...</div>
-      </article>
-
-      <div class="mt-16 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-blue-50/70 to-indigo-50/60 border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div>
-          <div class="text-base font-bold text-slate-900">TechPro Engineering Unit</div>
-          <div class="text-xs text-slate-500">Commercial IT Hardware & Surveillance Maintenance • Akola</div>
-        </div>
-        <a id="consultationWhatsAppBtn" href="https://wa.me/917972104370" target="_blank" class="px-6 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xs uppercase tracking-wider">
-          Ask on WhatsApp
-        </a>
-      </div>
-    </div>
-  </main>
-
-  <footer class="bg-white border-t border-blue-100 py-10 text-center text-xs font-mono text-slate-500">
-    <p>&copy; 2026 TechPro Solutions. Physical IT Infrastructure & Web Architecture.</p>
-  </footer>
-
-  <script>
+<script>
     function extractPostContent(rawText) {
       let meta = {};
       let body = rawText;
@@ -226,38 +28,47 @@
 
     async function loadPost() {
       const urlParams = new URLSearchParams(window.location.search);
-      let slug = urlParams.get('post');
+      let rawParam = urlParams.get('post') || window.location.pathname.split('/').filter(Boolean).pop() || '';
+      
+      // Strip any extra path or extension (e.g., _posts/, .html, .md)
+      let slug = decodeURIComponent(rawParam)
+        .replace(/^_posts\//, '')
+        .replace(/^blog\//, '')
+        .replace(/\.(html|md)$/, '')
+        .trim();
 
-      if (!slug) {
-        const path = window.location.pathname;
-        if (path.includes('/blog/') && !path.endsWith('post.html')) {
-          slug = path.split('/').filter(Boolean).pop().replace('.html', '');
-        }
-      }
-
-      if (!slug) {
+      if (!slug || slug === 'post') {
         document.getElementById('postTitle').innerText = 'Select a Field Guide';
         document.getElementById('postBody').innerHTML = '<p><a href="../#blog" class="text-blue-600 font-bold">&larr; Return to Knowledge Hub</a></p>';
         return;
       }
 
       try {
-        // List of candidate filenames to check in _posts
-        const candidateFiles = [
-          slug,
-          `computer-amc-cctv-maintenance-in-akola-stop-downtime-before-it-halts-your-operations`,
-          `multi-hdd-storage-in-cp-plus-nvrs-and-ip-vs.-analog-cctv-the-complete-engineering-guide`
-        ];
+        // WhatsApp button integration
+        fetch(`../site.json?t=${Date.now()}`).then(r => r.json()).then(site => {
+          if (site && site.whatsapp) {
+            document.getElementById('consultationWhatsAppBtn').href = 
+              `https://wa.me/${site.whatsapp}?text=Hi,%20I%20have%20a%20question%20regarding:%20${encodeURIComponent(slug)}`;
+          }
+        }).catch(() => {});
 
-        let mdRes = null;
+        // Fetch markdown directly from _posts/
+        let mdRes = await fetch(`../_posts/${slug}.md?t=${Date.now()}`).catch(() => null);
 
-        // Try exact first, then match by prefix
-        for (const candidate of candidateFiles) {
-          if (candidate === slug || candidate.startsWith(slug) || slug.startsWith(candidate.slice(0, 20))) {
-            const res = await fetch(`../_posts/${candidate}.md?t=${Date.now()}`).catch(() => null);
-            if (res && res.ok) {
-              mdRes = res;
-              break;
+        // Fallback for long filename variations
+        if (!mdRes || !mdRes.ok) {
+          const fallbacks = [
+            'computer-amc-cctv-maintenance-in-akola-stop-downtime-before-it-halts-your-operations',
+            'multi-hdd-storage-in-cp-plus-nvrs-and-ip-vs.-analog-cctv-the-complete-engineering-guide',
+            'multiple-hdd-nvr-ip-vs-analog-cameras-guide'
+          ];
+          for (const fb of fallbacks) {
+            if (fb.includes(slug) || slug.includes(fb.slice(0, 15))) {
+              const res = await fetch(`../_posts/${fb}.md?t=${Date.now()}`).catch(() => null);
+              if (res && res.ok) {
+                mdRes = res;
+                break;
+              }
             }
           }
         }
@@ -277,17 +88,25 @@
             document.getElementById('postMetaDesc').setAttribute('content', meta.metaDesc || meta.excerpt);
           }
 
+          // Handle Image path
           if (meta.image && meta.image.trim() !== '') {
+            let cleanImg = meta.image.trim().replace(/^\//, '');
+            if (!cleanImg.startsWith('http') && !cleanImg.startsWith('../')) {
+              cleanImg = `../${cleanImg}`;
+            }
             const imgEl = document.getElementById('postImage');
-            imgEl.src = meta.image.startsWith('http') || meta.image.startsWith('../') ? meta.image : `../${meta.image}`;
+            imgEl.src = cleanImg;
             document.getElementById('postImageContainer').classList.remove('hidden');
+          } else {
+            document.getElementById('postImageContainer').classList.add('hidden');
           }
 
+          // Render Markdown
           document.getElementById('postBody').innerHTML = marked.parse(body || meta.excerpt || '');
           return;
         }
 
-        // Fallback to posts.json
+        // Fallback: check posts.json
         const jsonRes = await fetch(`../posts.json?t=${Date.now()}`).catch(() => null);
         if (jsonRes && jsonRes.ok) {
           const pData = await jsonRes.json();
@@ -308,11 +127,9 @@
         document.getElementById('postBody').innerHTML = '<p>The requested guide could not be located. <a href="../#blog" class="text-blue-600 font-bold">&larr; Return to Knowledge Hub</a></p>';
       } catch (err) {
         document.getElementById('postTitle').innerText = 'Error Loading Guide';
-        document.getElementById('postBody').innerHTML = '<p>Please refresh the page.</p>';
+        document.getElementById('postBody').innerHTML = '<p>Please refresh the page or return to the main platform.</p>';
       }
     }
 
     window.addEventListener('DOMContentLoaded', loadPost);
   </script>
-</body>
-</html>
