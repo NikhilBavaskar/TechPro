@@ -13,7 +13,8 @@ collections:
     folder: "_posts"
     create: true
     delete: true
-    slug: "{{slug}}"
+    identifier_field: "slug"
+    slug: "{{fields.slug}}"
     format: "frontmatter"
     editor:
       preview: true
