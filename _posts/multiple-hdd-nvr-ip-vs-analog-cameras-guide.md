@@ -1,6 +1,6 @@
 ---
 title: 'Multi-HDD Storage in CP Plus NVRs and IP vs. Analog CCTV: The Complete Engineering Guide'
-slug: multiple-hdd-nvr-ip-vs-analog-cameras-guide
+slug:_posts/multiple-hdd-nvr-ip-vs-analog-cameras-guide.md
 seoTitle: Multiple HDDs in CP Plus NVRs & IP vs. Analog Cameras Explained | TechPro Akola
 metaDesc: Confused between IP vs Analog CCTV, or how multiple HDDs work in a CP Plus NVR? Learn how to configure multi-SATA storage and choose the right security setup.
 keywords: multiple HDD in NVR CP Plus, analog vs IP camera difference, NVR storage configuration, CCTV camera selection guide Akola, commercial CCTV installation
