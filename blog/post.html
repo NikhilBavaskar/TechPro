@@ -1,101 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title id="postMetaTitle">Technical Field Guide | TechPro Solutions</title>
-  <meta id="postMetaDesc" name="description" content="Technical hardware diagnostics and surveillance guides." />
+  
+  <meta id="postMetaDesc" name="description" content="Technical hardware diagnostics, surveillance compliance audits, and workstation optimization guides." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" id="canonicalLink" href="https://techprohardware.in/blog/post.html" />
 
-  <!-- Tailwind CSS & Markdown Engine -->
+  <!-- Tailwind CSS & Marked Parser -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          colors: {
+            brandCanvas: '#F8FAFC',
+            brandSlate: '#0F172A',
+          }
+        }
+      }
+    }
+  </script>
+
   <style>
     .article-body h2 {
-      font-size: 1.6rem;
+      font-size: 1.65rem;
       font-weight: 800;
       color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.3;
       border-bottom: 2px solid #F1F5F9;
       padding-bottom: 0.5rem;
     }
     .article-body h3 {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 700;
       color: #1E293B;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
     }
     .article-body p {
       font-size: 1.05rem;
-      line-height: 1.8;
+      line-height: 1.85;
       color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
       margin-bottom: 1.5rem;
+    }
+    .article-body ul, .article-body ol {
+      padding-left: 1.75rem;
+      margin-bottom: 1.75rem;
       color: #334155;
+      font-size: 1.025rem;
       line-height: 1.8;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body strong { color: #0F172A; font-weight: 700; }
+    .article-body hr {
+      border: 0;
+      height: 1px;
+      background: #E2E8F0;
+      margin: 2.5rem 0;
     }
     .article-body table {
       width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-      border: 1px solid #E2E8F0;
-      border-radius: 0.75rem;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 2rem 0;
+      border-radius: 1rem;
       overflow: hidden;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.04);
     }
     .article-body th {
       background-color: #F8FAFC;
       color: #0F172A;
       font-weight: 700;
-      padding: 0.75rem 1rem;
+      padding: 0.85rem 1rem;
       border-bottom: 2px solid #E2E8F0;
       text-align: left;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.9rem;
     }
     .article-body td {
-      padding: 0.75rem 1rem;
+      padding: 0.85rem 1rem;
       border-bottom: 1px solid #F1F5F9;
       color: #475569;
+      font-size: 0.95rem;
     }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) { background-color: #FAFCFF; }
     .article-body blockquote {
       border-left: 4px solid #2563EB;
       background-color: #EFF6FF;
-      padding: 0.75rem 1rem;
-      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 1rem 1.25rem;
+      border-radius: 0 1rem 1rem 0;
       color: #1E3A8A;
-      margin: 1.25rem 0;
+      margin: 1.5rem 0;
+      font-style: italic;
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-brandCanvas text-brandSlate antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
-    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-      <a href="../" class="font-black text-xl text-slate-900">
-        Tech<span class="text-blue-600">Pro</span> <span class="text-xs font-mono font-bold text-cyan-600">SOLUTIONS</span>
+  <!-- TOP DISPATCH -->
+  <div class="bg-gradient-to-r from-blue-100/90 via-cyan-100/80 to-indigo-100/90 border-b border-blue-200 text-[11px] font-mono tracking-wider py-2.5 px-4 text-slate-700">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="font-bold text-slate-900">ENGINEERING DESK:</span>
+        <span class="text-blue-700 font-semibold bg-white px-2 py-0.5 rounded border border-blue-300">Akola On-Site Technical Guides</span>
+      </div>
+      <a href="../#audit-ticket" class="text-blue-700 font-bold hover:underline hidden sm:inline">Book On-Site Audit &rarr;</a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="../" class="flex items-center gap-3 group">
+        <div>
+          <span class="text-2xl font-black text-slate-900">Tech<span class="text-blue-600">Pro</span></span>
+          <span class="block text-[9px] font-mono font-bold tracking-[0.28em] text-cyan-600 uppercase">SOLUTIONS</span>
+        </div>
       </a>
       <div class="flex items-center gap-4">
         <a href="../#blog" class="text-xs font-bold text-slate-600 hover:text-blue-600">&larr; Back to Guides</a>
-        <a href="../#audit-ticket" class="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider">Book Audit</a>
+        <a href="../#audit-ticket" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xs uppercase tracking-wider">Book Audit</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Header -->
-  <section class="pt-12 pb-10 bg-white border-b border-slate-200">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <div id="postTagBadge" class="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-mono font-bold uppercase mb-4">
-        Surveillance & IT
+  <!-- HERO SECTION -->
+  <section class="relative pt-12 pb-16 overflow-hidden border-b border-blue-100 bg-gradient-to-b from-blue-50/40 to-brandCanvas">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blue-200 text-xs font-mono text-slate-600 mb-6 font-semibold shadow-sm">
+        <a href="../" class="text-blue-600 hover:underline">Home</a>
+        <span>/</span>
+        <span id="postTagBadge" class="text-cyan-700 uppercase font-bold">Field Guide</span>
       </div>
-      <h1 id="postTitle" class="text-2xl sm:text-4xl font-extrabold text-slate-950 tracking-tight leading-snug">
+      <h1 id="postTitle" class="text-3xl sm:text-5xl font-extrabold text-slate-950 tracking-tight leading-tight max-w-3xl mx-auto">
         Loading Field Guide...
       </h1>
-      <div class="mt-4 flex items-center justify-center gap-3 text-xs font-mono text-slate-500">
+      <div class="mt-6 flex items-center justify-center gap-4 text-xs font-mono text-slate-500">
         <span id="postDate">Published in Akola</span>
         <span>•</span>
         <span id="postReadTime">5 min read</span>
@@ -103,57 +163,61 @@
     </div>
   </section>
 
-  <!-- Article Container -->
-  <main class="py-12 bg-white flex-grow">
-    <div class="max-w-3xl mx-auto px-4">
+  <!-- ARTICLE CONTAINER -->
+  <main class="py-16 bg-white border-b border-blue-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
       
-      <!-- Optional Cover Image -->
-      <div id="postImageContainer" class="hidden mb-10 rounded-2xl overflow-hidden border border-slate-200">
-        <img id="postImage" src="" alt="Post banner" class="w-full h-auto max-h-[380px] object-cover" />
+      <!-- Featured Image Banner -->
+      <div id="postImageContainer" class="hidden mb-12 rounded-3xl overflow-hidden border border-blue-100 shadow-sm">
+        <img id="postImage" src="" alt="Field Guide Banner" class="w-full h-auto max-h-[440px] object-cover" />
       </div>
 
-      <!-- Main Body Output -->
+      <!-- Markdown Output -->
       <article id="postBody" class="article-body font-sans">
-        <p class="text-slate-400 font-mono text-sm text-center py-10">Connecting to technical repository...</p>
+        <div class="py-12 text-center text-slate-400 font-mono text-xs">Loading complete field guide...</div>
       </article>
 
-      <!-- Bottom Card -->
-      <div class="mt-12 p-6 rounded-2xl bg-blue-50 border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <!-- Bottom Consultation Card -->
+      <div class="mt-16 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-blue-50/70 to-indigo-50/60 border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
         <div>
-          <div class="text-sm font-bold text-slate-900">TechPro Technical Services Desk</div>
-          <div class="text-xs text-slate-600">On-Site AMC & Surveillance Upkeep Across Akola</div>
+          <div class="text-base font-bold text-slate-900">TechPro Engineering Unit</div>
+          <div class="text-xs text-slate-500">Commercial IT Hardware & Surveillance Maintenance • Akola</div>
         </div>
-        <a id="consultationWhatsAppBtn" href="https://wa.me/917972104370" target="_blank" class="px-5 py-2.5 rounded-full bg-blue-600 text-white font-bold text-xs uppercase tracking-wider hover:bg-blue-700">
-          WhatsApp Support
+        <a id="consultationWhatsAppBtn" href="https://wa.me/917972104370" target="_blank" class="px-6 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all text-center">
+          Ask on WhatsApp
         </a>
       </div>
     </div>
   </main>
 
-  <footer class="bg-slate-100 border-t border-slate-200 py-6 text-center text-xs font-mono text-slate-500">
-    &copy; 2026 TechPro Solutions • Akola District
+  <footer class="bg-white border-t border-blue-100 py-10 text-center text-xs font-mono text-slate-500">
+    <p>&copy; 2026 TechPro Solutions. Physical IT Infrastructure & Web Architecture.</p>
   </footer>
 
-  <!-- Hydration Script -->
+  <!-- Bulletproof Parser & Hydrator -->
   <script>
-    function parseFrontMatter(text) {
+    function parseMarkdownDoc(rawText) {
+      const normalized = rawText.replace(/\r\n/g, '\n');
       let meta = {};
-      let body = text;
-      const normalized = text.replace(/\r\n/g, '\n');
+      let body = normalized;
 
       if (normalized.startsWith('---')) {
-        const endIdx = normalized.indexOf('\n---', 3);
-        if (endIdx !== -1) {
-          const rawMeta = normalized.slice(3, endIdx).trim();
-          body = normalized.slice(endIdx + 4).trim();
+        // Find closing --- that starts on its own line
+        const secondFenceIdx = normalized.indexOf('\n---', 3);
+        if (secondFenceIdx !== -1) {
+          const rawMeta = normalized.substring(3, secondFenceIdx).trim();
+          // The body begins after '\n---' plus the next newline
+          const bodyStart = normalized.indexOf('\n', secondFenceIdx + 4);
+          body = bodyStart !== -1 ? normalized.substring(bodyStart).trim() : normalized.substring(secondFenceIdx + 4).trim();
 
+          // Parse metadata keys
           rawMeta.split('\n').forEach(line => {
-            const splitIdx = line.indexOf(':');
-            if (splitIdx !== -1) {
-              const key = line.slice(0, splitIdx).trim();
-              let val = line.slice(splitIdx + 1).trim();
+            const colonIdx = line.indexOf(':');
+            if (colonIdx !== -1) {
+              const key = line.substring(0, colonIdx).trim();
+              let val = line.substring(colonIdx + 1).trim();
               if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
-                val = val.slice(1, -1);
+                val = val.substring(1, val.length - 1);
               }
               meta[key] = val;
             }
@@ -174,45 +238,69 @@
         .trim();
 
       if (!slug || slug === 'post') {
-        document.getElementById('postTitle').innerText = 'Field Guide Selection';
+        document.getElementById('postTitle').innerText = 'Select a Field Guide';
         document.getElementById('postBody').innerHTML = '<p><a href="../#blog" class="text-blue-600 font-bold">&larr; Return to Knowledge Hub</a></p>';
         return;
       }
 
       try {
-        // Look up file in _posts directory
-        let mdRes = await fetch(`../_posts/${slug}.md?t=${Date.now()}`).catch(() => null);
+        // WhatsApp button integration
+        fetch(`../site.json?t=${Date.now()}`).then(r => r.json()).then(site => {
+          if (site && site.whatsapp) {
+            document.getElementById('consultationWhatsAppBtn').href = 
+              `https://wa.me/${site.whatsapp}?text=Hi,%20I%20have%20a%20question%20regarding:%20${encodeURIComponent(slug)}`;
+          }
+        }).catch(() => {});
 
-        // Prefix and long-filename fallback
-        if (!mdRes || !mdRes.ok) {
-          const candidates = [
-            'multiple-hdd-nvr-ip-vs-analog-cameras-guide',
-            'multi-hdd-storage-in-cp-plus-nvrs-and-ip-vs.-analog-cctv-the-complete-engineering-guide',
-            'computer-amc-cctv-maintenance-akola',
-            'computer-amc-cctv-maintenance-in-akola-stop-downtime-before-it-halts-your-operations'
-          ];
-          for (const cand of candidates) {
-            if (cand.includes(slug) || slug.includes(cand.slice(0, 15))) {
-              const testRes = await fetch(`../_posts/${cand}.md?t=${Date.now()}`).catch(() => null);
-              if (testRes && testRes.ok) {
-                mdRes = testRes;
-                break;
-              }
+        // Fetch candidate list to prevent slug/filename mismatch
+        const candidateFiles = [
+          slug,
+          'multiple-hdd-nvr-ip-vs-analog-cameras-guide',
+          'multi-hdd-storage-in-cp-plus-nvrs-and-ip-vs.-analog-cctv-the-complete-engineering-guide',
+          'computer-amc-cctv-maintenance-akola',
+          'computer-amc-cctv-maintenance-in-akola-stop-downtime-before-it-halts-your-operations'
+        ];
+
+        let mdRes = null;
+        for (const candidate of candidateFiles) {
+          if (candidate === slug || candidate.includes(slug) || slug.includes(candidate.slice(0, 15))) {
+            const test = await fetch(`../_posts/${candidate}.md?t=${Date.now()}`).catch(() => null);
+            if (test && test.ok) {
+              mdRes = test;
+              break;
             }
           }
         }
 
         if (mdRes && mdRes.ok) {
           const rawText = await mdRes.text();
-          const { meta, body } = parseFrontMatter(rawText);
+          const { meta, body } = parseMarkdownDoc(rawText);
 
           const title = meta.title || slug;
-          document.title = (meta.seoTitle || title) + ' | TechPro';
+          const seoTitle = meta.seoTitle || title;
+          document.title = `${seoTitle} | TechPro Solutions`;
+          document.getElementById('postMetaTitle').innerText = `${seoTitle} | TechPro Solutions`;
           document.getElementById('postTitle').innerText = title;
+
+          if (meta.metaDesc || meta.excerpt) {
+            document.getElementById('postMetaDesc').setAttribute('content', meta.metaDesc || meta.excerpt);
+          }
+
+          if (meta.keywords) {
+            let kwTag = document.querySelector('meta[name="keywords"]');
+            if (!kwTag) {
+              kwTag = document.createElement('meta');
+              kwTag.name = 'keywords';
+              document.head.appendChild(kwTag);
+            }
+            kwTag.setAttribute('content', meta.keywords);
+          }
+
           if (meta.tag) document.getElementById('postTagBadge').innerText = meta.tag;
           if (meta.date) document.getElementById('postDate').innerText = meta.date;
           if (meta.readTime) document.getElementById('postReadTime').innerText = meta.readTime;
 
+          // Featured Image handling (strips leading slash to fix GitHub Pages relative paths)
           if (meta.image && meta.image.trim() !== '') {
             let imgPath = meta.image.trim().replace(/^\//, '');
             if (!imgPath.startsWith('http') && !imgPath.startsWith('../')) {
@@ -220,34 +308,41 @@
             }
             const imgEl = document.getElementById('postImage');
             imgEl.src = imgPath;
+            imgEl.onload = () => { document.getElementById('postImageContainer').classList.remove('hidden'); };
             imgEl.onerror = () => { document.getElementById('postImageContainer').classList.add('hidden'); };
-            document.getElementById('postImageContainer').classList.remove('hidden');
+          } else {
+            document.getElementById('postImageContainer').classList.add('hidden');
           }
 
-          document.getElementById('postBody').innerHTML = marked.parse(body || meta.excerpt || '');
+          // Render Full Markdown Body
+          if (body && body.trim().length > 0) {
+            document.getElementById('postBody').innerHTML = marked.parse(body);
+          } else {
+            document.getElementById('postBody').innerHTML = marked.parse(meta.excerpt || 'Guide content being updated.');
+          }
           return;
         }
 
-        // Fallback: check posts.json
+        // Fallback: posts.json
         const jsonRes = await fetch(`../posts.json?t=${Date.now()}`).catch(() => null);
         if (jsonRes && jsonRes.ok) {
           const list = await jsonRes.json();
-          const post = (Array.isArray(list) ? list : (list.posts || [])).find(p => p.id === slug || p.slug === slug);
-          if (post) {
-            document.title = post.title + ' | TechPro';
-            document.getElementById('postTitle').innerText = post.title;
-            if (post.tag) document.getElementById('postTagBadge').innerText = post.tag;
-            if (post.date) document.getElementById('postDate').innerText = post.date;
-            if (post.readTime) document.getElementById('postReadTime').innerText = post.readTime;
-            document.getElementById('postBody').innerHTML = marked.parse(post.body || post.excerpt || '');
+          const p = (Array.isArray(list) ? list : (list.posts || [])).find(item => item.id === slug || item.slug === slug);
+          if (p) {
+            document.title = `${p.title} | TechPro Solutions`;
+            document.getElementById('postTitle').innerText = p.title;
+            if (p.tag) document.getElementById('postTagBadge').innerText = p.tag;
+            if (p.date) document.getElementById('postDate').innerText = p.date;
+            if (p.readTime) document.getElementById('postReadTime').innerText = p.readTime;
+            document.getElementById('postBody').innerHTML = marked.parse(p.body || p.excerpt || '');
             return;
           }
         }
 
         document.getElementById('postTitle').innerText = 'Guide Not Found';
         document.getElementById('postBody').innerHTML = '<p>The requested guide could not be located. <a href="../#blog" class="text-blue-600 font-bold">&larr; Return to Knowledge Hub</a></p>';
-      } catch (e) {
-        document.getElementById('postTitle').innerText = 'Error Loading Document';
+      } catch (err) {
+        document.getElementById('postTitle').innerText = 'Notice';
         document.getElementById('postBody').innerHTML = '<p>Please refresh the page.</p>';
       }
     }
