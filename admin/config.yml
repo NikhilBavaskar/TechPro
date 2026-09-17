@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: NikhilBavaskar/TechPro
+  repo: NikhilBavaskar/TechPro # Replace with your actual repository path (e.g. yourname/techpro)
   branch: main
 
 media_folder: "assets/uploads"
@@ -18,8 +18,8 @@ collections:
       preview: true
     fields:
       - { label: "Article Title", name: "title", widget: "string" }
-      - { label: "URL Slug", name: "slug", widget: "string", hint: "Clean identifier without spaces (e.g., computer-amc-akola)" }
-      - { label: "Publish Date", name: "date", widget: "date", format: "MMM DD, YYYY" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "Clean identifier without spaces (e.g. computer-amc-akola)" }
+      - { label: "Publish Date", name: "date", widget: "datetime", date_format: "MMM DD, YYYY", time_format: false }
       - { label: "Category", name: "tag", widget: "select", options: ["Maintenance & AMC", "Surveillance", "Workstations", "Web Systems", "Hardware Diagnostics"] }
       - { label: "Read Time", name: "readTime", widget: "string", default: "5 min read" }
       - { label: "Featured Cover Image", name: "image", widget: "image", required: false }
