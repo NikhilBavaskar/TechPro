@@ -10,13 +10,13 @@
     "excerpt": "Professional computer AMC, IT hardware support & CCTV surveillance maintenance in Akola. Guaranteed 2–4 hr critical on-site SLA."
   },
   {
-    "id": "_posts/multiple-hdd-nvr-ip-vs-analog-cameras-guide",
-    "slug": "_posts/multiple-hdd-nvr-ip-vs-analog-cameras-guide",
+    "id": "multiple-hdd-nvr-ip-vs-analog-cameras-guide",
+    "slug": "multiple-hdd-nvr-ip-vs-analog-cameras-guide",
     "title": "Multi-HDD Storage in CP Plus NVRs and IP vs. Analog CCTV: The Complete Engineering Guide",
     "tag": "Surveillance",
     "date": "Sep 18, 2026",
     "readTime": "7 min read",
-    "image": "/assets/uploads/Gemini_Generated_Image_tgeol6tgeol6tgeo.png",
+    "image": "assets/uploads/Gemini_Generated_Image_tgeol6tgeol6tgeo.png",
     "excerpt": "A practical, engineering breakdown of multi-SATA storage pooling, channel grouping, and hardware RAID in CP Plus NVRs alongside a detailed comparison of Analog vs. IP surveillance."
   }
 ]
