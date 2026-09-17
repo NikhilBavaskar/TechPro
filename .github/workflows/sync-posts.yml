@@ -1,0 +1,75 @@
+name: Sync Blog Posts to Homepage
+
+on:
+  push:
+    paths:
+      - '_posts/**'
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build posts-index.json
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const dir = './_posts';
+
+            if (!fs.existsSync(dir)) {
+              fs.writeFileSync('./posts.json', JSON.stringify([]));
+              return;
+            }
+
+            const files = fs.readdirSync(dir).filter(f => f.endsWith('.md'));
+            const posts = [];
+
+            for (const file of files) {
+              const content = fs.readFileSync(path.join(dir, file), 'utf8');
+              const meta = {};
+              if (content.startsWith('---')) {
+                const parts = content.split('---');
+                if (parts.length >= 3) {
+                  parts[1].trim().split('\n').forEach(line => {
+                    const idx = line.indexOf(':');
+                    if (idx !== -1) {
+                      const key = line.slice(0, idx).trim();
+                      let val = line.slice(idx + 1).trim();
+                      if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+                        val = val.slice(1, -1);
+                      }
+                      meta[key] = val;
+                    }
+                  });
+                }
+              }
+              const slug = meta.slug || file.replace('.md', '');
+              posts.push({
+                id: slug,
+                slug: slug,
+                title: meta.title || slug,
+                tag: meta.tag || 'Field Guide',
+                date: meta.date || '',
+                readTime: meta.readTime || '5 min read',
+                image: meta.image || '',
+                excerpt: meta.excerpt || meta.metaDesc || ''
+              });
+            }
+
+            // Write back to posts.json so index.html loads all posts immediately
+            fs.writeFileSync('./posts.json', JSON.stringify(posts, null, 2));
+
+      - name: Commit Updated Index
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add posts.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-sync posts to homepage [skip ci]" && git push)
