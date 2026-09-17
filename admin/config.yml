@@ -1,13 +1,13 @@
 backend:
   name: github
-  repo: NikhilBavaskar/TechPro # Replace with your exact repository path
+  repo: NikhilBavaskar/TechPro
   branch: main
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  # ==================== FIELD GUIDES & BLOG ====================
+  # ==================== FIELD GUIDES & BLOG (DMM OPTIMIZED) ====================
   - name: "posts"
     label: "Field Guides & Blog"
     folder: "_posts"
@@ -18,16 +18,21 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: "Article Title", name: "title", widget: "string" }
-      - { label: "URL Slug", name: "slug", widget: "string", hint: "Clean URL name (e.g. computer-amc-akola)" }
+      - { label: "Article Title (H1 Display)", name: "title", widget: "string" }
+      - { label: "Target URL Slug", name: "slug", widget: "string", hint: "e.g., computer-amc-cctv-maintenance-akola" }
+      - { label: "SEO Meta Title", name: "seoTitle", widget: "string", hint: "Appears in browser tabs and Google SERP" }
+      - { label: "SEO Meta Description", name: "metaDesc", widget: "text", hint: "150-160 characters summary for Google" }
+      - { label: "Primary Target Keywords", name: "keywords", widget: "string", hint: "Comma-separated keywords" }
+      - { label: "Target Audience", name: "targetAudience", widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime", date_format: "MMM DD, YYYY", time_format: false }
-      - { label: "Category", name: "tag", widget: "select", options: ["Maintenance & AMC", "Surveillance", "Workstations", "Web Systems", "Hardware Diagnostics"] }
+      - { label: "Category / Tag", name: "tag", widget: "select", options: ["Maintenance & AMC", "Surveillance", "Workstations", "Web Systems", "Hardware Diagnostics"] }
       - { label: "Read Time", name: "readTime", widget: "string", default: "5 min read" }
       - { label: "Featured Cover Image", name: "image", widget: "image", required: false }
       - { label: "Short Summary (Excerpt)", name: "excerpt", widget: "text" }
-      - { label: "Article Content", name: "body", widget: "markdown" }
+      - { label: "Full Article Content (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Social Repurposing Package (LinkedIn / WhatsApp Copy)", name: "socialCopy", widget: "text", required: false }
 
-  # ==================== PRODUCTS & WEB PACKAGES ====================
+  # ==================== PRODUCTS & BUNDLES ====================
   - name: "products_collection"
     label: "Products & Bundles"
     files:
@@ -82,7 +87,6 @@ collections:
               - { label: "Component Name", name: "name", widget: "string" }
               - { label: "Price (₹)", name: "price", widget: "number" }
               - { label: "Default Selected", name: "selected", widget: "boolean", default: false }
-
           - label: "RAM (Memory)"
             name: "rams"
             widget: "list"
@@ -90,7 +94,6 @@ collections:
               - { label: "Component Name", name: "name", widget: "string" }
               - { label: "Price (₹)", name: "price", widget: "number" }
               - { label: "Default Selected", name: "selected", widget: "boolean", default: false }
-
           - label: "SSDs & Hard Drives"
             name: "ssds"
             widget: "list"
@@ -98,7 +101,6 @@ collections:
               - { label: "Component Name", name: "name", widget: "string" }
               - { label: "Price (₹)", name: "price", widget: "number" }
               - { label: "Default Selected", name: "selected", widget: "boolean", default: false }
-
           - label: "Motherboards & Power Units"
             name: "psus"
             widget: "list"
@@ -123,5 +125,3 @@ collections:
           - { label: "Direct WhatsApp Number", name: "whatsapp", widget: "string" }
           - { label: "Official Support Email", name: "email", widget: "string" }
           - { label: "Office Address", name: "address", widget: "string" }
-          - { label: "SEO Meta Title", name: "metaTitle", widget: "string" }
-          - { label: "SEO Meta Description", name: "metaDescription", widget: "text" }
