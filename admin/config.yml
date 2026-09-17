@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: NikhilBavaskar/TechPro # Replace with your exact GitHub repository path (e.g. nikhil/techpro)
+  repo: NikhilBavaskar/TechPro
   branch: main
 
 media_folder: "assets/uploads"
