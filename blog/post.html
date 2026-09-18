@@ -194,7 +194,6 @@
     <p>&copy; 2026 TechPro Solutions. Physical IT Infrastructure & Web Architecture.</p>
   </footer>
 
-  <!-- Bulletproof Parser & Hydrator with Cache-Busting -->
   <script>
     function parseMarkdownDoc(rawText) {
       const normalized = rawText.replace(/\r\n/g, '\n');
@@ -243,7 +242,6 @@
       const cacheBuster = `t=${Date.now()}`;
 
       try {
-        // WhatsApp button integration
         fetch(`/site.json?${cacheBuster}`).then(r => r.json()).then(site => {
           if (site && site.whatsapp) {
             document.getElementById('consultationWhatsAppBtn').href =
@@ -251,29 +249,22 @@
           }
         }).catch(() => {});
 
-        // Possible file name variations across environments
-        const candidateFiles = [
-          slug,
-          'multiple-hdd-nvr-ip-vs-analog-cameras-guide',
-          'multi-hdd-storage-in-cp-plus-nvrs-and-ip-vs.-analog-cctv-the-complete-engineering-guide',
-          'computer-amc-cctv-maintenance-akola',
-          'computer-amc-cctv-maintenance-in-akola-stop-downtime-before-it-halts-your-operations'
+        // Fetch sources: root server path, relative path, and GitHub raw CDN fallback
+        const candidateURLs = [
+          `/_posts/${slug}.md?${cacheBuster}`,
+          `../_posts/${slug}.md?${cacheBuster}`,
+          `https://raw.githubusercontent.com/NikhilBavaskar/TechPro/main/_posts/${slug}.md`
         ];
 
         let mdRes = null;
-        for (const candidate of candidateFiles) {
-          if (candidate === slug || candidate.includes(slug) || slug.includes(candidate.slice(0, 15))) {
-            // Try absolute root path first
-            let test = await fetch(`/_posts/${candidate}.md?${cacheBuster}`).catch(() => null);
-            // Fallback to relative path
-            if (!test || !test.ok) {
-              test = await fetch(`../_posts/${candidate}.md?${cacheBuster}`).catch(() => null);
-            }
-            if (test && test.ok) {
-              mdRes = test;
+        for (const url of candidateURLs) {
+          try {
+            const res = await fetch(url);
+            if (res && res.ok) {
+              mdRes = res;
               break;
             }
-          }
+          } catch (e) {}
         }
 
         if (mdRes && mdRes.ok) {
@@ -304,23 +295,21 @@
           if (meta.date) document.getElementById('postDate').innerText = meta.date;
           if (meta.readTime) document.getElementById('postReadTime').innerText = meta.readTime;
 
-          // Featured Image handling
+          // Featured Image handling (works with root and direct GitHub CDN paths)
           if (meta.image && meta.image.trim() !== '') {
-            let imgPath = meta.image.trim();
-            if (!imgPath.startsWith('http')) {
-              imgPath = imgPath.startsWith('/') ? imgPath : `/${imgPath}`;
-            }
+            let imgPath = meta.image.trim().replace(/^\//, '');
             const imgEl = document.getElementById('postImage');
-            imgEl.src = `${imgPath}?${cacheBuster}`;
+
             imgEl.onload = () => { document.getElementById('postImageContainer').classList.remove('hidden'); };
             imgEl.onerror = () => {
-              // Try relative fallback if absolute path failed
-              if (imgPath.startsWith('/')) {
-                imgEl.src = `..${imgPath}?${cacheBuster}`;
+              // Try raw GitHub fallback for the image
+              if (!imgEl.src.includes('raw.githubusercontent.com')) {
+                imgEl.src = `https://raw.githubusercontent.com/NikhilBavaskar/TechPro/main/${imgPath}`;
               } else {
                 document.getElementById('postImageContainer').classList.add('hidden');
               }
             };
+            imgEl.src = `/${imgPath}?${cacheBuster}`;
           } else {
             document.getElementById('postImageContainer').classList.add('hidden');
           }
@@ -351,10 +340,10 @@
         }
 
         document.getElementById('postTitle').innerText = 'Guide Not Found';
-        document.getElementById('postBody').innerHTML = '<p>The requested guide could not be located. <a href="/#blog" class="text-blue-600 font-bold">&larr; Return to Knowledge Hub</a></p>';
+        document.getElementById('postBody').innerHTML = '<p class="text-center py-10">Guide not found. <a href="/#blog" class="text-blue-600 font-bold">&larr; Return to Knowledge Hub</a></p>';
       } catch (err) {
         document.getElementById('postTitle').innerText = 'Notice';
-        document.getElementById('postBody').innerHTML = '<p>Please refresh the page.</p>';
+        document.getElementById('postBody').innerHTML = '<p class="text-center py-10">Please refresh the page.</p>';
       }
     }
 
