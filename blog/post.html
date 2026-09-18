@@ -9,7 +9,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" id="canonicalLink" href="https://techprohardware.in/blog/post.html" />
 
-  <!-- Tailwind CSS & Marked Parser -->
+  <!-- Tailwind CSS & Markdown Engine -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
@@ -124,22 +124,22 @@
         <span class="font-bold text-slate-900">ENGINEERING DESK:</span>
         <span class="text-blue-700 font-semibold bg-white px-2 py-0.5 rounded border border-blue-300">Akola On-Site Technical Guides</span>
       </div>
-      <a href="../#audit-ticket" class="text-blue-700 font-bold hover:underline hidden sm:inline">Book On-Site Audit &rarr;</a>
+      <a href="/#audit-ticket" class="text-blue-700 font-bold hover:underline hidden sm:inline">Book On-Site Audit &rarr;</a>
     </div>
   </div>
 
   <!-- NAVIGATION HEADER -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="../" class="flex items-center gap-3 group">
+      <a href="/" class="flex items-center gap-3 group">
         <div>
           <span class="text-2xl font-black text-slate-900">Tech<span class="text-blue-600">Pro</span></span>
           <span class="block text-[9px] font-mono font-bold tracking-[0.28em] text-cyan-600 uppercase">SOLUTIONS</span>
         </div>
       </a>
       <div class="flex items-center gap-4">
-        <a href="../#blog" class="text-xs font-bold text-slate-600 hover:text-blue-600">&larr; Back to Guides</a>
-        <a href="../#audit-ticket" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xs uppercase tracking-wider">Book Audit</a>
+        <a href="/#blog" class="text-xs font-bold text-slate-600 hover:text-blue-600">&larr; Back to Guides</a>
+        <a href="/#audit-ticket" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xs uppercase tracking-wider">Open Ticket</a>
       </div>
     </div>
   </header>
@@ -148,7 +148,7 @@
   <section class="relative pt-12 pb-16 overflow-hidden border-b border-blue-100 bg-gradient-to-b from-blue-50/40 to-brandCanvas">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blue-200 text-xs font-mono text-slate-600 mb-6 font-semibold shadow-sm">
-        <a href="../" class="text-blue-600 hover:underline">Home</a>
+        <a href="/" class="text-blue-600 hover:underline">Home</a>
         <span>/</span>
         <span id="postTagBadge" class="text-cyan-700 uppercase font-bold">Field Guide</span>
       </div>
@@ -166,7 +166,7 @@
   <!-- ARTICLE CONTAINER -->
   <main class="py-16 bg-white border-b border-blue-100">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      
+
       <!-- Featured Image Banner -->
       <div id="postImageContainer" class="hidden mb-12 rounded-3xl overflow-hidden border border-blue-100 shadow-sm">
         <img id="postImage" src="" alt="Field Guide Banner" class="w-full h-auto max-h-[440px] object-cover" />
@@ -194,7 +194,7 @@
     <p>&copy; 2026 TechPro Solutions. Physical IT Infrastructure & Web Architecture.</p>
   </footer>
 
-  <!-- Bulletproof Parser & Hydrator -->
+  <!-- Bulletproof Parser & Hydrator with Cache-Busting -->
   <script>
     function parseMarkdownDoc(rawText) {
       const normalized = rawText.replace(/\r\n/g, '\n');
@@ -202,15 +202,12 @@
       let body = normalized;
 
       if (normalized.startsWith('---')) {
-        // Find closing --- that starts on its own line
         const secondFenceIdx = normalized.indexOf('\n---', 3);
         if (secondFenceIdx !== -1) {
           const rawMeta = normalized.substring(3, secondFenceIdx).trim();
-          // The body begins after '\n---' plus the next newline
           const bodyStart = normalized.indexOf('\n', secondFenceIdx + 4);
           body = bodyStart !== -1 ? normalized.substring(bodyStart).trim() : normalized.substring(secondFenceIdx + 4).trim();
 
-          // Parse metadata keys
           rawMeta.split('\n').forEach(line => {
             const colonIdx = line.indexOf(':');
             if (colonIdx !== -1) {
@@ -230,7 +227,7 @@
     async function loadPost() {
       const urlParams = new URLSearchParams(window.location.search);
       let rawParam = urlParams.get('post') || window.location.pathname.split('/').filter(Boolean).pop() || '';
-      
+
       let slug = decodeURIComponent(rawParam)
         .replace(/^_posts\//, '')
         .replace(/^blog\//, '')
@@ -239,20 +236,22 @@
 
       if (!slug || slug === 'post') {
         document.getElementById('postTitle').innerText = 'Select a Field Guide';
-        document.getElementById('postBody').innerHTML = '<p><a href="../#blog" class="text-blue-600 font-bold">&larr; Return to Knowledge Hub</a></p>';
+        document.getElementById('postBody').innerHTML = '<p><a href="/#blog" class="text-blue-600 font-bold">&larr; Return to Knowledge Hub</a></p>';
         return;
       }
 
+      const cacheBuster = `t=${Date.now()}`;
+
       try {
         // WhatsApp button integration
-        fetch(`../site.json?t=${Date.now()}`).then(r => r.json()).then(site => {
+        fetch(`/site.json?${cacheBuster}`).then(r => r.json()).then(site => {
           if (site && site.whatsapp) {
-            document.getElementById('consultationWhatsAppBtn').href = 
+            document.getElementById('consultationWhatsAppBtn').href =
               `https://wa.me/${site.whatsapp}?text=Hi,%20I%20have%20a%20question%20regarding:%20${encodeURIComponent(slug)}`;
           }
         }).catch(() => {});
 
-        // Fetch candidate list to prevent slug/filename mismatch
+        // Possible file name variations across environments
         const candidateFiles = [
           slug,
           'multiple-hdd-nvr-ip-vs-analog-cameras-guide',
@@ -264,7 +263,12 @@
         let mdRes = null;
         for (const candidate of candidateFiles) {
           if (candidate === slug || candidate.includes(slug) || slug.includes(candidate.slice(0, 15))) {
-            const test = await fetch(`../_posts/${candidate}.md?t=${Date.now()}`).catch(() => null);
+            // Try absolute root path first
+            let test = await fetch(`/_posts/${candidate}.md?${cacheBuster}`).catch(() => null);
+            // Fallback to relative path
+            if (!test || !test.ok) {
+              test = await fetch(`../_posts/${candidate}.md?${cacheBuster}`).catch(() => null);
+            }
             if (test && test.ok) {
               mdRes = test;
               break;
@@ -300,21 +304,28 @@
           if (meta.date) document.getElementById('postDate').innerText = meta.date;
           if (meta.readTime) document.getElementById('postReadTime').innerText = meta.readTime;
 
-          // Featured Image handling (strips leading slash to fix GitHub Pages relative paths)
+          // Featured Image handling
           if (meta.image && meta.image.trim() !== '') {
-            let imgPath = meta.image.trim().replace(/^\//, '');
-            if (!imgPath.startsWith('http') && !imgPath.startsWith('../')) {
-              imgPath = `../${imgPath}`;
+            let imgPath = meta.image.trim();
+            if (!imgPath.startsWith('http')) {
+              imgPath = imgPath.startsWith('/') ? imgPath : `/${imgPath}`;
             }
             const imgEl = document.getElementById('postImage');
-            imgEl.src = imgPath;
+            imgEl.src = `${imgPath}?${cacheBuster}`;
             imgEl.onload = () => { document.getElementById('postImageContainer').classList.remove('hidden'); };
-            imgEl.onerror = () => { document.getElementById('postImageContainer').classList.add('hidden'); };
+            imgEl.onerror = () => {
+              // Try relative fallback if absolute path failed
+              if (imgPath.startsWith('/')) {
+                imgEl.src = `..${imgPath}?${cacheBuster}`;
+              } else {
+                document.getElementById('postImageContainer').classList.add('hidden');
+              }
+            };
           } else {
             document.getElementById('postImageContainer').classList.add('hidden');
           }
 
-          // Render Full Markdown Body
+          // Render Full Body
           if (body && body.trim().length > 0) {
             document.getElementById('postBody').innerHTML = marked.parse(body);
           } else {
@@ -324,7 +335,7 @@
         }
 
         // Fallback: posts.json
-        const jsonRes = await fetch(`../posts.json?t=${Date.now()}`).catch(() => null);
+        const jsonRes = await fetch(`/posts.json?${cacheBuster}`).catch(() => null);
         if (jsonRes && jsonRes.ok) {
           const list = await jsonRes.json();
           const p = (Array.isArray(list) ? list : (list.posts || [])).find(item => item.id === slug || item.slug === slug);
@@ -340,7 +351,7 @@
         }
 
         document.getElementById('postTitle').innerText = 'Guide Not Found';
-        document.getElementById('postBody').innerHTML = '<p>The requested guide could not be located. <a href="../#blog" class="text-blue-600 font-bold">&larr; Return to Knowledge Hub</a></p>';
+        document.getElementById('postBody').innerHTML = '<p>The requested guide could not be located. <a href="/#blog" class="text-blue-600 font-bold">&larr; Return to Knowledge Hub</a></p>';
       } catch (err) {
         document.getElementById('postTitle').innerText = 'Notice';
         document.getElementById('postBody').innerHTML = '<p>Please refresh the page.</p>';
