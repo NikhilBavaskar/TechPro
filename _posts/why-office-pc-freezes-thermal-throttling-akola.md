@@ -18,7 +18,7 @@ excerpt: |-
 socialCopy: ''
 ---
 
-t happens right in the middle of peak business hours: A customer is standing at your billing or cash counter, your software window turns pale grey, the mouse cursor turns into a spinning loading circle, and your computer case fan suddenly sounds like a jet engine.
+It happens right in the middle of peak business hours: A customer is standing at your billing or cash counter, your software window turns pale grey, the mouse cursor turns into a spinning loading circle, and your computer case fan suddenly sounds like a jet engine.
 
 A few seconds later, the screen goes black, or the PC shuts down with zero warning.
 
