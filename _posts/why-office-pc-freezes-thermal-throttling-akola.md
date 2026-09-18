@@ -8,7 +8,7 @@ targetAudience: Branch managers, co-operative credit society cashiers, retail bi
 date: Sep 18, 2026
 tag: Hardware Diagnostics
 readTime: 5 min read
-image: ''
+image: /assets/uploads/Gemini_Generated_Image_5qf27c5qf27c5qf2.png
 excerpt: |-
   This guide explains that over 75% of office computers in Akola freeze or shut down unexpectedly due to overheating and dust entrapment, not dead hardware or OS bugs.
   The Problem: Ambient dust forms a dense felt-like layer over CPU heatsink fins, while factory thermal compound dries into a brittle crust after 18–24 months.
