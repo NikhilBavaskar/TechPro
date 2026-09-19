@@ -16,8 +16,8 @@
     "tag": "Hardware Diagnostics",
     "date": "Sep 19, 2026",
     "readTime": "5 min read",
-    "image": "/assets/uploads/image.png",
-    "excerpt": "|-"
+    "image": "assets/uploads/image.png",
+    "excerpt": "Workstations in MIDC Akola face extreme dust, fiber lint, and heat. Discover the recommended 30-to-45-day cleaning protocol to stop sudden SMPS failure and dispatch stalls."
   },
   {
     "id": "multiple-hdd-nvr-ip-vs-analog-cameras-guide",
