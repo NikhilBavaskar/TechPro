@@ -6,7 +6,7 @@ metaDesc: Industrial workstations in MIDC Akola fail due to heavy dust, cotton l
 keywords: industrial computer maintenance MIDC Akola, factory PC repair Akola, dust protection for office computers, workstation cleaning service Akola, preventive IT maintenance for factories
 targetAudience: actory managers, plant supervisors, dispatch heads, and accounts administrators across MIDC Phase I, Phase II, and surrounding agro-processing industrial belts in Akola.
 date: Sep 19, 2026
-tag: Maintenance & AMC
+tag: Hardware Diagnostics
 readTime: 5 min read
 image: ''
 excerpt: |-
