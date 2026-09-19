@@ -9,8 +9,8 @@ date: Sep 19, 2026
 tag: Web Systems
 readTime: 5 min read
 image: /assets/uploads/Gemini_Generated_Image_q0j81bq0j81bq0j8-cleaned-cleaned.png
-excerpt: |-
-  In the early days of the commercial web, building an online presence for a business meant installing a bloated Content Management System (CMS), stacking dozens of third-party plugins, and paying ongoing monthly server bills to keep a resource-heavy SQL database from crashing.
+excerpt:
+In the early days of the commercial web, building an online presence for a business meant installing a bloated Content Management System (CMS), stacking dozens of third-party plugins, and paying ongoing monthly server bills to keep a resource-heavy SQL database from crashing.
 
   For most local and B2B enterprises—whether a specialized service company, medical clinic, educational institute, or retail firm—this architecture is complete overkill. Worse, it is often a silent killer of your sales pipeline. Slow-loading pages cause potential clients to bounce within three seconds, unpatched database plugins create glaring security vulnerabilities, and poor Core Web Vitals drag down your rankings in Google search results.
 socialCopy: ''
