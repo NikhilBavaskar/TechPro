@@ -11,10 +11,10 @@ readTime: 5 min read
 image: /assets/uploads/Gemini_Generated_Image_5qf27c5qf27c5qf2.png
 excerpt: 
   This guide explains that over 75% of office computers in Akola freeze or shut down unexpectedly due to overheating and dust entrapment, not dead hardware or OS bugs.
-  The Problem: Ambient dust forms a dense felt-like layer over CPU heatsink fins, while factory thermal compound dries into a brittle crust after 18–24 months.
-  The Mechanism: Above 85°C, the processor throttles performance (cutting clock speed in half, causing software lag); at 100°C–105°C, it triggers a hardware cutoff to prevent physical meltdown, instantly cutting power.
+  The Problem:-  Ambient dust forms a dense felt-like layer over CPU heatsink fins, while factory thermal compound dries into a brittle crust after 18–24 months.
+  The Mechanism:- Above 85°C, the processor throttles performance (cutting clock speed in half, causing software lag); at 100°C–105°C, it triggers a hardware cutoff to prevent physical meltdown, instantly cutting power.
   The Fix: ESD-safe dust cleaning, chemical solvent removal of old paste, high-conductivity thermal paste reapplication, and fan servicing restore stable 45°C–55°C operating temperatures.
-  The Outcome: Prevents unnecessary ₹35,000 PC replacements with a low-cost preventive overhaul and an offered free 10-minute on-site hardware audit for Akola businesses.
+  The Outcome:- Prevents unnecessary ₹35,000 PC replacements with a low-cost preventive overhaul and an offered free 10-minute on-site hardware audit for Akola businesses.
 socialCopy: ''
 ---
 
