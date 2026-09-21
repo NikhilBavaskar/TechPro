@@ -4,10 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title id="postMetaTitle">Technical Field Guide | TechPro Solutions</title>
-
+  
   <meta id="postMetaDesc" name="description" content="Technical hardware diagnostics, surveillance compliance audits, and workstation optimization guides." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" id="canonicalLink" href="https://techprohardware.in/blog/post.html" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="TechPro Solutions" />
+  <meta id="ogTitle" property="og:title" content="Technical Field Guide | TechPro Solutions" />
+  <meta id="ogDesc" property="og:description" content="Technical hardware diagnostics, surveillance compliance audits, and workstation optimization guides." />
+  <meta id="ogUrl" property="og:url" content="https://techprohardware.in/blog/post.html" />
+  <meta id="ogImage" property="og:image" content="https://techprohardware.in/assets/uploads/Gemini_Generated_Image_5qf27c5qf27c5qf2.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta id="twTitle" name="twitter:title" content="Technical Field Guide | TechPro Solutions" />
+  <meta id="twDesc" name="twitter:description" content="Technical hardware diagnostics, surveillance compliance audits, and workstation optimization guides." />
+  <meta id="twImage" name="twitter:image" content="https://techprohardware.in/assets/uploads/Gemini_Generated_Image_5qf27c5qf27c5qf2.png" />
+
+  <!-- Dynamic JSON-LD Article Schema Container -->
+  <script type="application/ld+json" id="articleSchemaJson"></script>
 
   <!-- Tab Favicon (Exact Homepage Brand Logo) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Cdefs%3E%3ClinearGradient id='tGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231D4ED8'/%3E%3Cstop offset='100%25' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3ClinearGradient id='pGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230284C7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='70' height='70' rx='20' fill='%23ffffff' stroke='%2393C5FD' stroke-width='3'/%3E%3Cpath d='M14 22h32M24 22v26' stroke='url(%23tGrad)' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M38 18v34M38 18h12c6 0 10 4 10 9s-4 9-10 9H38' stroke='url(%23pGrad)' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='54' cy='12' r='4' fill='%2300F2FE'/%3E%3C/svg%3E">
@@ -17,7 +34,7 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <script>
@@ -50,13 +67,12 @@
     }
     .animate-drift-grid {
       background-size: 40px 40px;
-      background-image:
+      background-image: 
         linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
       animation: gridDrift 30s linear infinite;
     }
 
-    /* Homepage Match Typography & Layout */
     .article-body h2 {
       font-size: 1.75rem;
       font-weight: 800;
@@ -143,7 +159,7 @@
 </head>
 <body class="bg-brandCanvas text-brandSlate antialiased selection:bg-blue-600 selection:text-white flex flex-col min-h-screen">
 
-  <!-- TOP DISPATCH TICKER (Homepage Exact Match) -->
+  <!-- TOP DISPATCH TICKER -->
   <div class="bg-gradient-to-r from-blue-100/90 via-cyan-100/80 to-indigo-100/90 border-b border-blue-200/80 text-[11px] font-mono tracking-wider py-2.5 px-4 text-slate-700">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       <div class="flex items-center gap-2">
@@ -158,11 +174,9 @@
     </div>
   </div>
 
-  <!-- NAVIGATION HEADER (Homepage Identical Structure) -->
+  <!-- NAVIGATION HEADER -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100/80 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-
-      <!-- Brand Logo -->
       <a href="/" class="flex items-center gap-3.5 group">
         <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-500 via-indigo-500 to-cyan-400 p-[2px] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
           <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1.5">
@@ -178,7 +192,6 @@
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
       <nav class="hidden md:flex items-center gap-8 text-xs font-bold text-slate-600">
         <a href="/#services" class="hover:text-blue-600 transition-colors">Services</a>
         <a href="/#bundles" class="hover:text-blue-600 transition-colors">Bundles & Web</a>
@@ -187,7 +200,6 @@
         <a href="/#sla" class="hover:text-blue-600 transition-colors">SLA Standards</a>
       </nav>
 
-      <!-- Action Buttons -->
       <div class="flex items-center gap-3">
         <a href="tel:+917972104370" class="hidden sm:inline-flex text-xs font-mono font-bold text-blue-700 bg-blue-50 px-3.5 py-2 rounded-full border border-blue-200 hover:bg-blue-100 transition-all">
           +91 797210 4370
@@ -199,11 +211,9 @@
     </div>
   </header>
 
-  <!-- HERO SECTION WITH HOMEPAGE GLOW & GRID -->
+  <!-- HERO SECTION -->
   <section class="relative pt-16 pb-20 overflow-hidden border-b border-blue-100 animate-drift-grid bg-gradient-to-b from-blue-50/50 via-white to-brandCanvas">
     <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-
-      <!-- Category Badge -->
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blue-200 text-xs font-mono text-slate-700 mb-6 font-bold shadow-sm">
         <a href="/" class="text-blue-600 hover:underline">Home</a>
         <span class="text-slate-300">/</span>
@@ -212,12 +222,10 @@
         <span id="postTagBadge" class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 uppercase font-black">Field Guide</span>
       </div>
 
-      <!-- Title -->
       <h1 id="postTitle" class="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-[1.15] max-w-3xl mx-auto">
         Loading Field Guide...
       </h1>
 
-      <!-- Meta info -->
       <div class="mt-6 flex items-center justify-center gap-3 text-xs font-mono text-slate-500">
         <span id="postDate" class="bg-white/80 px-2.5 py-1 rounded border border-slate-200">Published in Akola</span>
         <span>•</span>
@@ -229,18 +237,14 @@
   <!-- ARTICLE CONTAINER -->
   <main class="py-16 bg-white border-b border-blue-100 flex-grow">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
-
-      <!-- Featured Image Banner -->
       <div id="postImageContainer" class="hidden mb-12 rounded-3xl overflow-hidden border border-blue-100 shadow-cardLight">
         <img id="postImage" src="" alt="Field Guide Cover" class="w-full h-auto max-h-[460px] object-cover" />
       </div>
 
-      <!-- Main Rendered Markdown -->
       <article id="postBody" class="article-body font-sans">
         <div class="py-16 text-center text-slate-400 font-mono text-xs">Loading complete engineering article...</div>
       </article>
 
-      <!-- Bottom Conversion Card (Homepage Matched) -->
       <div class="mt-20 p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-blue-600 via-indigo-600 to-cyan-600 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
         <div class="text-center sm:text-left">
           <div class="text-xs font-mono font-bold tracking-widest text-cyan-200 uppercase mb-1">On-Site Dispatch Unit</div>
@@ -254,7 +258,7 @@
     </div>
   </main>
 
-  <!-- FOOTER (Homepage Parity) -->
+  <!-- FOOTER -->
   <footer class="bg-brandSlate text-slate-400 border-t border-slate-800 py-12 text-center text-xs font-mono">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
       <div class="text-slate-300 font-bold">TechPro Solutions • Akola, Maharashtra</div>
@@ -262,7 +266,7 @@
     </div>
   </footer>
 
-  <!-- Self-Healing Parser Script -->
+  <!-- Production Hydrator with Dynamic Canonical & JSON-LD Schema -->
   <script>
     function parseMarkdownDoc(rawText) {
       const normalized = rawText.replace(/\r\n/g, '\n');
@@ -295,7 +299,7 @@
     async function loadPost() {
       const urlParams = new URLSearchParams(window.location.search);
       let rawParam = urlParams.get('post') || window.location.pathname.split('/').filter(Boolean).pop() || '';
-
+      
       let slug = decodeURIComponent(rawParam)
         .replace(/^_posts\//, '')
         .replace(/^blog\//, '')
@@ -308,17 +312,21 @@
         return;
       }
 
+      // Fix 1: Dynamic canonical link per individual guide
+      const currentFullUrl = `https://techprohardware.in/blog/post.html?post=${encodeURIComponent(slug)}`;
+      document.getElementById('canonicalLink').setAttribute('href', currentFullUrl);
+      document.getElementById('ogUrl').setAttribute('content', currentFullUrl);
+
       const cacheBuster = `t=${Date.now()}`;
 
       try {
         fetch(`/site.json?${cacheBuster}`).then(r => r.json()).then(site => {
           if (site && site.whatsapp) {
-            document.getElementById('consultationWhatsAppBtn').href =
+            document.getElementById('consultationWhatsAppBtn').href = 
               `https://wa.me/${site.whatsapp}?text=Hi,%20I%20have%20a%20question%20regarding:%20${encodeURIComponent(slug)}`;
           }
         }).catch(() => {});
 
-        // Fetch candidates with raw GitHub fallback
         const candidateURLs = [
           `/_posts/${slug}.md?${cacheBuster}`,
           `../_posts/${slug}.md?${cacheBuster}`,
@@ -342,13 +350,22 @@
 
           const title = meta.title || slug;
           const seoTitle = meta.seoTitle || title;
+          const desc = meta.metaDesc || meta.excerpt || 'Technical guide by TechPro Solutions Akola.';
+          const fullImg = meta.image ? (meta.image.startsWith('http') ? meta.image : `https://techprohardware.in/${meta.image.replace(/^\//, '')}`) : 'https://techprohardware.in/assets/uploads/Gemini_Generated_Image_5qf27c5qf27c5qf2.png';
+
+          // Update Document Head
           document.title = `${seoTitle} | TechPro Solutions`;
           document.getElementById('postMetaTitle').innerText = `${seoTitle} | TechPro Solutions`;
           document.getElementById('postTitle').innerText = title;
+          document.getElementById('postMetaDesc').setAttribute('content', desc);
 
-          if (meta.metaDesc || meta.excerpt) {
-            document.getElementById('postMetaDesc').setAttribute('content', meta.metaDesc || meta.excerpt);
-          }
+          // Update OG & Twitter Meta Tags
+          document.getElementById('ogTitle').setAttribute('content', seoTitle);
+          document.getElementById('ogDesc').setAttribute('content', desc);
+          document.getElementById('ogImage').setAttribute('content', fullImg);
+          document.getElementById('twTitle').setAttribute('content', seoTitle);
+          document.getElementById('twDesc').setAttribute('content', desc);
+          document.getElementById('twImage').setAttribute('content', fullImg);
 
           if (meta.keywords) {
             let kwTag = document.querySelector('meta[name="keywords"]');
@@ -368,7 +385,7 @@
           if (meta.image && meta.image.trim() !== '') {
             let imgPath = meta.image.trim().replace(/^\//, '');
             const imgEl = document.getElementById('postImage');
-
+            
             imgEl.onload = () => { document.getElementById('postImageContainer').classList.remove('hidden'); };
             imgEl.onerror = () => {
               if (!imgEl.src.includes('raw.githubusercontent.com')) {
@@ -382,12 +399,49 @@
             document.getElementById('postImageContainer').classList.add('hidden');
           }
 
-          // Render Full Body
+          // Render Body
           if (body && body.trim().length > 0) {
             document.getElementById('postBody').innerHTML = marked.parse(body);
           } else {
             document.getElementById('postBody').innerHTML = marked.parse(meta.excerpt || 'Guide content being updated.');
           }
+
+          // Fix 2: Inject Google JSON-LD Article Schema
+          const schemaObj = {
+            "@context": "https://schema.org",
+            "@type": "TechArticle",
+            "headline": title,
+            "description": desc,
+            "image": [fullImg],
+            "datePublished": meta.date ? new Date(meta.date).toISOString().split('T')[0] : "2026-09-18",
+            "dateModified": "2026-09-22",
+            "author": {
+              "@type": "Organization",
+              "name": "TechPro Solutions",
+              "url": "https://techprohardware.in"
+            },
+            "publisher": {
+              "@type": "LocalBusiness",
+              "name": "TechPro Solutions",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://techprohardware.in/assets/uploads/amc-cctv-akola.png"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Akola",
+                "addressRegion": "Maharashtra",
+                "addressCountry": "IN"
+              },
+              "telephone": "+917972104370"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": currentFullUrl
+            }
+          };
+          document.getElementById('articleSchemaJson').textContent = JSON.stringify(schemaObj, null, 2);
+
           return;
         }
 
