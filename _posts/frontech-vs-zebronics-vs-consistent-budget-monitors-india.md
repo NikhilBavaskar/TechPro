@@ -27,15 +27,68 @@ Below is an honest, technician-tested comparison of how these three Indian budge
 
 ## Technical Specifications Comparison Matrix
 
-| **Feature / Spec** | **Zebronics (e.g., Zeb-EA122 / A22FHD)** | **Consistent (e.g., CTM2200 / 22" Borderless)** | **Frontech (e.g., MON-0058 / MON-0091)** |
-| **Native Resolution** | 1920 x 1080 (FHD) | 1920 x 1080 (FHD) | 1920 x 1080 or 1680 x 1050 (Check model!) |
-| **Panel Type** | TN / Standard Glossy LED | VA / IPS Grade (Model dependent) | TN / VA Grade |
-| **Peak Brightness** | \~250 nits ($cd/m^2$) | \~250 nits ($cd/m^2$) | 200 – 250 nits |
-| **Viewing Angles** | 140° H / 130° V | Up to 178° (IPS/VA models) | 130° – 160° |
-| **Connectivity** | 1x HDMI, 1x VGA | 1x HDMI, 1x VGA (Some add Audio In) | 1x HDMI, 1x VGA |
-| **Internal Speakers** | Rare (Mostly visual only) | Built-in 2x 2W speakers on popular models | Available on select models |
-| **Manufacturer Warranty** | **1 Year** (Carry-in) | **3 Years** (Major advantage) | **3 Years** (On select Ultima series) |
-| **Street Price Range** | ₹3,400 – ₹4,200 | ₹3,499 – ₹4,600 | ₹3,200 – ₹4,100 |
+<div class="overflow-x-auto my-8 rounded-2xl border border-slate-200 shadow-sm bg-white">
+  <table class="w-full border-collapse text-left text-sm text-slate-700">
+    <thead class="bg-slate-100 border-b border-slate-300 font-mono text-xs uppercase text-slate-900 tracking-wider">
+      <tr>
+        <th class="p-4 font-extrabold">Feature / Spec</th>
+        <th class="p-4 font-extrabold">Zebronics (e.g., Zeb-EA122)</th>
+        <th class="p-4 font-extrabold">Consistent (e.g., CTM2200)</th>
+        <th class="p-4 font-extrabold">Frontech (e.g., MON-0058)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Native Resolution</td>
+        <td class="p-4 border-t border-slate-100">1920 x 1080 (FHD)</td>
+        <td class="p-4 border-t border-slate-100">1920 x 1080 (FHD)</td>
+        <td class="p-4 border-t border-slate-100">1920 x 1080 or 1680 x 1050</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Panel Type</td>
+        <td class="p-4 border-t border-slate-100">TN / Standard Glossy LED</td>
+        <td class="p-4 border-t border-slate-100">VA / IPS Grade</td>
+        <td class="p-4 border-t border-slate-100">TN / VA Grade</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Peak Brightness</td>
+        <td class="p-4 border-t border-slate-100">~250 nits</td>
+        <td class="p-4 border-t border-slate-100">~250 nits</td>
+        <td class="p-4 border-t border-slate-100">200 – 250 nits</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Viewing Angles</td>
+        <td class="p-4 border-t border-slate-100">140° H / 130° V</td>
+        <td class="p-4 border-t border-slate-100">Up to 178° (IPS/VA models)</td>
+        <td class="p-4 border-t border-slate-100">130° – 160°</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Connectivity</td>
+        <td class="p-4 border-t border-slate-100">1x HDMI, 1x VGA</td>
+        <td class="p-4 border-t border-slate-100">1x HDMI, 1x VGA (Audio In)</td>
+        <td class="p-4 border-t border-slate-100">1x HDMI, 1x VGA</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Internal Speakers</td>
+        <td class="p-4 border-t border-slate-100">Rare (Mostly visual only)</td>
+        <td class="p-4 border-t border-slate-100">Built-in 2x 2W speakers</td>
+        <td class="p-4 border-t border-slate-100">Available on select models</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Warranty</td>
+        <td class="p-4 border-t border-slate-100"><strong>1 Year</strong> (Carry-in)</td>
+        <td class="p-4 border-t border-slate-100"><strong>3 Years</strong> (Major advantage)</td>
+        <td class="p-4 border-t border-slate-100"><strong>3 Years</strong> (Ultima series)</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Street Price Range</td>
+        <td class="p-4 border-t border-slate-100">₹3,400 – ₹4,200</td>
+        <td class="p-4 border-t border-slate-100">₹3,499 – ₹4,600</td>
+        <td class="p-4 border-t border-slate-100">₹3,200 – ₹4,100</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## 1. Zebronics: The Safe Consumer Choice with High Contrast
 
@@ -111,7 +164,6 @@ Yes. Almost all 21.5" and 22" models from these three manufacturers feature stan
 ### Is a 21.5-inch or 24-inch monitor better for office work?
 
 For small office desks, cash counters, and CCTV walls, **21.5 inches is the ideal size**. It offers sharp pixel density in 1080p Full HD without taking up excessive table space. 24-inch monitors are better suited for creative editing, multi-window programming, or larger executive desks.
-
 
 ## Hardware Sourcing & Setup Support in Akola
 
