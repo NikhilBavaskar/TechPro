@@ -56,16 +56,54 @@ Never install standard desktop computing drives into a multi-bay NVR. Desktop dr
 ## Part 2: Analog (HD-CVI/TVI/AHD) vs. IP Network Cameras
 
 Understanding the architectural differences between analog and IP surveillance prevents costly deployment mistakes:
-
-| Engineering Parameter | Analog HD Surveillance (DVR-Based) | IP Network Surveillance (NVR-Based) |
-| :--- | :--- | :--- |
-| **Video Processing** | Raw analog signal generated at lens; digitized at central DVR. | Digitized, compressed (H.265+), and encoded directly inside camera housing. |
-| **Transmission Cable** | Coaxial cable (RG59 / RG6) or 3+1 composite copper cable. | Standard Cat6 Ethernet cable via RJ45 interfaces. |
-| **Power Architecture** | Dedicated 12V DC centralized multi-channel SMPS power supply. | PoE (Power over Ethernet): One Cat6 cable delivers both data and DC power. |
-| **Resolution Limit** | Typically capped at 2MP–5MP; high-frequency loss over distance. | 4MP, 8MP (4K), and 12MP+ with zero signal degradation across rated lengths. |
-| **Cable Distance** | Signal drops, color distortion, and ground-loop hum past 70–90m. | 100 meters per Cat6 run; expandable indefinitely using PoE switches or fiber uplinks. |
-| **Edge Intelligence** | Limited; dependent on central DVR software capabilities. | On-board camera AI: Tripwire detection, vehicle plate logging, and face indexing. |
-| **Cabling Topology** | Star Point-to-Point: Every camera requires a dedicated home-run cable to DVR. | Distributed Networking: Cameras plug into local floor switches routing to NVR over a single uplink. |
+<div class="overflow-x-auto my-8 rounded-2xl border border-slate-200 shadow-sm bg-white">
+  <table class="w-full border-collapse text-left text-sm text-slate-700">
+    <thead class="bg-slate-100 border-b border-slate-300 font-mono text-xs uppercase text-slate-900 tracking-wider">
+      <tr>
+        <th class="p-4 font-extrabold">Engineering Parameter</th>
+        <th class="p-4 font-extrabold">Analog HD Surveillance (DVR-Based)</th>
+        <th class="p-4 font-extrabold">IP Network Surveillance (NVR-Based)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Video Processing</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Raw analog signal generated at lens; digitized at central DVR.</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700">Digitized, compressed (H.265+), and encoded directly inside camera housing.</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Transmission Cable</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Coaxial cable (RG59 / RG6) or 3+1 composite copper cable.</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700">Standard Cat6 Ethernet cable via RJ45 interfaces.</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Power Architecture</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Dedicated 12V DC centralized multi-channel SMPS power supply.</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700">PoE (Power over Ethernet): One Cat6 cable delivers both data and DC power.</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Resolution Limit</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Typically capped at 2MP–5MP; high-frequency loss over distance.</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700">4MP, 8MP (4K), and 12MP+ with zero signal degradation across rated lengths.</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Cable Distance</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Signal drops, color distortion, and ground-loop hum past 70–90m.</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700">100 meters per Cat6 run; expandable indefinitely using PoE switches or fiber uplinks.</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Edge Intelligence</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Limited; dependent on central DVR software capabilities.</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700">On-board camera AI: Tripwire detection, vehicle plate logging, and face indexing.</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Cabling Topology</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Star Point-to-Point: Every camera requires a dedicated home-run cable to DVR.</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700">Distributed Networking: Cameras plug into local floor switches routing to NVR over a single uplink.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 

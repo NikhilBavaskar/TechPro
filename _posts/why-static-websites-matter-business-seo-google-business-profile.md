@@ -90,14 +90,49 @@ A static site allows you to easily publish fast, lightweight landing pages targe
 
 ## Static vs. Traditional Dynamic Websites for Local Business
 
-| Parameter | Traditional Dynamic Site (Bloated CMS) | Modern Static Website (Pre-rendered) |
-| :--- | :--- | :--- |
-| **Page Load Speed** | 2.5 – 6.0+ seconds | **0.4 – 1.2 seconds** |
-| **Google PageSpeed Score** | Typically 40 – 70 / 100 on mobile | **95 – 100 / 100 on mobile** |
-| **Hosting Costs** | ₹500 – ₹2,500+/month for decent server resources | **₹0 – ₹300/month** (Hosted on fast CDNs like Cloudflare/GitHub) |
-| **Maintenance Overhead** | Constant plugin updates, core patches, database backups | **Zero maintenance**; no database to manage or break |
-| **Security Risk** | High (SQL injections, brute-force admin logins) | **Virtually immune** (No server database or login dashboard) |
-| **Uptime & Stability** | Server crashes under traffic surges | **99.99% uptime** distributed across global CDN nodes |
+<div class="overflow-x-auto my-8 rounded-2xl border border-slate-200 shadow-sm bg-white">
+  <table class="w-full border-collapse text-left text-sm text-slate-700">
+    <thead class="bg-slate-100 border-b border-slate-300 font-mono text-xs uppercase text-slate-900 tracking-wider">
+      <tr>
+        <th class="p-4 font-extrabold">Parameter</th>
+        <th class="p-4 font-extrabold">Traditional Dynamic Site (Bloated CMS)</th>
+        <th class="p-4 font-extrabold">Modern Static Website (Pre-rendered)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Page Load Speed</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">2.5 – 6.0+ seconds</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700 font-bold">0.4 – 1.2 seconds</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Google PageSpeed Score</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Typically 40 – 70 / 100 on mobile</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700 font-bold">95 – 100 / 100 on mobile</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Hosting Costs</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">₹500 – ₹2,500+/month for decent server resources</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700 font-bold">₹0 – ₹300/month (Hosted on fast CDNs like Cloudflare/GitHub)</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Maintenance Overhead</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Constant plugin updates, core patches, database backups</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700 font-bold">Zero maintenance; no database to manage or break</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Security Risk</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">High (SQL injections, brute-force admin logins)</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700 font-bold">Virtually immune (No server database or login dashboard)</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Uptime & Stability</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Server crashes under traffic surges</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700 font-bold">99.99% uptime distributed across global CDN nodes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 

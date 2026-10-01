@@ -1,5 +1,5 @@
 ---
-title: '"Frontech vs Zebronics vs Consistent: Best Budget 21.5” / 22” LED Monitors for Office & CCTV in India (Comparison & Buying Guide)"'
+title: 'Frontech vs Zebronics vs Consistent: Best Budget 21.5” / 22” LED Monitors for Office & CCTV in India (Comparison & Buying Guide)'
 slug: frontech-vs-zebronics-vs-consistent-budget-monitors-india
 seoTitle: Frontech vs Zebronics vs Consistent 21.5”/22” Monitor Comparison | India
 metaDesc: Comparing Zebronics, Consistent, and Frontech 21.5"/22" LED monitors. See real differences in panel clarity, warranty, CCTV compatibility, and best value for office use.

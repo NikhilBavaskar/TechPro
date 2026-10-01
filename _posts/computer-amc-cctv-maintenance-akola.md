@@ -19,7 +19,7 @@ A teller workstation freezes during peak cash hours. A shared billing printer di
 
 Reactive repairs—calling an ad-hoc local technician each time an issue strikes—leave your business exposed to repeated downtime, unpredictable repair bills, and long waiting hours.
 
-\*\*TechPro Hardware Solutions\*\* delivers structured, proactive IT hardware maintenance and CCTV surveillance upkeep across Akola District. Registered as a Micro enterprise under Udyam, we back our services with guaranteed on-site response times and structured preventive checks designed to keep your business running smoothly.
+**TechPro Hardware Solutions** delivers structured, proactive IT hardware maintenance and CCTV surveillance upkeep across Akola District. Registered as a Micro enterprise under Udyam, we back our services with guaranteed on-site response times and structured preventive checks designed to keep your business running smoothly.
 
 
 
@@ -47,23 +47,23 @@ Voltage fluctuations and aging BNC/DC connectors lead to camera drops, blurry in
 
 **A. Commercial Computer & IT Hardware Support**
 
-\* \*\*Workstation Health & Tuning:\*\* Deep physical dust extraction, CPU thermal paste replacement, OS cleanup, and startup bottleneck elimination.
+* **Workstation Health & Tuning:** Deep physical dust extraction, CPU thermal paste replacement, OS cleanup, and startup bottleneck elimination.
 
-\* \*\*Storage Diagnostics:\*\* Proactive SMART health testing to identify failing HDDs and prevent catastrophic data loss before migration.
+* **Storage Diagnostics:** Proactive SMART health testing to identify failing HDDs and prevent catastrophic data loss before migration.
 
-\* \*\*Power Supply (SMPS) Testing:\*\* Voltage stabilization checks to prevent unpredictable reboots and motherboard electrical damage.
+* **Power Supply (SMPS) Testing:** Voltage stabilization checks to prevent unpredictable reboots and motherboard electrical damage.
 
-\* \*\*Peripheral & LAN Integration:\*\* Resolution of network drops, local workgroup folder sharing issues, and shared printer communication errors.
+* **Peripheral & LAN Integration:** Resolution of network drops, local workgroup folder sharing issues, and shared printer communication errors.
 
 **B. CCTV Surveillance Upkeep & Preventive Care**
 
-\* \*\*Recording Integrity Checks:\*\* Physical and software verification to guarantee the DVR/NVR is actively writing footage across all channels.
+* **Recording Integrity Checks:** Physical and software verification to guarantee the DVR/NVR is actively writing footage across all channels.
 
-\* \*\*Retention Period Audits:\*\* Verification that storage history matches statutory and administrative requirements (15, 30, or 90 days).
+* **Retention Period Audits:** Verification that storage history matches statutory and administrative requirements (15, 30, or 90 days).
 
-\* \*\*Camera Focus & Night Vision (IR) Alignment:\*\* Cleaning optical glass, addressing back-reflection halos, and testing power supply draw during night IR mode.
+* **Camera Focus & Night Vision (IR) Alignment:** Cleaning optical glass, addressing back-reflection halos, and testing power supply draw during night IR mode.
 
-\* \*\*Date & Time Synchronization:\*\* Preventing DVR clock drift caused by depleted CMOS batteries, ensuring timestamps remain legally and administratively valid.
+* **Date & Time Synchronization:** Preventing DVR clock drift caused by depleted CMOS batteries, ensuring timestamps remain legally and administratively valid.
 
 **C. Printers & Billing Peripherals**
 
@@ -78,53 +78,86 @@ Many businesses hesitate to sign Annual Maintenance Contracts because traditiona
 
 TechPro operates on a transparent, non-comprehensive labor AMC model:
 
-| Feature | Standard Ad-Hoc Callout | Comprehensive AMC | TechPro Non-Comprehensive AMC |
- 
-| \*\*Response Window\*\* | Unpredictable (1–3 days) | 24–48 hours | \*\*⚡ 2–4 Hours for Critical Outages\*\* |
- 
-| \*\*Preventive Maintenance\*\* | None (Fix-when-broken) | Irregular | \*\*Scheduled Periodic Visits\*\* |
- 
-| \*\*Callout / Visit Charges\*\* | Billed every single visit | Included in inflated fee | \*\*₹0 Extra Visit Fees Under Contract\*\* |
- 
-| \*\*Diagnostic Health Audit\*\* | Rarely provided | Vague ticket closure | \*\*Detailed Signed 10-Point Health Card\*\* |
- 
-| \*\*Spare Parts Pricing\*\* | Marked-up spot prices | Hidden in high annual rate | \*\*100% Genuine Parts at Direct Market Cost\*\* |
+<div class="overflow-x-auto my-8 rounded-2xl border border-slate-200 shadow-sm bg-white">
+  <table class="w-full border-collapse text-left text-sm text-slate-700">
+    <thead class="bg-slate-100 border-b border-slate-300 font-mono text-xs uppercase text-slate-900 tracking-wider">
+      <tr>
+        <th class="p-4 font-extrabold">Feature</th>
+        <th class="p-4 font-extrabold">Standard Ad-Hoc Callout</th>
+        <th class="p-4 font-extrabold">Comprehensive AMC</th>
+        <th class="p-4 font-extrabold">TechPro Non-Comprehensive AMC</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Response Window</td>
+        <td class="p-4 border-t border-slate-100 text-slate-500">Unpredictable (1–3 days)</td>
+        <td class="p-4 border-t border-slate-100 text-slate-500">24–48 hours</td>
+        <td class="p-4 border-t border-slate-100 font-bold text-green-600">⚡ 2–4 Hours for Critical Outages</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Preventive Maintenance</td>
+        <td class="p-4 border-t border-slate-100 text-slate-500">None (Fix-when-broken)</td>
+        <td class="p-4 border-t border-slate-100 text-slate-500">Irregular</td>
+        <td class="p-4 border-t border-slate-100 font-bold">Scheduled Periodic Visits</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Callout / Visit Charges</td>
+        <td class="p-4 border-t border-slate-100 text-slate-500">Billed every single visit</td>
+        <td class="p-4 border-t border-slate-100 text-slate-500">Included in inflated fee</td>
+        <td class="p-4 border-t border-slate-100 font-bold">₹0 Extra Visit Fees Under Contract</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Diagnostic Health Audit</td>
+        <td class="p-4 border-t border-slate-100 text-slate-500">Rarely provided</td>
+        <td class="p-4 border-t border-slate-100 text-slate-500">Vague ticket closure</td>
+        <td class="p-4 border-t border-slate-100 font-bold">Detailed Signed 10-Point Health Card</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Spare Parts Pricing</td>
+        <td class="p-4 border-t border-slate-100 text-slate-500">Marked-up spot prices</td>
+        <td class="p-4 border-t border-slate-100 text-slate-500">Hidden in high annual rate</td>
+        <td class="p-4 border-t border-slate-100 font-bold">100% Genuine Parts at Direct Market Cost</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-\*\*Note:\*\* For current contract rates across desktops, printers, and 4–32 channel DVR installations, contact our dispatch desk directly to match your specific hardware configuration.
+**Note:** For current contract rates across desktops, printers, and 4–32 channel DVR installations, contact our dispatch desk directly to match your specific hardware configuration.
 
 
 
 
 **Service Areas Covered in Akola District**
 
-\* \*\*Civil Lines & Collectorate Area:\*\* Administrative desks, legal chambers, and financial branches.
+* **Civil Lines & Collectorate Area:** Administrative desks, legal chambers, and financial branches.
 
-\* \*\*Ramdaspeth & Tilak Road:\*\* Retail centers, medical clinics, and commercial consultancies.
+* **Ramdaspeth & Tilak Road:** Retail centers, medical clinics, and commercial consultancies.
 
-\* \*\*MIDC Phase I & Phase II:\*\* Manufacturing offices, warehousing logistics, and plant surveillance.
+* **MIDC Phase I & Phase II:** Manufacturing offices, warehousing logistics, and plant surveillance.
 
-\* \*\*Murtizapur Road & Old City Commercial Belts:\*\* Cooperative credit societies, wholesale distribution desks, and private institutes.
+* **Murtizapur Road & Old City Commercial Belts:** Cooperative credit societies, wholesale distribution desks, and private institutes.
 
-\* \*\*Extended District Support:\*\* Outstation servicing available for institutions in Malkapur, Akot, and Murtizapur by appointment.
+* **Extended District Support:** Outstation servicing available for institutions in Malkapur, Akot, and Murtizapur by appointment.
 
 
 
 
 **Frequently Asked Questions**
 
-\*\*How does the 2–4 hour critical on-site SLA work?\*\*
+**How does the 2–4 hour critical on-site SLA work?**
 
 For contracted clients, critical failures—such as a cash counter teller machine being completely down, a billing printer offline during business hours, or total DVR recording failure—receive prioritized dispatch. A technician arrives on-site within 2 to 4 hours of logging the request.
 
-\*\*What is the difference between live camera display and active recording?\*\*
+**What is the difference between live camera display and active recording?**
 
 A DVR's video output board can display camera feeds in real time even if the SATA hard disk has crashed, disconnected, or run into bad sector write loops. The only way to ensure footage is being saved is to physically review recording logs, timeline playbacks, and hard disk SMART parameters—which TechPro verifies on every routine audit.
 
-\*\*Can TechPro speed up our existing slow office computers without buying new ones?\*\*
+**Can TechPro speed up our existing slow office computers without buying new ones?**
 
 Yes. In most commercial workstations, slowness is caused by fragmented mechanical hard drives running at 100% disk usage, inadequate RAM allocation, or dried-out thermal paste causing CPU throttling. Upgrading to a solid-state drive (SSD) and executing thermal servicing typically delivers 3x to 5x performance improvements at a fraction of replacement cost.
 
-\*\*How do we get started?\*\*
+**How do we get started?**
 
 We recommend starting with our Complimentary 10-Minute System Health Audit. We inspect your critical hardware, verify your surveillance storage, and provide a clear status report with zero financial commitment.
 
@@ -135,10 +168,10 @@ We recommend starting with our Complimentary 10-Minute System Health Audit. We i
 
 Don't wait for a hardware crash to find out your backup or CCTV failed. Let TechPro inspect your systems on-site at zero cost.
 
-\* \*\*Phone / Dispatch:\*\* +91 797210 4370
+ ***Phone / Dispatch:*** +91 797210 4370
 
-\* \*\*WhatsApp Quick-Audit:\*\* Message \*\*"AUDIT"\*\* to +91 797210 4370
+ **WhatsApp Quick-Audit:** Message **"AUDIT"** to +91 797210 4370
 
-\* \*\*Service Hours:\*\* Monday – Saturday, 9:30 AM – 7:30 PM
+ **Service Hours:** Monday – Saturday, 9:30 AM – 7:30 PM
 
-\* \*\*Office:\*\* TechPro Hardware Solutions, Akola, Maharashtra
+ **Office:** TechPro Hardware Solutions, Akola, Maharashtra

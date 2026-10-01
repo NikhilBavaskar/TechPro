@@ -47,11 +47,38 @@ Industrial workstations often operate under ambient summer room temperatures exc
 
 Factory workstations cannot be treated with a generic "once-a-year" maintenance approach. Service frequency depends directly on the machine's physical operating zone:
 
-| Operating Environment | Representative Locations in Akola | Primary Particulate Type | Recommended Deep-Clean Cycle |
-| :--- | :--- | :--- | :--- |
-| **Zone 1: Heavy Particulate & Open Air** | Weighbridges, Loading Docks, Cotton Ginning Floors, Dal Mills | Heavy silica dust, raw organic fiber lint, moisture | **Every 30 to 45 Days** |
-| **Zone 2: Semi-Sealed Industrial Sheds** | Workshop Dispatch Cabins, Plant Maintenance Desks, Assembly Floors | Suspended atmospheric dust, carbon, light metal flakes | **Every 60 to 90 Days** |
-| **Zone 3: Enclosed Plant Admin Offices** | MIDC Administrative Cabins, Quality Control Labs, Factory Accounts | Ambient fine dust, footwear dirt, light airborne grime | **Every 90 to 120 Days** |
+<div class="overflow-x-auto my-8 rounded-2xl border border-slate-200 shadow-sm bg-white">
+  <table class="w-full border-collapse text-left text-sm text-slate-700">
+    <thead class="bg-slate-100 border-b border-slate-300 font-mono text-xs uppercase text-slate-900 tracking-wider">
+      <tr>
+        <th class="p-4 font-extrabold">Operating Environment</th>
+        <th class="p-4 font-extrabold">Representative Locations in Akola</th>
+        <th class="p-4 font-extrabold">Primary Particulate Type</th>
+        <th class="p-4 font-extrabold">Recommended Deep-Clean Cycle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Zone 1: Heavy Particulate & Open Air</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Weighbridges, Loading Docks, Cotton Ginning Floors, Dal Mills</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Heavy silica dust, raw organic fiber lint, moisture</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700 font-bold">Every 30 to 45 Days</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Zone 2: Semi-Sealed Industrial Sheds</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Workshop Dispatch Cabins, Plant Maintenance Desks, Assembly Floors</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Suspended atmospheric dust, carbon, light metal flakes</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700 font-bold">Every 60 to 90 Days</td>
+      </tr>
+      <tr>
+        <td class="p-4 border-t border-slate-100 font-bold">Zone 3: Enclosed Plant Admin Offices</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">MIDC Administrative Cabins, Quality Control Labs, Factory Accounts</td>
+        <td class="p-4 border-t border-slate-100 text-slate-600">Ambient fine dust, footwear dirt, light airborne grime</td>
+        <td class="p-4 border-t border-slate-100 text-slate-700 font-bold">Every 90 to 120 Days</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 

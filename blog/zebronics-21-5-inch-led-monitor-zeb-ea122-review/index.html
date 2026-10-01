@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="postMetaTitle">Technical Report | TechPro Solutions</title>
+  
+  <meta id="postMetaDesc" name="description" content="Technical hardware diagnostics and surveillance guides." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" id="canonicalLink" href="https://techprohardware.in/blog/post.html" />
+
+  <!-- Gradient TP Favicon Matching Homepage -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' rx='14' fill='%232563EB'/%3E%3Cpath d='M14 22h32M24 22v26' stroke='%23ffffff' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M38 18v34M38 18h12c6 0 10 4 10 9s-4 9-10 9H38' stroke='%2322D3EE' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Open Graph & JSON-LD -->
+  <meta id="ogTitle" property="og:title" content="" />
+  <meta id="ogDesc" property="og:description" content="" />
+  <meta id="ogUrl" property="og:url" content="" />
+  <meta id="ogImage" property="og:image" content="" />
+  <script type="application/ld+json" id="articleSchemaJson"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: '#2563EB',
+            deepBlack: '#050505',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Technical Textures for Header & Footer */
+    .bg-tech-mesh {
+      background-image: linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .bg-noise {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+    }
+
+    /* Enforced Left-Aligned Editorial Typography */
+    .article-body {
+      text-align: left !important;
+    }
+    .article-body h1 {
+      text-align: left;
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .article-body h2 {
+      text-align: left;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #E2E8F0;
+    }
+    .article-body h3 {
+      text-align: left;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1E293B;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      text-align: left;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #334155;
+      margin-bottom: 1.5rem;
+    }
+    .article-body ul {
+      text-align: left;
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #334155;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body strong { color: #0F172A; font-weight: 700; }
+    
+    .article-body blockquote {
+      text-align: left;
+      border-left: 4px solid #2563EB;
+      background-color: #F8FAFC;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      color: #1E293B;
+      font-style: italic;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased flex flex-col min-h-screen selection:bg-brand selection:text-white">
+
+  <!-- Navigation Header with Gradient Logo -->
+  <header class="border-b border-slate-200 bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-[12px] bg-gradient-to-tr from-blue-600 to-cyan-400 p-[2px] shadow-md group-hover:scale-105 transition-transform duration-300">
+          <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
+            <span class="text-blue-600 font-black text-sm tracking-tighter">TP</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">TechPro</span>
+          <span class="text-[9px] font-mono font-bold tracking-[0.3em] text-slate-500 uppercase mt-0.5">Solutions</span>
+        </div>
+      </a>
+      <a href="/" class="text-sm font-bold text-slate-600 hover:text-brand transition-colors">&larr; Back to Home</a>
+    </div>
+  </header>
+
+  <main class="flex-grow bg-slate-50">
+<!-- Dark Technical Article Header with Visible Mesh Texture -->
+    <header class="relative bg-deepBlack text-white py-16 md:py-20 border-b-2 border-brand/40 overflow-hidden">
+      <div class="absolute inset-0 bg-tech-mesh opacity-70"></div>
+      <div class="absolute inset-0 bg-noise mix-blend-overlay"></div>
+
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-left z-10">
+        <div class="flex flex-wrap items-center gap-3 mb-6">
+          <span id="postTagBadge" class="px-3 py-1 bg-blue-500/10 text-cyan-400 text-xs font-mono font-bold uppercase tracking-wider rounded-md border border-blue-500/20">Report</span>
+          <span id="postDate" class="text-xs text-slate-400 font-mono font-bold"></span>
+          <span class="text-slate-600">•</span>
+          <span id="postReadTime" class="text-xs text-slate-400 font-mono">-- min read</span>
+        </div>
+        <h1 id="postTitle" class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.2] mb-0">
+          Loading Data...
+        </h1>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+      <!-- Fixed Height Banner Cover Image (Always Full Color, No Animation) -->
+      <div id="postImageContainer" class="hidden mb-12 rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white max-h-[400px]">
+        <img id="postImage" src="" alt="Hardware Reference" class="w-full h-full object-cover" />
+      </div>
+
+      <article id="postBody" class="article-body">
+        <div class="py-10 text-left text-slate-500 font-mono text-sm">Initializing document parser...</div>
+      </article>
+
+      <!-- CTA Box -->
+      <div class="mt-16 bg-white border border-slate-200 p-8 rounded-2xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="text-left">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Need hardware deployed in Akola?</h3>
+          <p class="text-slate-600 text-sm">TechPro Solutions provides commercial hardware procurement, custom PC builds, and CCTV audits directly to your site.</p>
+        </div>
+        <a href="https://wa.me/917972104370" target="_blank" class="shrink-0 px-6 py-3.5 bg-slate-900 text-white font-bold rounded-xl hover:bg-brand transition-colors shadow-md">
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Textured Black Footer Matching the Homepage -->
+  <footer class="relative bg-deepBlack text-slate-400 py-16 border-t-4 border-brand overflow-hidden">
+    <div class="absolute inset-0 bg-tech-mesh opacity-30"></div>
+    <div class="absolute inset-0 bg-noise mix-blend-overlay"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 z-10">
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 p-[2px] flex items-center justify-center shadow-lg">
+            <div class="w-full h-full bg-deepBlack rounded-[10px] flex items-center justify-center p-1">
+              <svg class="w-full h-full" viewBox="0 0 70 70" fill="none">
+                <path d="M14 22h32M24 22v26" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+                <path d="M38 18v34M38 18h12c6 0 10 4 10 9s-4 9-10 9H38" stroke="#22D3EE" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <span class="text-xl font-black text-white tracking-tight">TechPro<span class="text-slate-500 font-medium text-sm ml-1">Solutions</span></span>
+        </div>
+        <p class="text-sm leading-relaxed mb-6">
+          Specialized in computer hardware repair, custom assembly, commercial CCTV surveillance, and secure networking architectures.
+        </p>
+        <div class="text-xs font-mono text-slate-500">Mothi Umri, Akola, Maharashtra 444001</div>
+      </div>
+      <div>
+        <div class="text-white text-sm font-bold uppercase tracking-wider mb-6">Territories Serviced</div>
+        <ul class="text-sm space-y-3 font-mono text-slate-500">
+          <li>> Civil Lines Business District</li>
+          <li>> Station Road Wholesale Hub</li>
+          <li>> MIDC Industrial Zone</li>
+          <li>> Akola District Co-ops</li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-white text-sm font-bold uppercase tracking-wider mb-6">Direct Dispatch</div>
+        <div class="p-5 bg-white/5 border border-white/10 rounded-xl backdrop-blur-md">
+          <div class="text-xs text-slate-500 uppercase tracking-wider mb-2">WhatsApp / Call</div>
+          <a href="tel:+917972104370" class="text-white text-xl font-mono font-bold hover:text-cyan-400 block mb-4 transition-colors">+91 797210 4370</a>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-bold rounded-md uppercase tracking-wider">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></span>
+            Emergency IT Support Active
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between text-xs font-mono text-slate-500 gap-4 z-10">
+      <span>&copy; 2026 TechPro Solutions.</span>
+      <span>Udyam Registered Micro-Enterprise.</span>
+    </div>
+  </footer>
+
+  <script>
+    function parseMarkdownDoc(rawText) {
+      const normalized = rawText.replace(/\r\n/g, '\n');
+      let meta = {};
+      let body = normalized;
+
+      if (normalized.startsWith('---')) {
+        const secondFenceIdx = normalized.indexOf('\n---', 3);
+        if (secondFenceIdx !== -1) {
+          const rawMeta = normalized.substring(3, secondFenceIdx).trim();
+          const bodyStart = normalized.indexOf('\n', secondFenceIdx + 4);
+          body = bodyStart !== -1 ? normalized.substring(bodyStart).trim() : normalized.substring(secondFenceIdx + 4).trim();
+
+          rawMeta.split('\n').forEach(line => {
+            const colonIdx = line.indexOf(':');
+            if (colonIdx !== -1) {
+              const key = line.substring(0, colonIdx).trim();
+              let val = line.substring(colonIdx + 1).trim();
+              if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+                val = val.substring(1, val.length - 1);
+              }
+              meta[key] = val;
+            }
+          });
+        }
+      }
+      return { meta, body };
+    }
+
+    async function loadPost() {
+      const pathSegments = window.location.pathname.split('/').filter(Boolean);
+      let slug = '';
+      const blogIdx = pathSegments.indexOf('blog');
+      if (blogIdx !== -1 && pathSegments[blogIdx + 1] && pathSegments[blogIdx + 1] !== 'post.html') {
+        slug = pathSegments[blogIdx + 1];
+      } else {
+        const urlParams = new URLSearchParams(window.location.search);
+        slug = urlParams.get('post') || pathSegments.pop() || '';
+      }
+      slug = decodeURIComponent(slug).replace(/\.html$/, '').trim();
+
+      if (!slug || slug === 'blog' || slug === 'post') {
+        document.getElementById('postTitle').innerText = 'Document Not Found';
+        document.getElementById('postBody').innerHTML = '<p>The requested hardware guide could not be located.</p>';
+        return;
+      }
+
+      const canonicalFullUrl = `https://techprohardware.in/blog/${slug}/`;
+      document.getElementById('canonicalLink').setAttribute('href', canonicalFullUrl);
+
+      try {
+        const candidateURLs = [
+          `../../_posts/${slug}.md?t=${Date.now()}`,
+          `/_posts/${slug}.md?t=${Date.now()}`,
+          `https://raw.githubusercontent.com/NikhilBavaskar/TechPro/main/_posts/${slug}.md`
+        ];
+
+        let mdRes = null;
+        for (const url of candidateURLs) {
+          try {
+            const res = await fetch(url);
+            if (res && res.ok) { mdRes = res; break; }
+          } catch (e) {}
+        }
+
+        if (mdRes && mdRes.ok) {
+          const rawText = await mdRes.text();
+          const { meta, body } = parseMarkdownDoc(rawText);
+
+          document.title = `${meta.seoTitle || meta.title || slug} | TechPro`;
+          document.getElementById('postTitle').innerText = meta.title || slug;
+          
+          if (meta.tag) document.getElementById('postTagBadge').innerText = meta.tag;
+          if (meta.date) document.getElementById('postDate').innerText = meta.date;
+          if (meta.readTime) document.getElementById('postReadTime').innerText = meta.readTime;
+
+          if (meta.image && meta.image.trim() !== '') {
+            let imgPath = meta.image.trim().replace(/^\//, '');
+            const imgEl = document.getElementById('postImage');
+            imgEl.onload = () => { document.getElementById('postImageContainer').classList.remove('hidden'); };
+            imgEl.onerror = () => {
+              if (!imgEl.src.includes('raw.githubusercontent.com')) {
+                imgEl.src = `https://raw.githubusercontent.com/NikhilBavaskar/TechPro/main/${imgPath}`;
+              } else {
+                document.getElementById('postImageContainer').classList.add('hidden');
+              }
+            };
+            imgEl.src = `../../${imgPath}`;
+          }
+
+          let parsedHtml = body && body.trim().length > 0 ? marked.parse(body) : marked.parse(meta.excerpt || '');
+          
+          // AUTOMATIC Markdown Table Formatter
+          parsedHtml = parsedHtml
+            .replace(/<table>/g, '<div class="overflow-x-auto my-8 rounded-2xl border border-slate-200 shadow-sm bg-white"><table class="w-full border-collapse text-left text-sm text-slate-700">')
+            .replace(/<\/table>/g, '</table></div>')
+            .replace(/<thead>/g, '<thead class="bg-slate-100 border-b border-slate-300 font-mono text-xs uppercase text-slate-900 tracking-wider">')
+            .replace(/<th>/g, '<th class="p-4 font-extrabold text-left">')
+            .replace(/<td>/g, '<td class="p-4 border-t border-slate-100 text-left">');
+
+          document.getElementById('postBody').innerHTML = parsedHtml;
+          return;
+        }
+        document.getElementById('postTitle').innerText = 'Error 404';
+        document.getElementById('postBody').innerHTML = '<p>Data file missing.</p>';
+      } catch (err) {
+        document.getElementById('postTitle').innerText = 'Connection Error';
+        document.getElementById('postBody').innerHTML = '<p>Unable to retrieve document.</p>';
+      }
+    }
+    window.addEventListener('DOMContentLoaded', loadPost);
+  </script>
+</body>
+</html>
