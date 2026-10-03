@@ -2,38 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://techprohardware.in/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://techprohardware.in/blog/post.html?post=computer-amc-cctv-maintenance-akola</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://techprohardware.in/blog/complete-computer-monitor-guide-choose-connect-calibrate-test/</loc>
+    <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://techprohardware.in/blog/post.html?post=midc-akola-industrial-workstation-dust-cleaning-guide</loc>
-    <lastmod>2026-09-19</lastmod>
+    <loc>https://techprohardware.in/blog/computer-amc-cctv-maintenance-akola/</loc>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://techprohardware.in/blog/post.html?post=multiple-hdd-nvr-ip-vs-analog-cameras-guide</loc>
-    <lastmod>2026-09-18</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://techprohardware.in/blog/post.html?post=why-office-pc-freezes-thermal-throttling-akola</loc>
-    <lastmod>2026-09-18</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://techprohardware.in/blog/post.html?post=why-static-websites-matter-business-seo-google-business-profile</loc>
-    <lastmod>2026-09-19</lastmod>
-    <priority>0.8</priority>
-  </url>
-    <url>
     <loc>https://techprohardware.in/blog/frontech-vs-zebronics-vs-consistent-budget-monitors-india/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://techprohardware.in/blog/midc-akola-industrial-workstation-dust-cleaning-guide/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://techprohardware.in/blog/multiple-hdd-nvr-ip-vs-analog-cameras-guide/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://techprohardware.in/blog/wd-blue-sn580-nvme-ssd-review-pros-cons-india/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://techprohardware.in/blog/why-office-pc-freezes-thermal-throttling-akola/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://techprohardware.in/blog/why-static-websites-matter-business-seo-google-business-profile/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://techprohardware.in/blog/zebronics-21-5-inch-led-monitor-zeb-ea122-review/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
