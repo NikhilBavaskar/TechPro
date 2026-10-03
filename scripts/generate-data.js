@@ -2,56 +2,50 @@ const fs = require('fs');
 const path = require('path');
 
 const postsDir = path.join(__dirname, '../_posts');
-const siteUrl = 'https://techprohardware.in';
+const outputPath = path.join(__dirname, '../posts.json');
 
-if (!fs.existsSync(postsDir)) process.exit(0);
+console.log('🚀 Generating posts data from frontmatter...');
 
-const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'));
-const posts = [];
+if (!fs.existsSync(postsDir)) {
+  console.error('❌ _posts directory not found!');
+  process.exit(1);
+}
 
-files.forEach(file => {
-  const content = fs.readFileSync(path.join(postsDir, file), 'utf8');
-  const match = content.match(/^---\n([\s\S]*?)\n---/);
-  if (!match) return;
+const files = fs.readdirSync(postsDir).filter(file => file.endsWith('.md'));
 
-  const meta = {};
-  match[1].split('\n').forEach(line => {
-    const idx = line.indexOf(':');
-    if (idx !== -1) {
-      const k = line.slice(0, idx).trim();
-      let v = line.slice(idx + 1).trim();
-      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
-        v = v.slice(1, -1);
-      }
-      meta[k] = v;
-    }
-  });
+const posts = files.map(file => {
+  const slug = file.replace(/\.md$/, '');
+  const filePath = path.join(postsDir, file);
+  const content = fs.readFileSync(filePath, 'utf8');
 
-  const slug = meta.slug || file.replace('.md', '');
-  posts.push({
-    id: slug,
-    slug: slug,
-    title: meta.title || slug,
-    tag: meta.tag || 'Field Guide',
-    date: meta.date || '2026-09-19',
-    readTime: meta.readTime || '5 min read',
-    image: meta.image || '',
-    excerpt: meta.excerpt || ''
-  });
+  // Helper to extract frontmatter values (e.g., image: /assets/... or description: ...)
+  const getFrontmatterField = (field) => {
+    const regex = new RegExp(`^${field}:\\s*(['"]?)(.*?)\\1$`, 'm');
+    const match = content.match(regex);
+    return match ? match[2].trim() : null;
+  };
+
+  // Extract title (from frontmatter or first # heading)
+  let title = getFrontmatterField('title');
+  if (!title) {
+    const titleMatch = content.match(/^#\s+(.+)$/m);
+    title = titleMatch ? titleMatch[1] : slug.replace(/-/g, ' ');
+  }
+
+  // Extract custom image and description from frontmatter
+  const image = getFrontmatterField('image') || '/assets/favicon.jpg';
+  const description = getFrontmatterField('description') || getFrontmatterField('excerpt') || 'Technical hardware guide and diagnostic documentation.';
+
+  return {
+    slug,
+    title,
+    description,
+    excerpt: description,
+    image,
+    url: `/blog/${slug}/`,
+    date: getFrontmatterField('date') || fs.statSync(filePath).birthtime.toISOString().split('T')[0]
+  };
 });
 
-// 1. Write posts.json
-fs.writeFileSync(path.join(__dirname, '../posts.json'), JSON.stringify(posts, null, 2));
-
-// 2. Write sitemap.xml
-const today = new Date().toISOString().split('T')[0];
-let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
-sitemap += `  <url><loc>${siteUrl}/</loc><lastmod>${today}</lastmod><priority>1.0</priority></url>\n`;
-
-posts.forEach(p => {
-  sitemap += `  <url><loc>${siteUrl}/blog/post.html?post=${p.slug}</loc><lastmod>${today}</lastmod><priority>0.8</priority></url>\n`;
-});
-
-sitemap += `</urlset>`;
-fs.writeFileSync(path.join(__dirname, '../sitemap.xml'), sitemap);
-console.log('Successfully regenerated posts.json and sitemap.xml');
+fs.writeFileSync(outputPath, JSON.stringify(posts, null, 2), 'utf8');
+console.log(`✨ Generated data for ${posts.length} posts with custom frontmatter successfully!`);
