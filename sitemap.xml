@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://techprohardware.in/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://techprohardware.in/blog/best-gaming-pc-build-under-50000-india-2026/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://techprohardware.in/blog/complete-computer-monitor-guide-choose-connect-calibrate-test/</loc>
