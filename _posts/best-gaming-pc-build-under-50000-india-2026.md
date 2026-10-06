@@ -1,5 +1,5 @@
 ---
-title: ': Best Gaming & Productivity PC Build Under ₹50,000 in India (2026 Edition): Real Component Prices, 1080p Benchmarks & What to Avoid'
+title: 'Best Gaming & Productivity PC Build Under ₹50,000 in India (2026 Edition): Real Component Prices, 1080p Benchmarks & What to Avoid'
 slug: best-gaming-pc-build-under-50000-india-2026
 seoTitle: 'Best Gaming PC Build Under ₹50,000 in India (2026): 1080p Parts & Price'
 metaDesc: Step-by-step guide to building the best gaming and video editing PC under ₹50,000 in India. Includes 2026 retail component prices, benchmarks, and mistakes to avoid.
