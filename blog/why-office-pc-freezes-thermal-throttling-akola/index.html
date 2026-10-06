@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <meta name="robots" content="index, follow" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title id="postMetaTitle">Technical Report | TechPro Solutions</title>
   
   <meta id="postMetaDesc" name="description" content="Technical hardware diagnostics and surveillance guides." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" id="canonicalLink" href="https://techprohardware.in/blog/" />
+  <link rel="canonical" id="canonicalLink" href="https://techprohardware.in/blog/why-office-pc-freezes-thermal-throttling-akola/" />
 
-  <link rel="icon" type="image/jpeg" href="/assets/favicon.jpg" />
-  
+ <link rel="icon" type="image/jpeg" href="/assets/favicon.jpg" />
   <!-- Open Graph & JSON-LD -->
-  <meta id="ogTitle" property="og:title" content="Technical Report | TechPro Solutions" />
-  <meta id="ogDesc" property="og:description" content="Technical hardware diagnostics and surveillance guides." />
-  <meta id="ogUrl" property="og:url" content="https://techprohardware.in/blog/" />
-  <meta id="ogImage" property="og:image" content="https://techprohardware.in/assets/favicon.jpg" />
+  <meta id="ogTitle" property="og:title" content="" />
+  <meta id="ogDesc" property="og:description" content="" />
+  <meta id="ogUrl" property="og:url" content="" />
+  <meta id="ogImage" property="og:image" content="" />
   <script type="application/ld+json" id="articleSchemaJson"></script>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -42,6 +42,7 @@
   </script>
 
   <style>
+    /* Technical Textures for Header & Footer */
     .bg-tech-mesh {
       background-image: linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
       background-size: 32px 32px;
@@ -49,15 +50,67 @@
     .bg-noise {
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
     }
-    .article-body { text-align: left !important; }
-    .article-body h1 { text-align: left; font-size: 2.25rem; font-weight: 800; color: #0F172A; margin-top: 2rem; margin-bottom: 1rem; line-height: 1.2; }
-    .article-body h2 { text-align: left; font-size: 1.75rem; font-weight: 800; color: #0F172A; margin-top: 3rem; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #E2E8F0; }
-    .article-body h3 { text-align: left; font-size: 1.35rem; font-weight: 700; color: #1E293B; margin-top: 2rem; margin-bottom: 0.75rem; }
-    .article-body p { text-align: left; font-size: 1.1rem; line-height: 1.8; color: #334155; margin-bottom: 1.5rem; }
-    .article-body ul { text-align: left; list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: #334155; font-size: 1.1rem; line-height: 1.8; }
+
+    /* Enforced Left-Aligned Editorial Typography */
+    .article-body {
+      text-align: left !important;
+    }
+    .article-body h1 {
+      text-align: left;
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .article-body h2 {
+      text-align: left;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #E2E8F0;
+    }
+    .article-body h3 {
+      text-align: left;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1E293B;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      text-align: left;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #334155;
+      margin-bottom: 1.5rem;
+    }
+    .article-body ul {
+      text-align: left;
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #334155;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
     .article-body li { margin-bottom: 0.5rem; }
     .article-body strong { color: #0F172A; font-weight: 700; }
-    .article-body blockquote { text-align: left; border-left: 4px solid #2563EB; background-color: #F8FAFC; padding: 1.25rem 1.5rem; margin: 1.5rem 0; color: #1E293B; font-style: italic; border-radius: 0 0.5rem 0.5rem 0; }
+    
+    .article-body blockquote {
+      text-align: left;
+      border-left: 4px solid #2563EB;
+      background-color: #F8FAFC;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      color: #1E293B;
+      font-style: italic;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
   </style>
 </head>
 <body class="bg-white text-slate-900 antialiased flex flex-col min-h-screen selection:bg-brand selection:text-white">
@@ -81,6 +134,7 @@
   </header>
 
   <main class="flex-grow bg-slate-50">
+<!-- Dark Technical Article Header with Visible Mesh Texture -->
     <header class="relative bg-deepBlack text-white py-16 md:py-20 border-b-2 border-brand/40 overflow-hidden">
       <div class="absolute inset-0 bg-tech-mesh opacity-70"></div>
       <div class="absolute inset-0 bg-noise mix-blend-overlay"></div>
@@ -98,7 +152,9 @@
       </div>
     </header>
 
+    <!-- Main Content Area -->
     <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+      <!-- Fixed Height Banner Cover Image (Always Full Color, No Animation) -->
       <div id="postImageContainer" class="hidden mb-12 rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white max-h-[400px]">
         <img id="postImage" src="" alt="Hardware Reference" class="w-full h-full object-cover" />
       </div>
@@ -107,6 +163,7 @@
         <div class="py-10 text-left text-slate-500 font-mono text-sm">Initializing document parser...</div>
       </article>
 
+      <!-- CTA Box -->
       <div class="mt-16 bg-white border border-slate-200 p-8 rounded-2xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
         <div class="text-left">
           <h3 class="text-xl font-bold text-slate-900 mb-2">Need hardware deployed in Akola?</h3>
@@ -119,6 +176,7 @@
     </div>
   </main>
 
+  <!-- Textured Black Footer Matching the Homepage -->
   <footer class="relative bg-deepBlack text-slate-400 py-16 border-t-4 border-brand overflow-hidden">
     <div class="absolute inset-0 bg-tech-mesh opacity-30"></div>
     <div class="absolute inset-0 bg-noise mix-blend-overlay"></div>
@@ -217,7 +275,6 @@
 
       const canonicalFullUrl = `https://techprohardware.in/blog/${slug}/`;
       document.getElementById('canonicalLink').setAttribute('href', canonicalFullUrl);
-      document.getElementById('ogUrl').setAttribute('content', canonicalFullUrl);
 
       try {
         const candidateURLs = [
@@ -238,24 +295,15 @@
           const rawText = await mdRes.text();
           const { meta, body } = parseMarkdownDoc(rawText);
 
-          const pageTitle = `${meta.seoTitle || meta.title || slug} | TechPro Solutions`;
-          document.title = pageTitle;
-          document.getElementById('ogTitle').setAttribute('content', pageTitle);
+          document.title = `${meta.seoTitle || meta.title || slug} | TechPro`;
           document.getElementById('postTitle').innerText = meta.title || slug;
           
-          if (meta.description || meta.excerpt) {
-            const desc = meta.description || meta.excerpt;
-            document.getElementById('postMetaDesc').setAttribute('content', desc);
-            document.getElementById('ogDesc').setAttribute('content', desc);
-          }
-
           if (meta.tag) document.getElementById('postTagBadge').innerText = meta.tag;
           if (meta.date) document.getElementById('postDate').innerText = meta.date;
           if (meta.readTime) document.getElementById('postReadTime').innerText = meta.readTime;
 
           if (meta.image && meta.image.trim() !== '') {
             let imgPath = meta.image.trim().replace(/^\//, '');
-            document.getElementById('ogImage').setAttribute('content', `https://techprohardware.in/${imgPath}`);
             const imgEl = document.getElementById('postImage');
             imgEl.onload = () => { document.getElementById('postImageContainer').classList.remove('hidden'); };
             imgEl.onerror = () => {
@@ -270,6 +318,7 @@
 
           let parsedHtml = body && body.trim().length > 0 ? marked.parse(body) : marked.parse(meta.excerpt || '');
           
+          // AUTOMATIC Markdown Table Formatter
           parsedHtml = parsedHtml
             .replace(/<table>/g, '<div class="overflow-x-auto my-8 rounded-2xl border border-slate-200 shadow-sm bg-white"><table class="w-full border-collapse text-left text-sm text-slate-700">')
             .replace(/<\/table>/g, '</table></div>')

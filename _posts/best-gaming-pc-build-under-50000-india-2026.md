@@ -37,123 +37,64 @@ Below is the verified component breakdown, actual Indian street prices, live ben
 
 ## The ₹50,000 Component Blueprint (Verified Indian Street Pricing)
 <div class="overflow-x-auto my-8 rounded-2xl border border-slate-200 shadow-sm bg-white">
-
   <table class="w-full border-collapse text-left text-sm text-slate-700">
-
     <thead class="bg-slate-100 border-b border-slate-300 font-mono text-xs uppercase text-slate-900 tracking-wider">
-
       <tr>
-
         <th class="p-4 font-extrabold text-left">Component</th>
-
-        <th class="p-4 font-extrabold text-left">Hardware Model</th>
-
+        <th class="p-4 font-extrabold text-left">Selected Hardware Model</th>
         <th class="p-4 font-extrabold text-left">Key Specification</th>
-
         <th class="p-4 font-extrabold text-left">Approx. Street Price (INR)</th>
-
       </tr>
-
     </thead>
-
     <tbody>
-
       <tr class="border-t border-slate-100">
-
         <td class="p-4 text-left font-bold text-slate-900">Processor (CPU)</td>
-
-        <td class="p-4 text-left font-semibold text-slate-900">AMD Ryzen 5 5600</td>
-
+        <td class="p-4 text-left">AMD Ryzen 5 5600</td>
         <td class="p-4 text-left">6 Cores / 12 Threads, 4.4 GHz Boost, 32MB Cache, Wraith Stealth Cooler</td>
-
         <td class="p-4 text-left font-mono font-bold text-slate-900">₹10,400</td>
-
       </tr>
-
       <tr class="border-t border-slate-100 bg-slate-50/50">
-
         <td class="p-4 text-left font-bold text-slate-900">Graphics Card (GPU)</td>
-
-        <td class="p-4 text-left font-semibold text-slate-900">AMD Radeon RX 6600 8GB <span class="font-normal text-slate-500 block text-xs">(Asus Dual / Sapphire Pulse / ASRock Challenger)</span></td>
-
+        <td class="p-4 text-left">AMD Radeon RX 6600 8GB <span class="font-normal text-slate-500 block text-xs">(Asus Dual / Sapphire Pulse / ASRock Challenger)</span></td>
         <td class="p-4 text-left">8GB GDDR6, PCIe 4.0, 132W TDP</td>
-
         <td class="p-4 text-left font-mono font-bold text-slate-900">₹19,500</td>
-
       </tr>
-
       <tr class="border-t border-slate-100">
-
         <td class="p-4 text-left font-bold text-slate-900">Motherboard</td>
-
-        <td class="p-4 text-left font-semibold text-slate-900">MSI B450M-A PRO MAX II / Gigabyte B450M K</td>
-
+        <td class="p-4 text-left">MSI B450M-A PRO MAX II / Gigabyte B450M K</td>
         <td class="p-4 text-left">AM4 Socket, PCIe 3.0 M.2 slot, Dual DDR4 DIMM, BIOS Flashback</td>
-
         <td class="p-4 text-left font-mono font-bold text-slate-900">₹4,600</td>
-
       </tr>
-
       <tr class="border-t border-slate-100 bg-slate-50/50">
-
         <td class="p-4 text-left font-bold text-slate-900">Memory (RAM)</td>
-
-        <td class="p-4 text-left font-semibold text-slate-900">G.Skill Ripjaws V / Corsair Vengeance LPX</td>
-
+        <td class="p-4 text-left">G.Skill Ripjaws V / Corsair Vengeance LPX</td>
         <td class="p-4 text-left">16GB (8GB x 2) DDR4 3200MHz CL16 Dual Channel Kit</td>
-
         <td class="p-4 text-left font-mono font-bold text-slate-900">₹3,100</td>
-
       </tr>
-
       <tr class="border-t border-slate-100">
-
         <td class="p-4 text-left font-bold text-slate-900">Storage (SSD)</td>
-
-        <td class="p-4 text-left font-semibold text-slate-900">WD Blue SN580 1TB NVMe M.2 SSD</td>
-
+        <td class="p-4 text-left">WD Blue SN580 1TB NVMe M.2 SSD</td>
         <td class="p-4 text-left">PCIe Gen 4.0 x4, up to 4,150 MB/s Read Speed, TLC NAND, 5-Yr Warranty</td>
-
         <td class="p-4 text-left font-mono font-bold text-slate-900">₹5,600</td>
-
       </tr>
-
       <tr class="border-t border-slate-100 bg-slate-50/50">
-
         <td class="p-4 text-left font-bold text-slate-900">Power Supply (PSU)</td>
-
-        <td class="p-4 text-left font-semibold text-slate-900">Deepcool PK550D / Cooler Master MWE 550 V2</td>
-
+        <td class="p-4 text-left">Deepcool PK550D / Cooler Master MWE 550 V2</td>
         <td class="p-4 text-left">550W, 80 Plus Bronze Certified, Active PFC, 5-Yr Warranty</td>
-
         <td class="p-4 text-left font-mono font-bold text-slate-900">₹3,500</td>
-
       </tr>
-
       <tr class="border-t border-slate-100">
-
         <td class="p-4 text-left font-bold text-slate-900">Chassis (Cabinet)</td>
-
-        <td class="p-4 text-left font-semibold text-slate-900">Ant Esports ICE-112 / Zebronics Zeb-Asta Pro</td>
-
+        <td class="p-4 text-left">Ant Esports ICE-112 / Zebronics Zeb-Asta Pro</td>
         <td class="p-4 text-left">Front Mesh Panel, 3–4 Pre-Installed 120mm Fans, Acrylic/Glass Side</td>
-
         <td class="p-4 text-left font-mono font-bold text-slate-900">₹2,400</td>
-
       </tr>
-
-      <tr class="border-t-2 border-slate-300 bg-slate-100 font-bold">
-
-        <td class="p-4 text-left text-slate-900" colspan="3">Total Build Cost</td>
-
-        <td class="p-4 text-left font-mono text-blue-600 text-base">₹49,100</td>
-
+      <tr class="border-t border-2 border-slate-300 bg-slate-100/80">
+        <td class="p-4 text-left font-extrabold text-slate-900" colspan="3">Total Build Cost</td>
+        <td class="p-4 text-left font-mono font-black text-brand text-base">₹49,100</td>
       </tr>
-
     </tbody>
-
   </table>
-
 </div>
 
 
